@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Teams meetings | Copilot, plainly</title>
+<meta name="description" content="How Microsoft Copilot works in Teams meetings, what the organiser must switch on, and why recaps and questions sometimes fail.">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar"><div class="topbar-in">
+<a class="brand" href="../">Copilot<span>, plainly</span></a>
+<nav class="nav" aria-label="Main"><a href="../">Home</a><a href="../start/">Start here</a><a href="../what-is-copilot/">What it is</a><a href="../copilot-chat/">Copilot Chat</a><a href="../word-outlook/">Word/Outlook</a><a href="../excel/">Excel</a><a href="../powerpoint/">PowerPoint</a><a href="../teams-meetings/" aria-current=page>Teams</a><a href="../agents/">Agents</a><a href="../prompts/">Prompts</a><a href="../safety/">Safety</a><a href="../troubleshooting/">Troubleshooting</a><a href="../references/">Sources</a></nav>
+<button type="button" class="theme" id="theme">Dark mode</button>
+</div></header>
+<div class="wrap">
+<div class="layout has-toc">
+<nav class="toc" aria-label="On this page"><div class="toc-in"><h2>On this page</h2><ol><li><a href="#setting">The organiser's setting</a></li><li><a href="#during">During the meeting</a></li><li><a href="#after">After the meeting</a></li><li><a href="#limits">Limits Microsoft lists</a></li></ol></div></nav>
+<main id="main"><article>
+<p class="eyebrow">Guide 6</p>
+<h1>Teams meetings</h1>
+<p class="lede">Copilot can summarise a meeting while it happens and after it ends. Whether it can depends mostly on a setting the organiser chose.</p>
+
+<div class="short"><h2>The short version</h2>
+<ul>
+<li>The <strong>organiser</strong> controls Copilot for their meeting. If it's off, nobody can turn it on.</li>
+<li>To ask questions <strong>after</strong> the meeting, transcription must have been on.</li>
+<li>It doesn't work in meetings hosted by another organisation.</li>
+<li>Check summaries against what you remember before you act on them or forward them.</li>
+</ul></div>
+
+<h2 id="setting"><span class="sec-num">1</span>The organiser's setting</h2>
+<p>In <em>Meeting options</em>, under <em>Copilot and other AI</em>, the organiser picks one of three choices (Microsoft, 2026h):</p>
+<table>
+<thead><tr><th>Choice</th><th>What it means</th></tr></thead>
+<tbody>
+<tr><td><strong>During and after the meeting</strong></td><td>Transcription is required. Copilot starts and stops with transcription, and works afterwards.</td></tr>
+<tr><td><strong>Only during the meeting</strong></td><td>Copilot uses speech-to-text and is available only live. Untranscribed speech and Copilot chats are not available after the meeting ends.</td></tr>
+<tr><td><strong>Off</strong></td><td>Copilot, recording and transcription are all disabled.</td></tr>
+</tbody></table>
+<p>If you organise meetings, pick deliberately. If you attend them and want recaps, ask the organiser to choose the first option. Which choices are available can also depend on your company's policy, sensitivity labels and meeting templates.</p>
+
+<h2 id="during"><span class="sec-num">2</span>During the meeting</h2>
+<ul>
+<li>Copilot can summarise key discussion points, note who said what, suggest action items and answer questions in real time.</li>
+<li>You talk to it in a <strong>private chat</strong>. Other attendees do not see your questions. Prompt suggestions appear under <em>View prompts</em>.</li>
+<li>If you join more than <strong>5 minutes</strong> late and Copilot is active, it offers a catch-up summary.</li>
+</ul>
+<div class="promptbox"><span class="label">Prompt</span><pre>What has been decided so far, and what is still open?
+List any action items with the person responsible, if one was named.</pre></div>
+
+<h2 id="after"><span class="sec-num">3</span>After the meeting</h2>
+<p>Open Copilot from the meeting chat or the <em>Recap</em> tab. Copilot cites its sources. Long answers (over 1,300 characters) can open in Word, and tables can open in Excel (Microsoft, 2026h).</p>
+<div class="promptbox"><span class="label">Prompt</span><pre>Write follow-up notes for the people who attended.
+Include decisions, action items (owner and date if mentioned), and open questions.
+Use only what was said in the meeting. If something is unclear, flag it instead of filling it in.</pre></div>
+
+<h2 id="limits"><span class="sec-num">4</span>Limits Microsoft lists</h2>
+<ul>
+<li>Doesn't work in meetings <strong>hosted outside your organisation</strong>.</li>
+<li>After-meeting questions about spoken content <strong>need a transcript</strong>.</li>
+<li>In a recurring meeting, earlier Copilot conversation history is lost if a later meeting in the series is transcribed. If the transcript is gone, Copilot is unavailable and history is removed.</li>
+<li>Export to Word or Excel can be blocked by a sensitivity label or by the option that turns off copying and forwarding of chat, captions and transcripts.</li>
+<li><strong>Intelligent recap</strong> needs a Teams Premium add-on or a Copilot licence.</li>
+</ul>
+<div class="callout warn"><strong>Be careful with people's words</strong><p>Summaries can misattribute or soften what someone said. Check anything that affects a person, a decision or a customer. Microsoft also restricts Copilot from judging an employee's performance or emotional state from workplace communication (Microsoft, 2026d).</p></div>
+<p class="meta">Sources: Microsoft (2026d, 2026h). The Teams page shows no update date. Full details on the <a href="../references/">sources page</a>. Symptoms and fixes are in <a href="../troubleshooting/#teams">Troubleshooting</a>.</p>
+<p class="meta">Last checked against Microsoft's documentation: 16 October 2026. Copilot changes often, so check the sources at the end of the page.</p>
+<div class="pager"><a href="../powerpoint/">&larr; PowerPoint</a><a href="../agents/">Agents &rarr;</a></div>
+</article></main>
+</div>
+</div>
+<footer><div class="wrap">
+<p>An independent guide for people who use Microsoft Copilot at work. It is not made by, endorsed by, or affiliated with Microsoft. Microsoft, Copilot, Word, Excel, PowerPoint, Outlook and Teams are trademarks of Microsoft.</p>
+<p>Content is licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Format inspired by <a href="https://www.guidesforhumans.com/">Guides for Humans</a>. All text here is original. Prices and features change; the <a href="../references/">sources page</a> links to Microsoft's own pages.</p>
+</div></footer>
+<script src="../assets/app.js" defer></script>
+</body>
+</html>

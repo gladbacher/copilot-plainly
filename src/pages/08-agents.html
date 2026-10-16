@@ -1,0 +1,74 @@
+slug: agents
+order: 8
+nav: yes
+navlabel: Agents
+title: Agents
+desc: What agents are in Microsoft Copilot, what Researcher and Analyst do, which others exist, and why one might be missing for you.
+toc: yes
+verified: yes
+---
+<p class="eyebrow">Guide 7</p>
+<h1>Agents</h1>
+<p class="lede">An agent is Copilot set up for one kind of job. You pick it, then give it the task.</p>
+
+<div class="short"><h2>The short version</h2>
+<ul>
+<li>Microsoft ships a set of agents. <strong>Researcher</strong> and <strong>Analyst</strong> are the two most useful at work.</li>
+<li>Researcher is slower on purpose and gives a cited report. Use normal chat for quick things.</li>
+<li>Your company decides which agents exist for you. A missing one usually means licence or admin settings.</li>
+</ul></div>
+
+<h2 id="what"><span class="sec-num">1</span>What an agent is</h2>
+<p>Microsoft describes agents as scoped or focused versions of Copilot that act as assistants and can automate processes (Microsoft, 2026a). In the Copilot app you find them under <em>Agents</em> in Chat. Which ones you see depends on your subscription, and your administrator controls which agents are allowed (Microsoft, 2026d, 2026n).</p>
+
+<h2 id="researcher"><span class="sec-num">2</span>Researcher</h2>
+<p>Researcher handles complex, multi-step research. It draws on the web <em>and</em> your work content (files, emails, meetings and chats you can access) and produces a report with organised sections, cited sources and often charts. It follows the same permissions and policies as the rest of Copilot (Microsoft, 2026m).</p>
+<table>
+<thead><tr><th>You need…</th><th>Choose</th></tr></thead>
+<tbody>
+<tr><td>A quick summary, a short reply, light brainstorming</td><td>Standard Copilot chat</td></tr>
+<tr><td>Deeper reasoning across web and work sources, and a report you can share</td><td>Researcher</td></tr>
+<tr><td>Citations and clean structure for a decision</td><td>Researcher</td></tr>
+<tr><td>A back-and-forth without heavy analysis</td><td>Standard Copilot chat</td></tr>
+</tbody></table>
+<p class="meta">Source: Microsoft (2026m). Researcher deliberately spends longer retrieving and analysing.</p>
+<h3>Getting a better report</h3>
+<ul>
+<li><strong>Be specific.</strong> Clear, detailed questions give more focused results.</li>
+<li><strong>Define the scope.</strong> Say whether you want work sources, the web, or both.</li>
+<li><strong>Answer its questions.</strong> It may ask clarifying questions first. That step steers the final report.</li>
+</ul>
+<div class="promptbox"><span class="label">Prompt · Researcher</span><pre>Research [topic] for a decision on [decision].
+Scope: [the web only / our internal documents and emails only / both].
+I need: the key findings, where sources disagree, risks, and a recommendation.
+Cite every claim. Mark anything you could not verify.</pre></div>
+
+<h2 id="analyst"><span class="sec-num">3</span>Analyst</h2>
+<p>Microsoft describes Analyst as turning raw data into insights and clear visualisations for business metrics, trends and forecasts (Microsoft, 2026n). For work inside a spreadsheet itself, see <a href="../excel/">Excel</a>.</p>
+<div class="promptbox"><span class="label">Prompt · Analyst</span><pre>Here is my data: [attach file].
+What are the three biggest trends, and one number that doesn't fit?
+Show a chart for each trend and explain how you calculated it.</pre></div>
+
+<h2 id="others"><span class="sec-num">4</span>Other Microsoft-built agents</h2>
+<table>
+<thead><tr><th>Agent</th><th>What it does</th><th>Where</th></tr></thead>
+<tbody>
+<tr><td>Visual Creator</td><td>Turns descriptions into visuals, prototypes, videos and interactive scenarios</td><td>Shown by default</td></tr>
+<tr><td>Idea Coach</td><td>Generates and refines ideas into structured plans</td><td>Add via <em>All agents</em></td></tr>
+<tr><td>Writing Coach</td><td>Feedback on tone, grammar and style</td><td>Add via <em>All agents</em></td></tr>
+<tr><td>Prompt Coach</td><td>Teaches you to structure prompts</td><td>Add via <em>All agents</em></td></tr>
+<tr><td>Learning Coach</td><td>Helps master subjects and build study plans</td><td>Add via <em>All agents</em></td></tr>
+<tr><td>Career Coach</td><td>Skills, goals and career planning for students and institutions</td><td>Add via <em>All agents</em></td></tr>
+</tbody></table>
+<p class="meta">Source: Microsoft (2026n). Analyst and Researcher are also shown by default.</p>
+
+<h2 id="missing"><span class="sec-num">5</span>"I can't see an agent"</h2>
+<ul>
+<li>Microsoft says availability varies by subscription type. A missing agent can mean you lack a Copilot licence, or your administrator hasn't enabled it (Microsoft, 2026n).</li>
+<li>With the Basic versions, agents grounded in instructions and public websites are included. Custom agents and agents that use work data are pay-as-you-go (Microsoft, 2026a).</li>
+</ul>
+<div class="callout warn"><strong>Sources disagree on Researcher</strong><p>One Microsoft Learn page says Researcher is part of the core experience for licensed users. A Microsoft Support page I found describes it as available to certain consumer subscribers. I couldn't settle this for a work account, so check with IT.</p></div>
+
+<h2 id="custom"><span class="sec-num">6</span>Agents your company builds</h2>
+<p>Companies can build their own agents, for example for an HR or help-desk process, using tools such as Copilot Studio (Microsoft, 2026a). Before using one, read its privacy statement. Agents built by others handle your data under their own terms (Microsoft, 2026d). See <a href="../safety/#web">Safety</a>.</p>
+<p class="meta">Sources: Microsoft (2026a, 2026d, 2026m, 2026n). Full details on the <a href="../references/">sources page</a>.</p>

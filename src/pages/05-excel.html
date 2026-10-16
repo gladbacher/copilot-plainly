@@ -1,0 +1,73 @@
+slug: excel
+order: 5
+nav: yes
+navlabel: Excel
+title: Excel
+desc: What Microsoft Copilot can do in Excel, the three modes, which devices can edit, and what Microsoft's documentation does not say.
+toc: yes
+verified: yes
+---
+<p class="eyebrow">Guide 4</p>
+<h1>Excel</h1>
+<p class="lede">Copilot in Excel can change your workbook, not just talk about it. That makes the mode you pick matter.</p>
+
+<div class="short"><h2>The short version</h2>
+<ul>
+<li>There are three modes: <strong>Allow editing</strong>, <strong>Plan</strong> and <strong>Chat only</strong>. Use Plan or Chat only when the file matters.</li>
+<li>It uses Excel's own features (formulas, charts, PivotTables), so what it makes stays editable.</li>
+<li>Editing works on Windows, Mac and the web. Phones are chat only for now.</li>
+<li>Keep a copy before a big multi-step change.</li>
+</ul></div>
+
+<h2 id="can"><span class="sec-num">1</span>What it can do</h2>
+<p>According to Microsoft (2026i), Copilot in Excel can:</p>
+<ul>
+<li>Add, rename and delete sheets, change cells and ranges, and apply formatting, validation and layouts.</li>
+<li>Generate data and formulas across sheets.</li>
+<li>Create charts, PivotTables and shapes.</li>
+<li>Answer questions about your data, and sort and filter.</li>
+<li>Search the web and cite sources.</li>
+<li>Import data from other workbooks (OneDrive, SharePoint or your computer).</li>
+<li>Run saved "skills" for repeatable tasks.</li>
+</ul>
+<p>Microsoft says it updates your workbook <em>using Excel's built-in features</em>, so the content stays editable. A Stop button lets you halt a task that is running.</p>
+
+<h2 id="modes"><span class="sec-num">2</span>The three modes</h2>
+<table>
+<thead><tr><th>Mode</th><th>What happens</th><th>Use it when</th></tr></thead>
+<tbody>
+<tr><td><strong>Allow editing</strong> (default)</td><td>Handles multi-step tasks and edits the workbook directly</td><td>A throwaway file, or you've saved a copy</td></tr>
+<tr><td><strong>Plan</strong></td><td>Proposes a plan for you to review before any change</td><td>A file other people rely on</td></tr>
+<tr><td><strong>Chat only</strong></td><td>Analyses and answers; does not modify the workbook</td><td>You only want an explanation or a formula to copy</td></tr>
+</tbody></table>
+<p class="meta">Source: Microsoft (2026i). The page does not use the phrase "Agent mode"; Microsoft's other pages and blog posts do.</p>
+
+<h2 id="where"><span class="sec-num">3</span>Where it works</h2>
+<table>
+<thead><tr><th>Platform</th><th>Modes available</th></tr></thead>
+<tbody>
+<tr><td>Windows, Mac, web</td><td>Edit, chat and plan</td></tr>
+<tr><td>iPad</td><td>Chat and plan (editing is rolling out)</td></tr>
+<tr><td>iPhone</td><td>Chat only (editing is rolling out)</td></tr>
+<tr><td>Android</td><td>Chat only</td></tr>
+</tbody></table>
+<p>Access depends on having an eligible Copilot licence and on your organisation's settings (Microsoft, 2026i).</p>
+
+<h2 id="prompts"><span class="sec-num">4</span>Prompts to try</h2>
+<div class="promptbox"><span class="label">Prompt · Chat only</span><pre>Look at the data on this sheet. Tell me three things that stand out, and one thing that looks like an error or an outlier.
+Explain how you know. Don't change anything.</pre></div>
+<div class="promptbox"><span class="label">Prompt · Plan</span><pre>I want a summary table of [measure] by [category] and [month], plus a chart that shows the trend.
+Show me your plan first. Use formulas, not pasted values, so the table updates when the data does.</pre></div>
+<div class="promptbox"><span class="label">Prompt · formula help</span><pre>Write a formula for column [D] that [describes what it should calculate].
+Explain it in one sentence, and tell me what happens if a cell in [B] is empty.</pre></div>
+
+<h2 id="unknown"><span class="sec-num">5</span>What Microsoft's page doesn't say</h2>
+<div class="callout warn"><strong>Gaps I couldn't fill</strong><p>The Excel support page does not say whether your data must be formatted as a table, how large a workbook can be, which functions are supported, or how to undo a Copilot change. I would not assume anything on these. Test on a copy first, and ask your IT team if you hit limits.</p></div>
+
+<h2 id="check"><span class="sec-num">6</span>Check its work</h2>
+<ul>
+<li>Click into a few generated cells and read the formulas. Do they refer to the right ranges?</li>
+<li>Spot-check one total by hand.</li>
+<li>Be most careful when it filters or sorts. Make sure rows weren't dropped.</li>
+</ul>
+<p class="meta">Source: Microsoft (2026i). Full details on the <a href="../references/">sources page</a>. Need a different kind of analysis? Look at the Analyst agent on <a href="../agents/">the Agents page</a>.</p>
