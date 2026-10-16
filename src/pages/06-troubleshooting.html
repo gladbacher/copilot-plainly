@@ -1,0 +1,81 @@
+slug: troubleshooting
+order: 6
+nav: yes
+navlabel: Troubleshooting
+title: When it breaks
+desc: Fixes for missing Copilot buttons, wrong account, empty answers, blocked access and Teams meeting recaps.
+toc: yes
+verified: yes
+---
+<p class="eyebrow">Guide 5</p>
+<h1>When it breaks</h1>
+<p class="lede">Copilot not showing up, not seeing your files, or not answering. Start with the first one. It is the cause more often than not.</p>
+
+<div class="short"><h2>The short version</h2>
+<ul>
+<li>Most problems are the <strong>account</strong> (personal instead of work) or the <strong>licence</strong> (the thing you expected isn't included in yours).</li>
+<li>Steps marked <span class="pill">Microsoft</span> come from Microsoft's documentation. Steps marked <span class="pill soon">Reported</span> are commonly suggested elsewhere; I have not confirmed them in Microsoft's pages.</li>
+</ul></div>
+
+<h2 id="account"><span class="sec-num">1</span>"I'm not sure I'm in the right Copilot"</h2>
+<p><span class="pill">Microsoft</span> Work and personal accounts keep separate chats, files, and protections. In the work version you should see <em>Work</em> under your profile and a green data protection shield (Microsoft, 2026e).</p>
+<ol>
+<li>Sign out, then sign in at <code>copilot.cloud.microsoft</code> with your work email.</li>
+<li>Check the label under your name: <em>Copilot Chat (Basic)</em>, <em>M365 Copilot (Basic)</em> or <em>M365 Copilot (Premium)</em> (Microsoft, 2026b).</li>
+<li>In Edge, make sure the browser profile itself is signed in with your work account.</li>
+</ol>
+
+<h2 id="missing"><span class="sec-num">2</span>"There's no Copilot button in Word, Excel or PowerPoint"</h2>
+<p>Work down this list:</p>
+<ol>
+<li><strong>Check your label.</strong> <em>Copilot Chat (Basic)</em> does not include Copilot inside Word, Excel, PowerPoint or OneNote (Microsoft, 2026a).</li>
+<li><strong>Know the April 2026 report.</strong> Several university IT pages say embedded Copilot in these apps ended for people without a paid licence around then. Microsoft's overview still describes standard access for the Basic tier. If you lost it recently, ask IT before spending time on fixes.</li>
+<li><strong>Ask IT to check your licence.</strong> Microsoft publishes a checker for administrators: <a href="https://aka.ms/CopilotLicenseDetails">Copilot License Details</a> (Microsoft, 2026g).</li>
+<li><span class="pill soon">Reported</span> In the app, open <em>File &gt; Account</em> and look for <em>Update License</em>, then restart the app. The button is not always there.</li>
+<li><span class="pill soon">Reported</span> Make sure the app is up to date. Some features are reported to be missing on the Semi-Annual Enterprise Channel; your update channel is shown under <em>File &gt; Account</em>.</li>
+</ol>
+<div class="callout"><strong>An admin setting can switch it off</strong><p><span class="pill">Microsoft</span> If your company turns off "connected experiences that analyze your content", Copilot is unavailable in Word, Excel, OneNote, Outlook and PowerPoint, regardless of licence (Microsoft, 2026d).</p></div>
+
+<h2 id="blocked"><span class="sec-num">3</span>"It says access is turned off"</h2>
+<p><span class="pill">Microsoft</span> Administrators can block Copilot Chat for everyone or for chosen groups, including people with a paid licence. You may still see <em>Chat</em> in the app menu, but selecting it shows a message that access is disabled by policy. Your company can add a link there to its own guidance, titled <em>View info from your organization</em> (Microsoft, 2026e). Follow that link or ask IT.</p>
+<p><span class="pill">Microsoft</span> If the app won't load at all, IT may be blocking part of <code>*.cloud.microsoft</code>. Microsoft says all of that domain needs to be allowed (Microsoft, 2026e).</p>
+
+<h2 id="files"><span class="sec-num">4</span>"It can't find my files, emails or meetings"</h2>
+<ul>
+<li><strong>Basic versions can't search your work data.</strong> Upload or paste the content, or open it in Outlook or Teams first (Microsoft, 2026a). This isn't a fault.</li>
+<li><strong>Premium</strong> can. If it still can't see something, check that you have permission to open that file yourself. Copilot only shows what you can access (Microsoft, 2026d).</li>
+<li>Ask IT whether Work IQ has been switched off in your organisation. When it is off, answers aren't grounded in your work data (Microsoft, 2026a).</li>
+</ul>
+
+<h2 id="wrong"><span class="sec-num">5</span>"It invented something"</h2>
+<ol>
+<li>Ask: "Where does that come from? Quote the source." Then open the citation.</li>
+<li>Re-run with an instruction such as "use only the attached document; if it isn't there, say so".</li>
+<li>Run it a second time. Microsoft notes results vary from run to run (Microsoft, 2026c).</li>
+<li>If it is wrong about something that matters, don't send it. Fix it by hand.</li>
+</ol>
+
+<h2 id="teams"><span class="sec-num">6</span>"Copilot in my Teams meeting isn't working"</h2>
+<p>These come from Microsoft's page on Copilot in Teams meetings (Microsoft, 2026h).</p>
+<table>
+<thead><tr><th>Symptom</th><th>Likely reason</th></tr></thead>
+<tbody>
+<tr><td>Can't ask questions after the meeting</td><td>The organiser must have chosen "during and after the meeting", which needs transcription. Without a transcript, post-meeting questions about what was said don't work.</td></tr>
+<tr><td>Copilot is missing entirely</td><td>The organiser set Copilot to <em>Off</em>, which also disables recording and transcription. Only the organiser can change it (Online meeting options &gt; Copilot and other AI).</td></tr>
+<tr><td>It doesn't work in this meeting</td><td>It doesn't work in meetings hosted by another organisation.</td></tr>
+<tr><td>No "intelligent recap"</td><td>Recap needs a Teams Premium add-on or a Copilot licence.</td></tr>
+<tr><td>Can't export an answer to Word or Excel</td><td>A sensitivity label or a "turn off copying and forwarding" meeting option can block it.</td></tr>
+<tr><td>Joined late</td><td>If you join more than 5 minutes after the start and Copilot is on, it offers a catch-up summary.</td></tr>
+</tbody></table>
+
+<h2 id="escalate"><span class="sec-num">7</span>What to send IT</h2>
+<p>You'll get a faster answer with this:</p>
+<div class="promptbox"><span class="label">Message to IT</span><pre>Hi, Copilot isn't working for me.
+- App: [Word / Excel / Teams / copilot.cloud.microsoft]
+- What I expected: [e.g. a Copilot button in Word]
+- What happens: [e.g. no button / "access is turned off"]
+- Label under my name at copilot.cloud.microsoft: [Copilot Chat (Basic) / M365 Copilot (Basic) / M365 Copilot (Premium) / none]
+- Account I'm signed in with: [work email]
+- Since when: [date, or "never worked"]
+Can you check my licence assignment and any policies that apply to me?</pre></div>
+<p class="meta">Sources: Microsoft (2026a, 2026b, 2026c, 2026d, 2026e, 2026g, 2026h). Full details on the <a href="../references/">sources page</a>.</p>
