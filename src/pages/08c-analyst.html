@@ -1,0 +1,51 @@
+slug: analyst
+order: 82
+nav: no
+navlabel: Analyst
+section: agents
+title: Analyst
+desc: What Analyst does with your data, how to check its calculations, and how it differs from Copilot in Excel.
+toc: yes
+verified: yes
+---
+<p class="eyebrow">Agents · Analyst</p>
+<h1>Analyst</h1>
+<p class="lede">Hand it data. Get back trends, charts and an explanation of how it got there.</p>
+
+<div class="short"><h2>The short version</h2>
+<ul>
+<li>Microsoft describes Analyst as turning raw data into insights and clear visualisations for metrics, trends and forecasts (Microsoft, 2026n).</li>
+<li>Always request its working, then check one number by hand.</li>
+<li>Analyst is a licensed agent. I couldn't find a Microsoft page that gives it to Chat-only users.</li>
+</ul></div>
+
+<h2 id="what">What goes in, and what comes out</h2>
+<p>Give Analyst a data file or table and a question. It answers with findings and visualisations. Microsoft's page is a short description. I couldn't find a detailed Analyst page (the one I tried returned an error), so I can't tell you its file-size limits or supported formats. Test with a small, clean sample first.</p>
+<h2 id="check">Checking its calculations</h2>
+<ul>
+<li>Request an explanation of how Analyst calculated each figure and which columns it used.</li>
+<li>Recalculate one total or average yourself.</li>
+<li>Watch for rows dropped by a filter, and for dates read the wrong way round.</li>
+<li>Don't forward a chart until you can say in one sentence what it shows.</li>
+</ul>
+<h2 id="vs-excel">Analyst or Copilot in Excel?</h2>
+<table>
+<thead><tr><th>Choose</th><th>When</th></tr></thead>
+<tbody>
+<tr><td>Copilot in Excel</td><td>You want the workbook itself changed or built: formulas, PivotTables, charts that stay in the file. See <a href="../excel/">Excel</a>.</td></tr>
+<tr><td>Analyst</td><td>You want questions answered about data and a quick set of insights, without editing a workbook.</td></tr>
+</tbody></table>
+<p class="meta">This split is my rule of thumb, not a Microsoft statement.</p>
+
+<h2 id="chat" class="tiered"><span class="tier tier-chat">Chat</span>On Copilot Chat</h2>
+<p>Microsoft's Support comparison lists Analyst under the advanced agents on the licensed side (Microsoft, 2026ar). If it isn't in your Agents pane, use ordinary chat: paste a small table and ask for trends and a formula, as in the <a href="../excel/#chat">Excel Chat section</a>.</p>
+<div class="promptbox"><span class="label">Prompt · Chat</span><pre>Here is a table: [paste it].
+What are the three biggest trends, and one number that doesn't fit?
+Explain how you calculated each, and say what you could not tell from this data.</pre></div>
+
+<h2 id="premium" class="tiered"><span class="tier tier-premium">Premium</span>With M365 Copilot (Premium)</h2>
+<p>Analyst is pinned by default where you have it (Microsoft, 2026ah). Open it from the Agents pane and attach your file.</p>
+<div class="promptbox"><span class="label">Prompt · Premium</span><pre>Here is my data: [attach file].
+What are the three biggest trends, and one number that doesn't fit?
+Show a chart for each trend and explain how you calculated it.</pre></div>
+<p class="meta">Sources: Microsoft (2026n, 2026ah, 2026ar). Full details on the <a href="../references/">sources page</a>.</p>

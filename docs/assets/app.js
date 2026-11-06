@@ -63,10 +63,10 @@
         ['M365 Copilot (Basic)','m365basic'],
         ['M365 Copilot (Premium)','premium'],
         ['I can’t tell, or I don’t see a label','unknown']]},
-      basic:{r:'<p><strong>You have the free chat.</strong> It answers from the web. It can use a work file only if you upload or paste it, or if you open it alongside Outlook or Teams.</p><p>Read <a href="copilot-chat/">Copilot Chat</a> next, then <a href="prompts/">the prompt library</a>.</p>'},
-      m365basic:{r:'<p><strong>You have standard access inside some apps.</strong> That covers Word, Excel, PowerPoint and OneNote, but not automatic access to your emails, meetings and files. Capacity can vary through the day.</p><p>Read <a href="what-is-copilot/">what each tier gives you</a>, then <a href="copilot-chat/">Copilot Chat</a>.</p>'},
-      premium:{r:'<p><strong>You have the full add-on.</strong> Copilot can reach your work data automatically through Microsoft Graph, within what you are already allowed to see.</p><p>Read <a href="safety/">Safety</a> first, then <a href="prompts/">the prompt library</a>.</p>'},
-      unknown:{r:'<p><strong>Check your sign-in first.</strong> Go to <code>copilot.cloud.microsoft</code> and sign in with your <em>work</em> account. Look for the word “Work” under your name and the green shield. If you still see no label, ask IT which licence you have.</p><p>See <a href="start/">Start here</a> or <a href="troubleshooting/">Troubleshooting</a>.</p>'}
+      basic:{r:'<p><strong>You are on the Chat track.</strong> Free chat that answers from the web. It uses a work file only if you give it one.</p><p>Go to <a href="copilot-chat/#chat">Copilot Chat</a>, then <a href="prompts/#chat">the prompt library</a>.</p>'},
+      m365basic:{r:'<p><strong>You are on the Chat track.</strong> Microsoft says this label has standard access to Copilot inside Word, Excel, PowerPoint and OneNote, subject to capacity. Open Word and look for the Copilot button to see whether you have it.</p><p>Go to <a href="copilot-chat/#chat">Copilot Chat</a>, then <a href="what-is-copilot/#chat">What you get</a>.</p>'},
+      premium:{r:'<p><strong>You are on the Premium track.</strong> Copilot can reach your work data automatically, within what you can already open.</p><p>Go to <a href="copilot-chat/#premium">Copilot Chat and work data</a>, then <a href="safety/">Safety</a>.</p>'},
+      unknown:{r:'<p><strong>Check your sign-in first.</strong> Go to <code>copilot.cloud.microsoft</code> and sign in with your <em>work</em> account. Look for the word “Work” under your name and the green shield. Still no label? Open <a href="https://aka.ms/CopilotLicenseDetails">Microsoft’s licence details page</a>, or see <a href="troubleshooting/#account">Troubleshooting</a>.</p>'}
     };
     var base=tree.getAttribute('data-base')||'';
     function show(id){

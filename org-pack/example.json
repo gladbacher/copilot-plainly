@@ -1,0 +1,56 @@
+{
+  "name": "Contoso",
+  "answers": {
+    "policy": {
+      "html": "<p>Read the Contoso AI use policy before you paste anything into Copilot.</p>",
+      "links": [
+        {
+          "text": "Contoso AI use policy",
+          "url": "https://intranet.contoso.example/ai-policy"
+        }
+      ]
+    },
+    "support": {
+      "html": "<p>Raise a ticket with the Service Desk and put \"Copilot\" in the title.</p>",
+      "links": [
+        {
+          "text": "Service Desk",
+          "url": "https://intranet.contoso.example/help"
+        }
+      ]
+    },
+    "tiers": {
+      "html": "<p>Everyone has Copilot Chat. About 500 people have the Premium licence. Request one through your line manager.</p>",
+      "links": []
+    },
+    "agents": {
+      "html": "<p>Approved agents: the Contoso HR helper and the Policy explainer.</p>",
+      "links": []
+    },
+    "agent-sharing": {
+      "html": "<p>You may build agents for your own team. Do not share an agent company-wide without review.</p>",
+      "links": []
+    },
+    "retention": {
+      "html": "<p>Copilot chats are kept for 180 days.</p>",
+      "links": []
+    },
+    "data-rules": {
+      "html": "<p>Do not paste anything classified Confidential or above. Never paste customer personal data.</p>",
+      "links": []
+    },
+    "report-oversharing": {
+      "html": "<p>If Copilot shows you a file you should not see, do not use it. Email security@contoso.example with the file name.</p>",
+      "links": []
+    },
+    "feedback": {
+      "html": "<p>Tell the Copilot champions what worked and what did not.</p>",
+      "url": "https://forms.contoso.example/copilot-feedback",
+      "links": []
+    },
+    "training": {
+      "html": "<p>Join a monthly Copilot clinic. Find your local champion on the intranet.</p>",
+      "links": []
+    }
+  }
+}

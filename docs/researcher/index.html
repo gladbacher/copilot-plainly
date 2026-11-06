@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Researcher | Copilot, plainly</title>
+<meta name="description" content="When to use Researcher instead of ordinary chat, how to scope it, how to read the cited report, and who has it.">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar"><div class="topbar-in">
+<a class="brand" href="../">Copilot<span>, plainly</span></a>
+<nav class="nav" aria-label="Main"><a href="../">Home</a><a href="../start/">Start here</a><a href="../what-is-copilot/">What it is</a><a href="../copilot-chat/">Copilot Chat</a><a href="../word-outlook/">Word/Outlook</a><a href="../excel/">Excel</a><a href="../powerpoint/">PowerPoint</a><a href="../teams-meetings/">Teams</a><a href="../agents/" aria-current=page>Agents</a><a href="../prompts/">Prompts</a><a href="../safety/">Safety</a><a href="../troubleshooting/">Troubleshooting</a><a href="../references/">Sources</a></nav>
+<button type="button" class="theme" id="theme">Dark mode</button>
+</div></header>
+<div class="wrap">
+<div class="layout has-toc">
+<nav class="toc" aria-label="On this page"><div class="toc-in"><h2>On this page</h2><ol><li><a href="#when">When to use it</a></li><li><a href="#scope">Scope it, then answer its questions</a></li><li><a href="#read">Reading the report</a></li><li><a href="#chat">Chat: On Copilot Chat</a></li><li><a href="#premium">Premium: With M365 Copilot (Premium)</a></li></ol></div></nav>
+<main id="main"><article>
+<nav class="secnav" aria-label="In this section"><a href="../agents/">Overview</a><a href="../researcher/" aria-current=page>Researcher</a><a href="../analyst/">Analyst</a><a href="../other-agents/">Other agents</a><a href="../make-an-agent/">Make your own</a><a href="../agents-safely/">Using agents safely</a><a href="../agent-prompts/">Agent prompts</a></nav>
+<p class="eyebrow">Agents · Researcher</p>
+<h1>Researcher</h1>
+<p class="lede">Slow on purpose. It does deep research and hands you a cited report.</p>
+
+<div class="short"><h2>The short version</h2>
+<ul>
+<li>Use it for multi-step research where you want citations. Use ordinary chat for quick things.</li>
+<li>Say whether you want the web, your work sources, or both, and answer its clarifying questions.</li>
+<li>Open the citations before you rely on the report.</li>
+</ul></div>
+
+<h2 id="when">When to use it</h2>
+<p>Researcher handles complex, multi-step research. It draws on the web and, where you have access, your work content (files, emails, meetings and chats you can open) and produces a report with organised sections, cited sources and often visuals. It follows the same permissions as the rest of Copilot (Microsoft, 2026m).</p>
+<table>
+<thead><tr><th>You need…</th><th>Choose</th></tr></thead>
+<tbody>
+<tr><td>A quick summary, a short reply, light brainstorming</td><td>Ordinary Copilot chat</td></tr>
+<tr><td>Deeper reasoning across sources, and a report you can share</td><td>Researcher</td></tr>
+<tr><td>Citations and clean structure for a decision</td><td>Researcher</td></tr>
+<tr><td>A back-and-forth without heavy analysis</td><td>Ordinary Copilot chat</td></tr>
+</tbody></table>
+<p class="meta">Source: Microsoft (2026m). Researcher deliberately spends longer retrieving and analysing. I have not published a typical run time because I couldn't confirm one on a Microsoft page.</p>
+
+<h2 id="scope">Scope it, then answer its questions</h2>
+<ul>
+<li><strong>Be specific.</strong> Clear, detailed questions give more focused results (Microsoft, 2026m).</li>
+<li><strong>Define the scope.</strong> Say whether you want the web, work sources, or both (Microsoft, 2026m).</li>
+<li><strong>Answer the clarifying questions.</strong> It may ask first. That step steers the final report (Microsoft, 2026m).</li>
+</ul>
+
+<h2 id="read">Reading the report</h2>
+<ol>
+<li>Read the summary, then the sections that matter to your decision.</li>
+<li>Open the citations for any figure, quote or claim you plan to repeat.</li>
+<li>Look for what it says it could not verify. Ask for that explicitly in your prompt.</li>
+<li>Ask a follow-up in the same chat: "expand section 3", "what do the sources disagree on?"</li>
+</ol>
+
+<h2 id="chat" class="tiered"><span class="tier tier-chat">Chat</span>On Copilot Chat</h2>
+<p>I couldn't find any Microsoft page that gives Researcher to work users without a Copilot licence. Microsoft's Support comparison puts "advanced agents like Researcher" on the licensed side and lists the unlicensed side as "Limited (no advanced agents)" (Microsoft, 2026ar). If you can't see it in the Agents pane, that is the likely reason.</p>
+<p>For similar help with web research, use ordinary chat with a prompt that asks for sources:</p>
+<div class="promptbox"><span class="label">Prompt · Chat</span><pre>Research [topic] using public web sources for a decision on [decision].
+Give me the key findings, where sources disagree, risks, and a recommendation.
+Cite every claim with its link. Mark anything you could not verify.</pre></div>
+
+<h2 id="premium" class="tiered"><span class="tier tier-premium">Premium</span>With M365 Copilot (Premium)</h2>
+<p>Researcher is listed with the licensed agents (Microsoft, 2026ar, 2026ah). Find it in the Agents pane (Microsoft, 2026m). If it isn't there, Microsoft says your administrator may not have enabled it (Microsoft, 2026v). That is an organisation setting.</p>
+<div class="callout"><strong>An earlier disagreement, now settled</strong><p>I previously noted that a Microsoft Learn page and a Support page seemed to disagree on Researcher. On re-reading (6 November 2026), the Support page's "Premium and Pro" wording refers to personal subscriptions. For work accounts, the pages I read agree that Researcher comes with a Copilot licence (Microsoft, 2026v, 2026ah). I did not find a page that gives it to unlicensed work users.</p></div>
+<div class="promptbox"><span class="label">Prompt · Premium</span><pre>Research [topic] for a decision on [decision].
+Scope: [the web only / our internal documents and emails only / both].
+I need: the key findings, where sources disagree, risks, and a recommendation.
+Cite every claim. Mark anything you could not verify.</pre></div>
+<p class="meta">Sources: Microsoft (2026m, 2026v, 2026ah, 2026ar). Full details on the <a href="../references/">sources page</a>.</p>
+<p class="meta">Last checked against Microsoft's documentation: 6 November 2026. Copilot changes often, so check the sources at the end of the page.</p>
+<div class="pager"><a href="../agents/">&larr; Agents</a><a href="../analyst/">Analyst &rarr;</a></div>
+</article></main>
+</div>
+</div>
+<footer><div class="wrap">
+<p class="feedback">Was this useful? <a href="https://github.com/gladbacher/copilot-plainly/issues/new?title=Feedback%3A%20Researcher">Report a problem or suggest a fix</a>.</p>
+<p>An independent guide for people who use Microsoft Copilot at work. It is not made by, endorsed by, or affiliated with Microsoft. Microsoft, Copilot, Word, Excel, PowerPoint, Outlook and Teams are trademarks of Microsoft.</p>
+<p>Content is licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Format inspired by <a href="https://www.guidesforhumans.com/">Guides for Humans</a>. All text here is original. Prices and features change; the <a href="../references/">sources page</a> links to Microsoft's own pages.</p>
+</div></footer>
+<script src="../assets/app.js" defer></script>
+</body>
+</html>

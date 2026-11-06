@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Analyst | Copilot, plainly</title>
+<meta name="description" content="What Analyst does with your data, how to check its calculations, and how it differs from Copilot in Excel.">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar"><div class="topbar-in">
+<a class="brand" href="../">Copilot<span>, plainly</span></a>
+<nav class="nav" aria-label="Main"><a href="../">Home</a><a href="../start/">Start here</a><a href="../what-is-copilot/">What it is</a><a href="../copilot-chat/">Copilot Chat</a><a href="../word-outlook/">Word/Outlook</a><a href="../excel/">Excel</a><a href="../powerpoint/">PowerPoint</a><a href="../teams-meetings/">Teams</a><a href="../agents/" aria-current=page>Agents</a><a href="../prompts/">Prompts</a><a href="../safety/">Safety</a><a href="../troubleshooting/">Troubleshooting</a><a href="../references/">Sources</a></nav>
+<button type="button" class="theme" id="theme">Dark mode</button>
+</div></header>
+<div class="wrap">
+<div class="layout has-toc">
+<nav class="toc" aria-label="On this page"><div class="toc-in"><h2>On this page</h2><ol><li><a href="#what">What goes in, and what comes out</a></li><li><a href="#check">Checking its calculations</a></li><li><a href="#vs-excel">Analyst or Copilot in Excel?</a></li><li><a href="#chat">Chat: On Copilot Chat</a></li><li><a href="#premium">Premium: With M365 Copilot (Premium)</a></li></ol></div></nav>
+<main id="main"><article>
+<nav class="secnav" aria-label="In this section"><a href="../agents/">Overview</a><a href="../researcher/">Researcher</a><a href="../analyst/" aria-current=page>Analyst</a><a href="../other-agents/">Other agents</a><a href="../make-an-agent/">Make your own</a><a href="../agents-safely/">Using agents safely</a><a href="../agent-prompts/">Agent prompts</a></nav>
+<p class="eyebrow">Agents · Analyst</p>
+<h1>Analyst</h1>
+<p class="lede">Hand it data. Get back trends, charts and an explanation of how it got there.</p>
+
+<div class="short"><h2>The short version</h2>
+<ul>
+<li>Microsoft describes Analyst as turning raw data into insights and clear visualisations for metrics, trends and forecasts (Microsoft, 2026n).</li>
+<li>Always request its working, then check one number by hand.</li>
+<li>Analyst is a licensed agent. I couldn't find a Microsoft page that gives it to Chat-only users.</li>
+</ul></div>
+
+<h2 id="what">What goes in, and what comes out</h2>
+<p>Give Analyst a data file or table and a question. It answers with findings and visualisations. Microsoft's page is a short description. I couldn't find a detailed Analyst page (the one I tried returned an error), so I can't tell you its file-size limits or supported formats. Test with a small, clean sample first.</p>
+<h2 id="check">Checking its calculations</h2>
+<ul>
+<li>Request an explanation of how Analyst calculated each figure and which columns it used.</li>
+<li>Recalculate one total or average yourself.</li>
+<li>Watch for rows dropped by a filter, and for dates read the wrong way round.</li>
+<li>Don't forward a chart until you can say in one sentence what it shows.</li>
+</ul>
+<h2 id="vs-excel">Analyst or Copilot in Excel?</h2>
+<table>
+<thead><tr><th>Choose</th><th>When</th></tr></thead>
+<tbody>
+<tr><td>Copilot in Excel</td><td>You want the workbook itself changed or built: formulas, PivotTables, charts that stay in the file. See <a href="../excel/">Excel</a>.</td></tr>
+<tr><td>Analyst</td><td>You want questions answered about data and a quick set of insights, without editing a workbook.</td></tr>
+</tbody></table>
+<p class="meta">This split is my rule of thumb, not a Microsoft statement.</p>
+
+<h2 id="chat" class="tiered"><span class="tier tier-chat">Chat</span>On Copilot Chat</h2>
+<p>Microsoft's Support comparison lists Analyst under the advanced agents on the licensed side (Microsoft, 2026ar). If it isn't in your Agents pane, use ordinary chat: paste a small table and ask for trends and a formula, as in the <a href="../excel/#chat">Excel Chat section</a>.</p>
+<div class="promptbox"><span class="label">Prompt · Chat</span><pre>Here is a table: [paste it].
+What are the three biggest trends, and one number that doesn't fit?
+Explain how you calculated each, and say what you could not tell from this data.</pre></div>
+
+<h2 id="premium" class="tiered"><span class="tier tier-premium">Premium</span>With M365 Copilot (Premium)</h2>
+<p>Analyst is pinned by default where you have it (Microsoft, 2026ah). Open it from the Agents pane and attach your file.</p>
+<div class="promptbox"><span class="label">Prompt · Premium</span><pre>Here is my data: [attach file].
+What are the three biggest trends, and one number that doesn't fit?
+Show a chart for each trend and explain how you calculated it.</pre></div>
+<p class="meta">Sources: Microsoft (2026n, 2026ah, 2026ar). Full details on the <a href="../references/">sources page</a>.</p>
+<p class="meta">Last checked against Microsoft's documentation: 6 November 2026. Copilot changes often, so check the sources at the end of the page.</p>
+<div class="pager"><a href="../researcher/">&larr; Researcher</a><a href="../other-agents/">Other agents &rarr;</a></div>
+</article></main>
+</div>
+</div>
+<footer><div class="wrap">
+<p class="feedback">Was this useful? <a href="https://github.com/gladbacher/copilot-plainly/issues/new?title=Feedback%3A%20Analyst">Report a problem or suggest a fix</a>.</p>
+<p>An independent guide for people who use Microsoft Copilot at work. It is not made by, endorsed by, or affiliated with Microsoft. Microsoft, Copilot, Word, Excel, PowerPoint, Outlook and Teams are trademarks of Microsoft.</p>
+<p>Content is licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Format inspired by <a href="https://www.guidesforhumans.com/">Guides for Humans</a>. All text here is original. Prices and features change; the <a href="../references/">sources page</a> links to Microsoft's own pages.</p>
+</div></footer>
+<script src="../assets/app.js" defer></script>
+</body>
+</html>

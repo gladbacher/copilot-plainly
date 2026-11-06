@@ -118,3 +118,53 @@ details{background:var(--surface);border:1px solid var(--line);border-radius:var
 summary{cursor:pointer;font-weight:600}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 @media print{.topbar,.toc,.copy,.theme,.pager{display:none}body{background:#fff;color:#000}}
+
+/* Tier badges: plain text labels, no JS needed */
+.tier{display:inline-block;font:700 .68rem var(--font);letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:99px;margin-right:10px;vertical-align:middle;border:1px solid currentColor}
+.tier-chat{background:var(--accent-soft);color:var(--accent)}
+.tier-premium{background:var(--warn-soft);color:var(--warn)}
+h2.tiered{border-top:2px solid var(--line);margin-top:2.6em;padding-top:.8em}
+
+/* Section mini-nav (agents) */
+.secnav{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 18px;padding:8px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);font-size:.9rem}
+.secnav a{padding:5px 10px;border-radius:8px;text-decoration:none;color:var(--muted)}
+.secnav a:hover{background:var(--accent-soft);color:var(--ink)}
+.secnav a[aria-current="page"]{background:var(--accent-soft);color:var(--ink);font-weight:600}
+
+/* Organisation edition */
+.orgbadge{font:600 .72rem var(--font);padding:3px 9px;border-radius:99px;background:var(--accent);color:var(--accent-ink);margin-right:auto;margin-left:-6px}
+.org-box{border:1px solid var(--accent);border-left:5px solid var(--accent);background:var(--accent-soft);border-radius:var(--radius);padding:10px 16px;margin:18px 0}
+.org-box.todo{border-style:dashed}
+.org-box p{margin:.3em 0}
+.org-h{font:700 .78rem var(--font)!important;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.feedback{font-weight:600}
+
+/* Track cards on the homepage */
+.tracks{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin:24px 0}
+.track{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:8px 20px 16px}
+.track h3{margin-top:.8em}
+.track ul{padding-left:1.1em;margin:.4em 0}
+
+/* Cheat sheets: one A4 page when printed */
+.sheet{display:grid;grid-template-columns:1fr 1fr;gap:10px 22px;font-size:.93rem;max-width:none}
+.sheet section{break-inside:avoid;border:1px solid var(--line);border-radius:10px;padding:8px 14px}
+.sheet h2{font-size:1.05rem;margin:0 0 4px;padding:0}
+.sheet ul,.sheet ol{margin:.2em 0;padding-left:1.2em}
+.sheet li{margin:.15em 0}
+.sheet .wide{grid-column:1 / -1}
+@media(max-width:700px){.sheet{grid-template-columns:1fr}}
+@media print{
+  .topbar,.toc,.copy,.theme,.pager,footer,.secnav,.skip,.noprint{display:none!important}
+  body{font-size:10pt;line-height:1.35;background:#fff;color:#000}
+  .layout{padding:0;display:block}
+  article{max-width:none}
+  body.cheat h1{font-size:18pt;margin:0 0 4pt}
+  body.cheat .eyebrow,body.cheat .lede{display:none}
+  .sheet{font-size:9pt;gap:5pt 10pt}
+  .sheet section{padding:4pt 8pt;border-color:#999}
+  .sheet h2{font-size:10.5pt}
+  .promptbox{border-color:#999;background:#f4f4f4}
+  .promptbox pre{font-size:8pt;padding:3pt 8pt}
+  .promptbox .label{padding:3pt 8pt 0}
+  @page{size:A4;margin:12mm}
+}

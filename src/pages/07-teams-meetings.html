@@ -1,5 +1,5 @@
 slug: teams-meetings
-order: 7
+order: 70
 nav: yes
 navlabel: Teams
 title: Teams meetings
@@ -19,7 +19,7 @@ verified: yes
 <li>Check summaries against what you remember before you act on them or forward them.</li>
 </ul></div>
 
-<h2 id="setting"><span class="sec-num">1</span>The organiser's setting</h2>
+<h2 id="setting">The organiser's setting</h2>
 <p>In <em>Meeting options</em>, under <em>Copilot and other AI</em>, the organiser picks one of three choices (Microsoft, 2026h):</p>
 <table>
 <thead><tr><th>Choice</th><th>What it means</th></tr></thead>
@@ -28,9 +28,9 @@ verified: yes
 <tr><td><strong>Only during the meeting</strong></td><td>Copilot uses speech-to-text and is available only live. Untranscribed speech and Copilot chats are not available after the meeting ends.</td></tr>
 <tr><td><strong>Off</strong></td><td>Copilot, recording and transcription are all disabled.</td></tr>
 </tbody></table>
-<p>If you organise meetings, pick deliberately. If you attend them and want recaps, ask the organiser to choose the first option. Which choices are available can also depend on your company's policy, sensitivity labels and meeting templates.</p>
+<p>If you organise meetings, pick deliberately. If you attend them and want recaps, you can suggest to the organiser that they choose the first option. Which choices are available can also depend on your company's policy, sensitivity labels and meeting templates.</p>
 
-<h2 id="during"><span class="sec-num">2</span>During the meeting</h2>
+<h2 id="during">During the meeting</h2>
 <ul>
 <li>Copilot can summarise key discussion points, note who said what, suggest action items and answer questions in real time.</li>
 <li>You talk to it in a <strong>private chat</strong>. Other attendees do not see your questions. Prompt suggestions appear under <em>View prompts</em>.</li>
@@ -39,13 +39,13 @@ verified: yes
 <div class="promptbox"><span class="label">Prompt</span><pre>What has been decided so far, and what is still open?
 List any action items with the person responsible, if one was named.</pre></div>
 
-<h2 id="after"><span class="sec-num">3</span>After the meeting</h2>
+<h2 id="after">After the meeting</h2>
 <p>Open Copilot from the meeting chat or the <em>Recap</em> tab. Copilot cites its sources. Long answers (over 1,300 characters) can open in Word, and tables can open in Excel (Microsoft, 2026h).</p>
 <div class="promptbox"><span class="label">Prompt</span><pre>Write follow-up notes for the people who attended.
 Include decisions, action items (owner and date if mentioned), and open questions.
 Use only what was said in the meeting. If something is unclear, flag it instead of filling it in.</pre></div>
 
-<h2 id="limits"><span class="sec-num">4</span>Limits Microsoft lists</h2>
+<h2 id="limits">Limits Microsoft lists</h2>
 <ul>
 <li>Doesn't work in meetings <strong>hosted outside your organisation</strong>.</li>
 <li>After-meeting questions about spoken content <strong>need a transcript</strong>.</li>
@@ -54,4 +54,19 @@ Use only what was said in the meeting. If something is unclear, flag it instead 
 <li><strong>Intelligent recap</strong> needs a Teams Premium add-on or a Copilot licence.</li>
 </ul>
 <div class="callout warn"><strong>Be careful with people's words</strong><p>Summaries can misattribute or soften what someone said. Check anything that affects a person, a decision or a customer. Microsoft also restricts Copilot from judging an employee's performance or emotional state from workplace communication (Microsoft, 2026d).</p></div>
+<h2 id="chat" class="tiered"><span class="tier tier-chat">Chat</span>With Copilot Chat</h2>
+<p>In Teams, Copilot Chat can see the meeting or item you have open, so you do not need to paste it (Microsoft, 2026a). Whether the meeting copilot (summaries, live questions, recap) is available to you depends on your tier and on the organiser's setting above. <em>Intelligent recap</em> needs a Teams Premium add-on or a Copilot licence, so on the Chat track expect the recap to be missing unless Teams Premium is on.</p>
+<p>What always works: copy the transcript or notes from the meeting chat and paste them into Copilot Chat.</p>
+<div class="promptbox"><span class="label">Prompt · Chat</span><pre>Below are the notes from our meeting. Write follow-up notes for the people who attended.
+Include decisions, action items (owner and date if mentioned), and open questions.
+Use only what is in the notes. If something is unclear, flag it instead of filling it in.
+
+[Paste the notes here]</pre></div>
+
+<h2 id="premium" class="tiered"><span class="tier tier-premium">Premium</span>With M365 Copilot (Premium)</h2>
+<p>Copilot works in the meeting itself and from the meeting chat or <em>Recap</em> tab afterwards, within the organiser's setting (Microsoft, 2026h). Use the prompts in the <em>During</em> and <em>After</em> sections above.</p>
+<div class="promptbox"><span class="label">Prompt · Premium</span><pre>Summarise the meeting for someone who missed it.
+Give the decisions, the action items with owners, and the open questions.
+Quote the part of the discussion each one came from.</pre></div>
+
 <p class="meta">Sources: Microsoft (2026d, 2026h). The Teams page shows no update date. Full details on the <a href="../references/">sources page</a>. Symptoms and fixes are in <a href="../troubleshooting/#teams">Troubleshooting</a>.</p>

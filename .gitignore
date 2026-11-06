@@ -1,2 +1,4 @@
 .DS_Store
 .claude/
+org-pack/*.json
+!org-pack/example.json

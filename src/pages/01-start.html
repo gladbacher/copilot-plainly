@@ -1,5 +1,5 @@
 slug: start
-order: 1
+order: 10
 nav: yes
 navlabel: Start here
 title: Start here
@@ -14,7 +14,7 @@ verified: yes
 <div class="short"><h2>The short version</h2>
 <ul>
 <li>Go to <code>copilot.cloud.microsoft</code> and sign in with your <strong>work</strong> account, not a personal one.</li>
-<li>Read the label under your name. It tells you which Copilot you have.</li>
+<li>Read the label under your name. It tells you which track to follow: Chat or Premium.</li>
 <li>Give Copilot a goal, who it is for, and the format you want. Then refine it.</li>
 </ul></div>
 
@@ -22,33 +22,44 @@ verified: yes
 <li><strong>Sign in with your work account</strong>
 Open <code>copilot.cloud.microsoft</code>. Use the email address your employer gave you. In the work version you should see the word <em>Work</em> under your profile and a green data protection shield. Personal accounts look different and have separate chats, files and protections (Microsoft, 2026a).</li>
 <li><strong>Read your label</strong>
-Under your name you will see one of three labels: <em>Copilot Chat (Basic)</em>, <em>M365 Copilot (Basic)</em> or <em>M365 Copilot (Premium)</em> (Microsoft, 2026b). Use the question below if you are unsure what yours means.</li>
+Under your name you will see one of three labels: <em>Copilot Chat (Basic)</em>, <em>M365 Copilot (Basic)</em> or <em>M365 Copilot (Premium)</em> (Microsoft, 2026b). The first two are the <strong>Chat track</strong> on this site. The third is the <strong>Premium track</strong>. If you see no label, use Microsoft's <a href="https://aka.ms/CopilotLicenseDetails">licence details page</a> or see <a href="../troubleshooting/#account">Troubleshooting</a>.</li>
 <li><strong>Send one good prompt</strong>
-Copy the prompt below, change the brackets, and send it. If the first answer is not right, say what to change. Refining is normal.</li>
+Pick the prompt for your track below, change the brackets, and send it. If the first answer is not right, say what to change. Refining is normal.</li>
 </ol>
 
-<div class="tree" id="tree" data-base="../">
-<h3>What does your label say?</h3>
-<ul>
-<li><strong>Copilot Chat (Basic):</strong> free chat that answers from the web. See <a href="../copilot-chat/">Copilot Chat</a>.</li>
-<li><strong>M365 Copilot (Basic):</strong> standard access in some apps. See <a href="../what-is-copilot/">what each version gives you</a>.</li>
-<li><strong>M365 Copilot (Premium):</strong> the full paid add-on. See <a href="../safety/">Safety</a>.</li>
-<li><strong>No label:</strong> see <a href="../troubleshooting/">Troubleshooting</a>.</li>
-</ul>
-</div>
+<aside class="org" data-key="tiers"></aside>
 
 <h2 id="first-prompt">Your first prompt</h2>
-<p>Microsoft says a prompt has four parts: a <strong>goal</strong> (the only required one), <strong>context</strong>, a <strong>source</strong> and your <strong>expectations</strong> (Microsoft, 2026c). This one uses three of them.</p>
+<p>Microsoft says a prompt has four parts: a <strong>goal</strong> (the only required one), <strong>context</strong>, a <strong>source</strong> and your <strong>expectations</strong> (Microsoft, 2026c). This one uses three of them and works on both tracks.</p>
 <div class="promptbox"><span class="label">Prompt</span><pre>I need to explain [topic or decision] to [who: my manager / a client / my team].
 They know [what they already know] and care about [what they care about].
 Write a first draft in under 150 words, in a friendly and direct tone.
 Then list the three questions they are most likely to ask.</pre></div>
-<div class="callout tip"><strong>Want it to use a document?</strong><p>With Copilot Chat (Basic) you have to upload the file or select it with your prompt. Copilot does not go looking through your files for you. See <a href="../copilot-chat/#files">giving it your files</a>.</p></div>
 
-<h2 id="next">Where next</h2>
+<h2 id="chat" class="tiered"><span class="tier tier-chat">Chat</span>Next, on the Chat track</h2>
+<p>Copilot does not go looking through your files for you. To use a document, upload it or select it with your prompt. See <a href="../copilot-chat/#files">giving it your files</a>.</p>
+<div class="promptbox"><span class="label">Prompt · Chat track</span><pre>Using only the document I have attached, summarise it in five bullet points for [who].
+If something is not in the document, say so instead of guessing.</pre></div>
 <ul>
-<li><a href="../what-is-copilot/">What Copilot is, and what it costs</a> to understand your label.</li>
+<li><a href="../what-is-copilot/#chat">What you get with Chat</a></li>
+<li><a href="../copilot-chat/#chat">Copilot Chat</a></li>
+<li><a href="../prompts/#chat">Prompt library for Chat</a></li>
+</ul>
+
+<h2 id="premium" class="tiered"><span class="tier tier-premium">Premium</span>Next, on the Premium track</h2>
+<p>Copilot can search your emails, files and meetings for you, within what you already have permission to open. You can name a file instead of uploading it.</p>
+<div class="promptbox"><span class="label">Prompt · Premium track</span><pre>Look at my emails and meetings from the last week about [project].
+Summarise what has been decided, what is still open, and anything waiting on me.
+Name the source of each point.</pre></div>
+<ul>
+<li><a href="../what-is-copilot/#premium">What you get with Premium</a></li>
+<li><a href="../copilot-chat/#premium">Copilot Chat and work data</a></li>
+<li><a href="../prompts/#premium">Prompt library for Premium</a></li>
+</ul>
+
+<h2 id="next">For everyone</h2>
+<ul>
 <li><a href="../safety/">Safety and privacy</a> before you paste anything sensitive.</li>
-<li><a href="../prompts/">The prompt library</a> for ready-made starting points.</li>
+<li><a href="../troubleshooting/">When it breaks</a> if something is missing.</li>
 </ul>
 <p class="meta">Sources: Microsoft (2026a), Microsoft (2026b), Microsoft (2026c). Full details on the <a href="../references/">sources page</a>.</p>

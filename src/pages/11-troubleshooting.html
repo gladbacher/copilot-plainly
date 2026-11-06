@@ -1,5 +1,5 @@
 slug: troubleshooting
-order: 11
+order: 120
 nav: yes
 navlabel: Troubleshooting
 title: When it breaks
@@ -17,7 +17,7 @@ verified: yes
 <li>Steps marked <span class="pill">Microsoft</span> come from Microsoft's documentation. Steps marked <span class="pill soon">Reported</span> are commonly suggested elsewhere; I have not confirmed them in Microsoft's pages.</li>
 </ul></div>
 
-<h2 id="account"><span class="sec-num">1</span>"I'm not sure I'm in the right Copilot"</h2>
+<h2 id="account">"I'm not sure I'm in the right Copilot"</h2>
 <p><span class="pill">Microsoft</span> Work and personal accounts keep separate chats, files, and protections. In the work version you should see <em>Work</em> under your profile and a green data protection shield (Microsoft, 2026e).</p>
 <ol>
 <li>Sign out, then sign in at <code>copilot.cloud.microsoft</code> with your work email.</li>
@@ -25,29 +25,29 @@ verified: yes
 <li>In Edge, make sure the browser profile itself is signed in with your work account.</li>
 </ol>
 
-<h2 id="missing"><span class="sec-num">2</span>"There's no Copilot button in Word, Excel or PowerPoint"</h2>
+<h2 id="missing">"There's no Copilot button in Word, Excel or PowerPoint"</h2>
 <p>Work down this list:</p>
 <ol>
-<li><strong>Check your label.</strong> <em>Copilot Chat (Basic)</em> does not include Copilot inside Word, Excel, PowerPoint or OneNote (Microsoft, 2026a).</li>
-<li><strong>Know the April 2026 report.</strong> Several university IT pages say embedded Copilot in these apps ended for people without a paid licence around then. Microsoft's overview still describes standard access for the Basic tier. If you lost it recently, ask IT before spending time on fixes.</li>
-<li><strong>Ask IT to check your licence.</strong> Microsoft publishes a checker for administrators: <a href="https://aka.ms/CopilotLicenseDetails">Copilot License Details</a> (Microsoft, 2026g).</li>
+<li><strong>Check your label.</strong> <em>Copilot Chat (Basic)</em> does not include Copilot inside Word, Excel, PowerPoint or OneNote. <em>M365 Copilot (Basic)</em> has standard access, subject to capacity (Microsoft, 2026a, 2026s).</li>
+<li><strong>Know the April 2026 report.</strong> Several university help pages say embedded Copilot in these apps ended for people without a paid licence around then. Microsoft's current pages match that for the <em>Copilot Chat (Basic)</em> label, but I couldn't find the original announcement or what decides which Basic label you get. If you lost it recently, check your label and your update channel first (below) before spending time on fixes.</li>
+<li><strong>Check your licence yourself.</strong> Microsoft publishes a licence details page: <a href="https://aka.ms/CopilotLicenseDetails">Copilot License Details</a> (Microsoft, 2026g).</li>
 <li><span class="pill soon">Reported</span> In the app, open <em>File &gt; Account</em> and look for <em>Update License</em>, then restart the app. The button is not always there.</li>
 <li><span class="pill soon">Reported</span> Make sure the app is up to date. Some features are reported to be missing on the Semi-Annual Enterprise Channel; your update channel is shown under <em>File &gt; Account</em>.</li>
 </ol>
 <div class="callout"><strong>An admin setting can switch it off</strong><p><span class="pill">Microsoft</span> If your company turns off "connected experiences that analyze your content", Copilot is unavailable in Word, Excel, OneNote, Outlook and PowerPoint, regardless of licence (Microsoft, 2026d).</p></div>
 
-<h2 id="blocked"><span class="sec-num">3</span>"It says access is turned off"</h2>
-<p><span class="pill">Microsoft</span> Administrators can block Copilot Chat for everyone or for chosen groups, including people with a paid licence. You may still see <em>Chat</em> in the app menu, but selecting it shows a message that access is disabled by policy. Your company can add a link there to its own guidance, titled <em>View info from your organization</em> (Microsoft, 2026e). Follow that link or ask IT.</p>
-<p><span class="pill">Microsoft</span> If the app won't load at all, IT may be blocking part of <code>*.cloud.microsoft</code>. Microsoft says all of that domain needs to be allowed (Microsoft, 2026e).</p>
+<h2 id="blocked">"It says access is turned off"</h2>
+<p><span class="pill">Microsoft</span> Administrators can block Copilot Chat for everyone or for chosen groups, including people with a paid licence. You may still see <em>Chat</em> in the app menu, but selecting it shows a message that access is disabled by policy. Your company can add a link there to its own guidance, titled <em>View info from your organization</em> (Microsoft, 2026e). Follow that link.</p>
+<p><span class="pill">Microsoft</span> If the app won't load at all, part of <code>*.cloud.microsoft</code> may be blocked on your network. Microsoft says all of that domain needs to be allowed (Microsoft, 2026e). That is a network setting, not something you can fix. Try a different network, such as a phone hotspot, to see whether that is the cause.</p>
 
-<h2 id="files"><span class="sec-num">4</span>"It can't find my files, emails or meetings"</h2>
+<h2 id="files">"It can't find my files, emails or meetings"</h2>
 <ul>
-<li><strong>Basic versions can't search your work data.</strong> Upload or paste the content, or open it in Outlook or Teams first (Microsoft, 2026a). This isn't a fault.</li>
-<li><strong>Premium</strong> can. If it still can't see something, check that you have permission to open that file yourself. Copilot only shows what you can access (Microsoft, 2026d).</li>
-<li>Ask IT whether Work IQ has been switched off in your organisation. When it is off, answers aren't grounded in your work data (Microsoft, 2026a).</li>
+<li><span class="tier tier-chat">Chat</span> Chat can't search your work data. Upload or paste the content, or open it in Outlook or Teams first (Microsoft, 2026a). This isn't a fault.</li>
+<li><span class="tier tier-premium">Premium</span> It can. If it still can't see something, check that you have permission to open that file yourself. Copilot only shows what you can access (Microsoft, 2026d).</li>
+<li><span class="tier tier-premium">Premium</span> Work IQ is an organisation setting. When it is off, answers aren't grounded in your work data (Microsoft, 2026a). You can't switch it on, but you can recognise it: answers about files you can open yourself come back with no work context.</li>
 </ul>
 
-<h2 id="wrong"><span class="sec-num">5</span>"It invented something"</h2>
+<h2 id="wrong">"It invented something"</h2>
 <ol>
 <li>Ask: "Where does that come from? Quote the source." Then open the citation.</li>
 <li>Re-run with an instruction such as "use only the attached document; if it isn't there, say so".</li>
@@ -55,7 +55,7 @@ verified: yes
 <li>If it is wrong about something that matters, don't send it. Fix it by hand.</li>
 </ol>
 
-<h2 id="teams"><span class="sec-num">6</span>"Copilot in my Teams meeting isn't working"</h2>
+<h2 id="teams">"Copilot in my Teams meeting isn't working"</h2>
 <p>These come from Microsoft's page on Copilot in Teams meetings (Microsoft, 2026h).</p>
 <table>
 <thead><tr><th>Symptom</th><th>Likely reason</th></tr></thead>
@@ -68,14 +68,13 @@ verified: yes
 <tr><td>Joined late</td><td>If you join more than 5 minutes after the start and Copilot is on, it offers a catch-up summary.</td></tr>
 </tbody></table>
 
-<h2 id="escalate"><span class="sec-num">7</span>What to send IT</h2>
-<p>You'll get a faster answer with this:</p>
-<div class="promptbox"><span class="label">Message to IT</span><pre>Hi, Copilot isn't working for me.
-- App: [Word / Excel / Teams / copilot.cloud.microsoft]
+<h2 id="escalate">Note these details if you need help</h2>
+<p>If you need to ask for help, these details get you a faster answer. Copy this into a note and fill it in:</p>
+<div class="promptbox"><span class="label">Your notes</span><pre>- App: [Word / Excel / Teams / copilot.cloud.microsoft]
 - What I expected: [e.g. a Copilot button in Word]
 - What happens: [e.g. no button / "access is turned off"]
 - Label under my name at copilot.cloud.microsoft: [Copilot Chat (Basic) / M365 Copilot (Basic) / M365 Copilot (Premium) / none]
 - Account I'm signed in with: [work email]
-- Since when: [date, or "never worked"]
-Can you check my licence assignment and any policies that apply to me?</pre></div>
-<p class="meta">Sources: Microsoft (2026a, 2026b, 2026c, 2026d, 2026e, 2026g, 2026h). Full details on the <a href="../references/">sources page</a>.</p>
+- Since when: [date, or "never worked"]</pre></div>
+<aside class="org" data-key="support"></aside>
+<p class="meta">Sources: Microsoft (2026a, 2026s, 2026b, 2026c, 2026d, 2026e, 2026g, 2026h). Full details on the <a href="../references/">sources page</a>.</p>

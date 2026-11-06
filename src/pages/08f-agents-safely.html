@@ -1,0 +1,68 @@
+slug: agents-safely
+order: 85
+nav: no
+navlabel: Using agents safely
+section: agents
+title: Using agents safely
+desc: What data each kind of agent can reach, third-party agent privacy, what not to put in instructions or knowledge, and retiring agents.
+toc: yes
+verified: yes
+---
+<p class="eyebrow">Agents · Safety</p>
+<h1>Using agents safely</h1>
+<p class="lede">Agents are Copilot with a narrower job. The same rules apply, plus a few of their own.</p>
+
+<div class="short"><h2>The short version</h2>
+<ul>
+<li>Agents see only what the person using them could already open.</li>
+<li>Agents from other companies handle your data under their own privacy statements. Read it first.</li>
+<li>Never put secrets or personal data in an agent's instructions or knowledge.</li>
+<li>Retire agents you no longer use.</li>
+</ul></div>
+
+<h2 id="reach">What each kind of agent can reach</h2>
+<table>
+<thead><tr><th>Kind</th><th>What it can reach</th></tr></thead>
+<tbody>
+<tr><td>Microsoft-built agents</td><td>Depend on the agent. Researcher uses the web and your work content within your permissions (Microsoft, 2026m).</td></tr>
+<tr><td>Agents you or a colleague built</td><td>Their knowledge sources, filtered by the permissions of whoever is chatting (Microsoft, 2026ab).</td></tr>
+<tr><td>Agents from partners or other companies</td><td>Whatever the administrator allowed. Copilot may send them a search query based on your prompt, your activity history and data you can access (Microsoft, 2026d).</td></tr>
+</tbody></table>
+<p>Encrypted content can exclude programmatic access, which can stop an agent reading it (Microsoft, 2026d).</p>
+
+<h2 id="third">Third-party and organisation agents</h2>
+<ul>
+<li>Check the agent's privacy statement and terms before using it. Microsoft says these determine how your organisation's data is handled (Microsoft, 2026d).</li>
+<li>An agent builder can add their own privacy and terms links; the defaults are placeholders, so don't assume they've been filled in (Microsoft, 2026ab).</li>
+<li>I couldn't find a Microsoft statement that third-party agents are covered by its "no training" commitments, so don't assume it.</li>
+<li>Administrators decide which agents are allowed and can see their permissions (Microsoft, 2026d, 2026ad). That is an organisation setting.</li>
+</ul>
+<aside class="org" data-key="agents"></aside>
+
+<h2 id="dont">What not to put in instructions or knowledge</h2>
+<ul>
+<li>Passwords, keys, tokens or personal data.</li>
+<li>Files you wouldn't want every user of the agent to see answers from. Anyone who can use the agent can see answers grounded in embedded files (Microsoft, 2026aa).</li>
+<li>Whole mailboxes in a shared agent.</li>
+<li>Anything your organisation classes as restricted.</li>
+</ul>
+<aside class="org" data-key="data-rules"></aside>
+
+<h2 id="check">Checking outputs</h2>
+<ul>
+<li>Ask for sources, then open them.</li>
+<li>Test an agent with a question its sources can't answer. It should say so.</li>
+<li>Treat answers about people, money and customers as drafts for a human to check.</li>
+</ul>
+
+<h2 id="retire">Retiring agents you no longer use</h2>
+<ol>
+<li>Remove people you shared it with. Removing someone from an agent does not remove their access to its files (Microsoft, 2026y), so fix the file permissions too.</li>
+<li>Delete the agent. For Agent Builder agents this is permanent (Microsoft, 2026ab). For SharePoint agents, delete the <code>.agent</code> file (Microsoft, 2026ak).</li>
+<li>Unpin agents you no longer use from your Agents list.</li>
+</ol>
+<h2 id="chat" class="tiered"><span class="tier tier-chat">Chat</span>On Copilot Chat</h2>
+<p>Agents with work data are off by default and billed by use. An administrator turns them on (Microsoft, 2026ah). If an agent says you can't use it, that is most likely a setting or a billing choice, not something you did.</p>
+<h2 id="premium" class="tiered"><span class="tier tier-premium">Premium</span>With M365 Copilot (Premium)</h2>
+<p>An agent built on your mailbox or meetings can surface sensitive material. Build shared agents on SharePoint sources, not on your email.</p>
+<p class="meta">Sources: Microsoft (2026aa, 2026ab, 2026ad, 2026ah, 2026ak, 2026d, 2026m, 2026y). Full details on the <a href="../references/">sources page</a>. Also read <a href="../safety/">Safety and privacy</a>.</p>

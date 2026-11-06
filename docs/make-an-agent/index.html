@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Make your own agent | Copilot, plainly</title>
+<meta name="description" content="Build an agent with Agent Builder or from a SharePoint site, write its instructions, choose knowledge sources, test it, share it, and a worked team FAQ example.">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar"><div class="topbar-in">
+<a class="brand" href="../">Copilot<span>, plainly</span></a>
+<nav class="nav" aria-label="Main"><a href="../">Home</a><a href="../start/">Start here</a><a href="../what-is-copilot/">What it is</a><a href="../copilot-chat/">Copilot Chat</a><a href="../word-outlook/">Word/Outlook</a><a href="../excel/">Excel</a><a href="../powerpoint/">PowerPoint</a><a href="../teams-meetings/">Teams</a><a href="../agents/" aria-current=page>Agents</a><a href="../prompts/">Prompts</a><a href="../safety/">Safety</a><a href="../troubleshooting/">Troubleshooting</a><a href="../references/">Sources</a></nav>
+<button type="button" class="theme" id="theme">Dark mode</button>
+</div></header>
+<div class="wrap">
+<div class="layout has-toc">
+<nav class="toc" aria-label="On this page"><div class="toc-in"><h2>On this page</h2><ol><li><a href="#builder">Agent Builder: Describe or Configure</a></li><li><a href="#instructions">Writing good instructions</a></li><li><a href="#knowledge">Knowledge sources</a></li><li><a href="#test">Testing and starter prompts</a></li><li><a href="#share">Sharing and permissions</a></li><li><a href="#manage">Editing, updating and deleting</a></li><li><a href="#sharepoint">SharePoint agents</a></li><li><a href="#example">Worked example: a team FAQ agent</a></li><li><a href="#chat">Chat: What you can use on Copilot Chat</a></li><li><a href="#premium">Premium: What you can use with M365 Copilot (Premium)</a></li></ol></div></nav>
+<main id="main"><article>
+<nav class="secnav" aria-label="In this section"><a href="../agents/">Overview</a><a href="../researcher/">Researcher</a><a href="../analyst/">Analyst</a><a href="../other-agents/">Other agents</a><a href="../make-an-agent/" aria-current=page>Make your own</a><a href="../agents-safely/">Using agents safely</a><a href="../agent-prompts/">Agent prompts</a></nav>
+<p class="eyebrow">Agents · Build</p>
+<h1>Make your own agent</h1>
+<p class="lede">Two ways to build one without code: Agent Builder in the Copilot app, and agents in SharePoint.</p>
+
+<div class="short"><h2>The short version</h2>
+<ul>
+<li><strong>Agent Builder</strong> (<em>New agent</em> in the Copilot app): describe what you want, or fill in the Configure tab yourself.</li>
+<li><strong>SharePoint agents:</strong> create one from a library, list or selected files, scoped to that content.</li>
+<li>An agent only shows people knowledge they could already open.</li>
+<li>What you can use as knowledge depends on your tier. See <a href="#chat">Chat</a> and <a href="#premium">Premium</a>.</li>
+<li>Agent Builder can't take actions in other systems. Copilot Studio can, and is outside this guide (Microsoft, 2026y).</li>
+</ul></div>
+
+<h2 id="builder">Agent Builder: Describe or Configure</h2>
+<p>Open the Copilot app, choose <em>New agent</em>. Agent Builder isn't available on mobile (Microsoft, 2026y). You have three ways in (Microsoft, 2026z):</p>
+<ol>
+<li><strong>Describe</strong> (recommended): chat about what you want. It fills in the name, description, instructions, knowledge and starter prompts for you, and you can see them on the Configure tab.</li>
+<li><strong>Skip to configure:</strong> fill in the fields yourself.</li>
+<li><strong>Templates.</strong></li>
+</ol>
+<p>Natural-language Describe works only in the languages Microsoft lists; otherwise use Configure (Microsoft, 2026z).</p>
+<div class="callout warn"><strong>Do I have it?</strong><p>Microsoft's pages differ on who can open Agent Builder: one says it is for people with a Copilot licence or in tenants with pay-as-you-go enabled; another suggests Chat users can build agents with limited capabilities. I couldn't settle it. The test is simple: look for <em>New agent</em> in your Copilot app (Microsoft, 2026y, 2026ac, 2026ah).</p></div>
+
+<h2 id="instructions">Writing good instructions</h2>
+<p>The Configure tab has these fields, with limits (Microsoft, 2026z):</p>
+<table>
+<thead><tr><th>Field</th><th>Limit</th></tr></thead>
+<tbody>
+<tr><td>Name</td><td>30 characters</td></tr>
+<tr><td>Description</td><td>1,000 characters; also used to decide when to use the agent</td></tr>
+<tr><td>Instructions</td><td>8,000 characters</td></tr>
+<tr><td>Starter prompts</td><td>A name and a prompt each; no minimum number</td></tr>
+</tbody></table>
+<p>A template for instructions that works for most agents:</p>
+<div class="promptbox"><span class="label">Instruction template</span><pre>Role: You are [role] for [team/audience].
+Purpose: Help people with [the jobs it should do].
+Use only: [the knowledge sources]. If the answer isn't there, say "I don't know" and say who to ask.
+Format: [short answers / bullets / steps]. Keep a [friendly, plain] tone.
+Never: [give legal or HR advice / guess / share personal data].
+Always: end with the source you used.</pre></div>
+
+<h2 id="knowledge">Knowledge sources</h2>
+<p>Knowledge limits per agent (Microsoft, 2026aa):</p>
+<ul>
+<li>Public websites: 4 (up to two path levels, no query strings)</li>
+<li>SharePoint files, folders or sites: 100 files; 1 SharePoint list</li>
+<li>OneDrive files: 50</li>
+<li>Files you upload: 20 (not password-protected or certain labelled files)</li>
+<li>Teams chats: 5 chats and 5 meetings</li>
+</ul>
+<ul>
+<li><strong>"Only use specified sources"</strong> prioritises your sources but does not block general AI knowledge (Microsoft, 2026aa).</li>
+<li>New SharePoint or OneDrive files can show "Preparing" for several minutes (Microsoft, 2026aa).</li>
+<li>Web access is blocked if your organisation turns off web search, even if the toggle looks on (Microsoft, 2026y).</li>
+</ul>
+
+<h2 id="test">Testing and starter prompts</h2>
+<p>Use the <em>Try it</em> tab. It becomes available once the agent has a name, description and instructions, and updates as you edit. You can't share prompts, give feedback or @mention other agents in Try it (Microsoft, 2026z). Test with:</p>
+<ol>
+<li>Three questions it should answer well.</li>
+<li>One question the sources can't answer. It should say so.</li>
+<li>One awkward question that tries to make it break its rules.</li>
+</ol>
+
+<h2 id="share">Sharing and permissions</h2>
+<ul>
+<li>A new agent is private. The share dialog offers <em>Can edit</em> and <em>Can chat</em>. Groups can only be <em>Can chat</em> (Microsoft, 2026ab).</li>
+<li>You can copy a chat link or an edit link, or turn on org-wide sharing for chat. When it is on, others in your organisation can see the agent in the Agent Store (Microsoft, 2026ab).</li>
+<li>Who may share is an organisation setting: all users, specific users or groups, or no one. If sharing is restricted, an administrator must approve and deploy the agent (Microsoft, 2026ab).</li>
+<li><strong>People only see knowledge they can already open.</strong> The agent respects each user's permissions and sensitivity labels, and leaves out files they can't see (Microsoft, 2026ab). Sharing an agent does not share the underlying files. Check the file permissions yourself before you share.</li>
+<li>People you share with need the licence type the agent's capabilities need; otherwise using it may give an error (Microsoft, 2026ab).</li>
+</ul>
+
+
+<h2 id="manage">Editing, updating and deleting</h2>
+<ul>
+<li>Open it from <em>All agents</em> and choose edit. Changes save automatically, but users don't see them until you choose <em>Update</em>, which can take a few minutes (Microsoft, 2026ab).</li>
+<li>I found no version history or roll-back described. Keep your instructions in a separate document so you can restore them.</li>
+<li>Deleting is permanent and removes the agent for other owners and shared users (Microsoft, 2026ab).</li>
+<li>You can add an <em>About this agent</em> description, a privacy statement and terms links (Microsoft, 2026ab).</li>
+</ul>
+
+<h2 id="sharepoint">SharePoint agents</h2>
+<p>An agent in SharePoint answers from a library, list, site or selected files (Microsoft, 2026ai, 2026aj).</p>
+<ol>
+<li>Open the library or list, choose <em>Copilot</em>, then <em>Create an agent</em>. Or select files or folders and right-click <em>Create an agent</em> (Microsoft, 2026ai).</li>
+<li>Name it, set its scope, and add starter prompts. Editors can add other sites, change branding and edit prompts (Microsoft, 2026aj).</li>
+<li>Share by copying the link from the chat pane, or through the file's sharing dialog (Microsoft, 2026aj, 2026al).</li>
+</ol>
+<ul>
+<li>You need edit permission on the site, plus a Copilot licence or a tenant with pay-as-you-go for SharePoint agents (Microsoft, 2026ai, 2026aj).</li>
+<li>All site members can create agents. Agents are <code>.agent</code> files in the site's libraries; deleting the file deletes the agent (Microsoft, 2026ak).</li>
+<li><strong>Default site agent:</strong> each site's own Copilot can't be shared. Site owners choose the main agent under Settings &gt; Site AI. Microsoft says upgrades to agents in SharePoint are coming in mid-November 2026, so this may change (Microsoft, 2026aj, 2026ak).</li>
+<li>After you use a SharePoint agent it appears in your Agents list in the Copilot app, where you can pin it (Microsoft, 2026al).</li>
+</ul>
+
+<h2 id="example">Worked example: a team FAQ agent</h2>
+<ol class="steps">
+<li><strong>Collect the answers</strong>Put your team's FAQ, onboarding guide and process documents in one SharePoint folder. Check that the whole team can open it.</li>
+<li><strong>Start in Agent Builder</strong>Choose <em>New agent</em> and describe it: "A friendly team assistant that answers questions about how we work, using only our FAQ folder."</li>
+<li><strong>Add the folder as knowledge</strong>On Configure, add the SharePoint folder. Turn on <em>Only use specified sources</em>.</li>
+<li><strong>Set the instructions</strong>Use the template above. Add: "If it isn't in the folder, say so and name [team owner]."</li>
+<li><strong>Add starter prompts</strong>"How do I book leave?", "Who approves purchases?", "Where is the onboarding checklist?"</li>
+<li><strong>Test, then share</strong>Run the three tests above. Share with the team as <em>Can chat</em>.</li>
+</ol>
+
+<h2 id="chat" class="tiered"><span class="tier tier-chat">Chat</span>What you can use on Copilot Chat</h2>
+<p>Per Microsoft's licensing table, without usage billing a Copilot Chat agent can use custom instructions, web search, scoped web search, the code interpreter and the image generator. It can't use SharePoint, embedded files or Copilot connectors as knowledge (Microsoft, 2026ac).</p>
+<p>With pay-as-you-go switched on by your organisation, it adds SharePoint, embedded files and connectors. Email, people data, Teams messages and meetings still need a Copilot licence (Microsoft, 2026ac).</p>
+<p>So a team FAQ agent that reads a SharePoint folder needs pay-as-you-go on the Chat track. Without it, you can build one grounded in public websites and instructions only.</p>
+<div class="promptbox"><span class="label">Chat starter</span><pre>You are a plain-English explainer for [team]. Use only the websites listed as knowledge.
+Answer in five lines or fewer, link the page you used, and say "I don't know" if the sites don't say.</pre></div>
+
+<h2 id="premium" class="tiered"><span class="tier tier-premium">Premium</span>What you can use with M365 Copilot (Premium)</h2>
+<p>All of the knowledge sources in the licensing table are available: SharePoint, embedded files, connectors, and your email, people data, Teams messages and meetings (Microsoft, 2026ac). Email knowledge is your whole mailbox and can't be narrowed, and the people you share with don't get your email (Microsoft, 2026aa). Be careful that an agent grounded in your mail never becomes a way to reveal it; use SharePoint sources for shared agents.</p>
+<div class="promptbox"><span class="label">Premium starter</span><pre>You are the project assistant for [project]. Use the SharePoint folder and the project's Teams meetings as knowledge.
+Answer questions on decisions, owners and next steps. Quote the source, and say when the sources are silent.</pre></div>
+<p class="meta">Sources: Microsoft (2026y, 2026z, 2026aa, 2026ab, 2026ac, 2026ai, 2026aj, 2026ak, 2026al). Full details on the <a href="../references/">sources page</a>.</p>
+<p class="meta">Last checked against Microsoft's documentation: 6 November 2026. Copilot changes often, so check the sources at the end of the page.</p>
+<div class="pager"><a href="../other-agents/">&larr; Other agents</a><a href="../agents-safely/">Using agents safely &rarr;</a></div>
+</article></main>
+</div>
+</div>
+<footer><div class="wrap">
+<p class="feedback">Was this useful? <a href="https://github.com/gladbacher/copilot-plainly/issues/new?title=Feedback%3A%20Make%20your%20own%20agent">Report a problem or suggest a fix</a>.</p>
+<p>An independent guide for people who use Microsoft Copilot at work. It is not made by, endorsed by, or affiliated with Microsoft. Microsoft, Copilot, Word, Excel, PowerPoint, Outlook and Teams are trademarks of Microsoft.</p>
+<p>Content is licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Format inspired by <a href="https://www.guidesforhumans.com/">Guides for Humans</a>. All text here is original. Prices and features change; the <a href="../references/">sources page</a> links to Microsoft's own pages.</p>
+</div></footer>
+<script src="../assets/app.js" defer></script>
+</body>
+</html>

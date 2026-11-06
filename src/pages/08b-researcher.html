@@ -1,0 +1,63 @@
+slug: researcher
+order: 81
+nav: no
+navlabel: Researcher
+section: agents
+title: Researcher
+desc: When to use Researcher instead of ordinary chat, how to scope it, how to read the cited report, and who has it.
+toc: yes
+verified: yes
+---
+<p class="eyebrow">Agents · Researcher</p>
+<h1>Researcher</h1>
+<p class="lede">Slow on purpose. It does deep research and hands you a cited report.</p>
+
+<div class="short"><h2>The short version</h2>
+<ul>
+<li>Use it for multi-step research where you want citations. Use ordinary chat for quick things.</li>
+<li>Say whether you want the web, your work sources, or both, and answer its clarifying questions.</li>
+<li>Open the citations before you rely on the report.</li>
+</ul></div>
+
+<h2 id="when">When to use it</h2>
+<p>Researcher handles complex, multi-step research. It draws on the web and, where you have access, your work content (files, emails, meetings and chats you can open) and produces a report with organised sections, cited sources and often visuals. It follows the same permissions as the rest of Copilot (Microsoft, 2026m).</p>
+<table>
+<thead><tr><th>You need…</th><th>Choose</th></tr></thead>
+<tbody>
+<tr><td>A quick summary, a short reply, light brainstorming</td><td>Ordinary Copilot chat</td></tr>
+<tr><td>Deeper reasoning across sources, and a report you can share</td><td>Researcher</td></tr>
+<tr><td>Citations and clean structure for a decision</td><td>Researcher</td></tr>
+<tr><td>A back-and-forth without heavy analysis</td><td>Ordinary Copilot chat</td></tr>
+</tbody></table>
+<p class="meta">Source: Microsoft (2026m). Researcher deliberately spends longer retrieving and analysing. I have not published a typical run time because I couldn't confirm one on a Microsoft page.</p>
+
+<h2 id="scope">Scope it, then answer its questions</h2>
+<ul>
+<li><strong>Be specific.</strong> Clear, detailed questions give more focused results (Microsoft, 2026m).</li>
+<li><strong>Define the scope.</strong> Say whether you want the web, work sources, or both (Microsoft, 2026m).</li>
+<li><strong>Answer the clarifying questions.</strong> It may ask first. That step steers the final report (Microsoft, 2026m).</li>
+</ul>
+
+<h2 id="read">Reading the report</h2>
+<ol>
+<li>Read the summary, then the sections that matter to your decision.</li>
+<li>Open the citations for any figure, quote or claim you plan to repeat.</li>
+<li>Look for what it says it could not verify. Ask for that explicitly in your prompt.</li>
+<li>Ask a follow-up in the same chat: "expand section 3", "what do the sources disagree on?"</li>
+</ol>
+
+<h2 id="chat" class="tiered"><span class="tier tier-chat">Chat</span>On Copilot Chat</h2>
+<p>I couldn't find any Microsoft page that gives Researcher to work users without a Copilot licence. Microsoft's Support comparison puts "advanced agents like Researcher" on the licensed side and lists the unlicensed side as "Limited (no advanced agents)" (Microsoft, 2026ar). If you can't see it in the Agents pane, that is the likely reason.</p>
+<p>For similar help with web research, use ordinary chat with a prompt that asks for sources:</p>
+<div class="promptbox"><span class="label">Prompt · Chat</span><pre>Research [topic] using public web sources for a decision on [decision].
+Give me the key findings, where sources disagree, risks, and a recommendation.
+Cite every claim with its link. Mark anything you could not verify.</pre></div>
+
+<h2 id="premium" class="tiered"><span class="tier tier-premium">Premium</span>With M365 Copilot (Premium)</h2>
+<p>Researcher is listed with the licensed agents (Microsoft, 2026ar, 2026ah). Find it in the Agents pane (Microsoft, 2026m). If it isn't there, Microsoft says your administrator may not have enabled it (Microsoft, 2026v). That is an organisation setting.</p>
+<div class="callout"><strong>An earlier disagreement, now settled</strong><p>I previously noted that a Microsoft Learn page and a Support page seemed to disagree on Researcher. On re-reading (6 November 2026), the Support page's "Premium and Pro" wording refers to personal subscriptions. For work accounts, the pages I read agree that Researcher comes with a Copilot licence (Microsoft, 2026v, 2026ah). I did not find a page that gives it to unlicensed work users.</p></div>
+<div class="promptbox"><span class="label">Prompt · Premium</span><pre>Research [topic] for a decision on [decision].
+Scope: [the web only / our internal documents and emails only / both].
+I need: the key findings, where sources disagree, risks, and a recommendation.
+Cite every claim. Mark anything you could not verify.</pre></div>
+<p class="meta">Sources: Microsoft (2026m, 2026v, 2026ah, 2026ar). Full details on the <a href="../references/">sources page</a>.</p>
