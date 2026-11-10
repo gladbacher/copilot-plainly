@@ -22,6 +22,9 @@ ROOT = Path(__file__).resolve().parent.parent
 SRC, DOCS = ROOT / "src", ROOT / "docs"
 SITE = "Copilot Flight Deck"
 VERIFIED = "6 November 2026"
+SITE_URL = "https://gladbacher.github.io/copilot-plainly/"  # public address; used for share tags, sitemap and the 404 page
+BASE_PATH = "/" + SITE_URL.split("/", 3)[3]
+FAVICON = "data:image/svg+xml," + urllib.parse.quote('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#0b6e6e"/><path d="M14 36l36-16-10 30-8-12z" fill="#fff"/></svg>')
 ISSUES = "https://github.com/gladbacher/copilot-plainly/issues/new"
 MARKER = ".copilot-plainly-build"
 
@@ -149,6 +152,25 @@ def render_library(items, href):
     return "\n".join(out)
 
 
+def index_sections(meta, body, url):
+    """Split a processed page into searchable sections."""
+    out = []
+    for part in re.split(r"(?=<h2[ >])", body):
+        m = TIER_H2.match(part)
+        h = re.match(r'<h2(?: id="([^"]+)")?[^>]*>(.*?)</h2>', part, re.S)
+        text = re.sub(r"\s+([.,;:)])", r"\1", html.unescape(text_of(re.sub(r"<[^>]+>", " ", re.sub(r'<span class="tier[^>]*>.*?</span>', "", part)))))
+        if len(text) < 25:
+            continue
+        out.append({
+            "u": url + ("#" + h.group(1) if h and h.group(1) else ""),
+            "p": meta["title"],
+            "h": html.unescape(text_of(h.group(2))) if h else "",
+            "t": m.group(1) if m else "",
+            "x": text,
+        })
+    return out
+
+
 def org_box(key, org):
     ans = org.get("answers", {}).get(key)
     if not ans:
@@ -261,9 +283,13 @@ def main():
             sequence.extend(s for s, _ in pages if s.get("section") == m["slug"] and s is not m)
     seq_slugs = [m["slug"] for m in sequence]
 
+    search_index = []
     for meta, body in pages:
         slug = meta["slug"]
-        up = "" if slug == "" else "../"
+        is404 = slug == "404"
+        if is404 and org:
+            continue
+        up = "" if slug == "" else BASE_PATH if is404 else "../"
         href = lambda s: up + (s + "/" if s else "") if s else (up or "./")
         section = meta.get("section", "")
         current = section or slug
@@ -281,7 +307,11 @@ def main():
                 f'<li><a class="card" href="{href(m["slug"])}"><b>{html.escape(m["navlabel"])}</b><span>{html.escape(m["desc"])}</span></a></li>'
                 for m, _ in pages if m.get("section") == "playbooks" and m["slug"] != "playbooks")
             body = body.replace("<!--PLAYBOOKS-->", f'<ul class="cards">{cards}</ul>')
+        body = body.replace("{SITE_URL}", SITE_URL.split("//", 1)[1].rstrip("/"))
+        body = body.replace("{HOME}", BASE_PATH)
         body, sources = strip_cites(body, refs)
+        if slug not in ("search", "404") and meta.get("cheat") != "yes":
+            search_index += index_sections(meta, body, (slug + "/") if slug else "")
         body = wrap_tiers(body)
         heads = re.findall(r'<h2 id="([^"]+)"[^>]*>(.*?)</h2>', body, flags=re.S)
         has_toc = meta.get("toc") == "yes" and len(heads) > 1
@@ -291,7 +321,7 @@ def main():
                 f'<li{" data-tier=" + i_ if i_ in ("chat", "premium") else ""}><a href="#{i_}">{re.sub(r"<[^>]+>", "", re.sub(r"<span class=.sec-num.>.*?</span>", "", re.sub(r"<span class=.tier [^>]*>(.*?)</span>", r"\1: ", t))).strip()}</a></li>'
                 for i_, t in heads
             )
-            toc = f'<nav class="toc" aria-label="On this page"><div class="toc-in"><h2>On this page</h2><ol>{items}</ol></div></nav>'
+            toc = f'<nav class="toc" aria-label="On this page"><details class="toc-in" open><summary>On this page</summary><ol>{items}</ol></details></nav>'
 
         secnav = ""
         if section:
@@ -315,7 +345,7 @@ def main():
         title = meta["title"] if slug == "" else f'{meta["title"]} | {SITE}'
         verified = ""
         if meta.get("verified") == "yes":
-            verified = f'{sources}<p class="meta">Last checked against Microsoft\'s documentation: {VERIFIED}. Copilot changes often.</p>'
+            verified = f'{sources}<p class="meta">Last checked against Microsoft\'s documentation: {meta.get("checked", VERIFIED)}. Copilot changes often.</p>'
 
         if org and org["answers"].get("feedback", {}).get("url"):
             fb_url = org["answers"]["feedback"]["url"]
@@ -331,6 +361,12 @@ def main():
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{html.escape(title)}</title>
 <meta name="description" content="{html.escape(meta['desc'])}">
+<meta property="og:title" content="{html.escape(title)}">
+<meta property="og:description" content="{html.escape(meta['desc'])}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{SITE}">
+<meta name="theme-color" content="#0b6e6e">
+<link rel="icon" href="{FAVICON}">
 <link rel="stylesheet" href="{up}assets/style.css">
 <script>try{{var d=document.documentElement,t=localStorage.getItem('tier'),h=localStorage.getItem('theme');if(t==='chat'||t==='premium')d.setAttribute('data-tier',t);if(h==='light'||h==='dark')d.setAttribute('data-theme',h)}}catch(e){{}}</script>
 </head>
@@ -339,6 +375,7 @@ def main():
 <header class="topbar"><div class="topbar-in">
 <a class="brand" href="{href('')}">Copilot <span>Flight Deck</span></a>{badge}
 <div class="tierswitch" id="tierswitch" role="group" aria-label="Show guidance for my licence" hidden><span>My licence</span><button type="button" data-t="chat">Chat</button><button type="button" data-t="premium">Premium</button><button type="button" data-t="both">Both</button></div>
+<a class="searchlink" href="{href('search')}"{" aria-current=page" if slug == "search" else ""}>Search</a>
 <button type="button" class="theme" id="theme">Dark mode</button>
 <nav class="nav" aria-label="Main">{nav}</nav>
 </div></header>
@@ -358,16 +395,22 @@ def main():
 <p>An independent guide for people who use Microsoft Copilot at work. It is not made by, endorsed by, or affiliated with Microsoft. Microsoft, Copilot, Word, Excel, PowerPoint, Outlook and Teams are trademarks of Microsoft.</p>
 <p>Content is licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Format inspired by <a href="https://www.guidesforhumans.com/">Guides for Humans</a>. All text here is original. Prices and features change, so check Microsoft's own pages.</p>
 </div></footer>
+{f'<script src="{up}assets/search-index.js" defer></script>' if slug == "search" else ""}
 <script src="{up}assets/app.js" defer></script>
 </body>
 </html>
 """
-        dest = out / slug / "index.html" if slug else out / "index.html"
+        dest = out / "404.html" if is404 else out / slug / "index.html" if slug else out / "index.html"
         dest.parent.mkdir(parents=True, exist_ok=True)
         dest.write_text(page, encoding="utf-8")
 
+    (out / "assets" / "search-index.js").write_text("window.SEARCH_INDEX=" + json.dumps(search_index, ensure_ascii=False, separators=(",", ":")) + ";", encoding="utf-8")
     if org:
         write_summary(out, org)
+    else:
+        urls = "".join(f"<url><loc>{SITE_URL}{m['slug'] + '/' if m['slug'] else ''}</loc></url>" for m, _ in pages if m["slug"] not in ("404", "search"))
+        (out / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>', encoding="utf-8")
+        (out / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}sitemap.xml\n", encoding="utf-8")
     print(f"built {len(pages)} pages -> {out}")
 
 

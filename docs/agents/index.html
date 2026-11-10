@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Agents: the overview | Copilot Flight Deck</title>
 <meta name="description" content="What agents are in Microsoft 365 Copilot, where to find them, and which ones you get on Copilot Chat and on Premium.">
+<meta property="og:title" content="Agents: the overview | Copilot Flight Deck">
+<meta property="og:description" content="What agents are in Microsoft 365 Copilot, where to find them, and which ones you get on Copilot Chat and on Premium.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Copilot Flight Deck">
+<meta name="theme-color" content="#0b6e6e">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%230b6e6e%22/%3E%3Cpath%20d%3D%22M14%2036l36-16-10%2030-8-12z%22%20fill%3D%22%23fff%22/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../assets/style.css">
 <script>try{var d=document.documentElement,t=localStorage.getItem('tier'),h=localStorage.getItem('theme');if(t==='chat'||t==='premium')d.setAttribute('data-tier',t);if(h==='light'||h==='dark')d.setAttribute('data-theme',h)}catch(e){}</script>
 </head>
@@ -13,12 +19,13 @@
 <header class="topbar"><div class="topbar-in">
 <a class="brand" href="../">Copilot <span>Flight Deck</span></a>
 <div class="tierswitch" id="tierswitch" role="group" aria-label="Show guidance for my licence" hidden><span>My licence</span><button type="button" data-t="chat">Chat</button><button type="button" data-t="premium">Premium</button><button type="button" data-t="both">Both</button></div>
+<a class="searchlink" href="../search/">Search</a>
 <button type="button" class="theme" id="theme">Dark mode</button>
 <nav class="nav" aria-label="Main"><a href="../start/">Start</a><a href="../playbooks/">Playbooks</a><a href="../prompts/">Prompts</a><a href="../apps/">Apps</a><a href="../agents/" aria-current=page>Agents</a><a href="../safety/">Safety</a><a href="../troubleshooting/">Fix it</a></nav>
 </div></header>
 <div class="wrap">
 <div class="layout has-toc">
-<nav class="toc" aria-label="On this page"><div class="toc-in"><h2>On this page</h2><ol><li><a href="#what">What an agent is</a></li><li><a href="#find">Where to find agents</a></li><li data-tier=chat><a href="#chat">Chat: Which agents you get with Copilot Chat</a></li><li data-tier=premium><a href="#premium">Premium: Which agents you get with M365 Copilot (Premium)</a></li><li><a href="#section">In this section</a></li></ol></div></nav>
+<nav class="toc" aria-label="On this page"><details class="toc-in" open><summary>On this page</summary><ol><li><a href="#what">What an agent is</a></li><li><a href="#find">Where to find agents</a></li><li data-tier=chat><a href="#chat">Chat: Which agents you get with Copilot Chat</a></li><li data-tier=premium><a href="#premium">Premium: Which agents you get with M365 Copilot (Premium)</a></li><li><a href="#section">In this section</a></li></ol></details></nav>
 <main id="main"><article>
 <nav class="secnav" aria-label="In this section"><a href="../agents/" aria-current=page>Overview</a><a href="../researcher/">Researcher</a><a href="../analyst/">Analyst</a><a href="../other-agents/">Other agents</a><a href="../make-an-agent/">Make your own</a><a href="../agents-safely/">Using agents safely</a><a href="../agent-prompts/">Agent prompts</a></nav>
 <p class="eyebrow">Agents</p>
@@ -40,7 +47,7 @@
 <ul>
 <li><strong>The Agents pane.</strong> In the Copilot app, open <em>Agents</em> in the left navigation. Pre-installed agents are listed there.</li>
 <li><strong>All agents / the Agent Store.</strong> <em>All agents</em> opens the Agent Store, a hub for agents from Microsoft, partners and your organisation. Choose <em>Add</em> or <em>Open</em>. Some agents show <em>Request approval</em> instead of <em>Add</em>.</li>
-<li><strong>@-mentioning.</strong> In the Copilot app you can mention an agent in your prompt. Type <code>@</code> and pick the agent. I couldn't find a Microsoft page that explains the steps, so if it doesn't work for you, use the Agents pane instead.</li>
+<li><strong>@-mentioning.</strong> In the Copilot app you can mention an agent in your prompt. Type <code>@</code> and pick the agent. If that doesn't work for you, use the Agents pane instead.</li>
 <li><strong>Pinning.</strong> Agents can be pinned by Microsoft, by administrators and by you. Researcher and Analyst are pinned by default where you have them. Use the pin icon to keep your favourites at the top.</li>
 <li><strong>Links.</strong> A colleague can send you a link to an agent they built.</li>
 </ul>
@@ -49,7 +56,7 @@
 <section class="tier-sec" data-tier="chat"><h2 id="chat" class="tiered"><span class="tier tier-chat">Chat</span>Which agents you get with Copilot Chat</h2>
 <ul>
 <li><strong>Included:</strong> agents grounded in instructions and public websites. Microsoft says these come with Copilot Chat.</li>
-<li><strong>Microsoft's coaching agents</strong> (Idea, Writing, Prompt, Career and Learning Coach) are described as included with Copilot Chat at no extra cost. I also found a setup page that suggests at least some of them use credits in a pay-as-you-go tenant, and I couldn't reconcile the two, so treat them as "included, but your organisation must have enabled them".</li>
+<li><strong>Microsoft's coaching agents</strong> (Idea, Writing, Prompt, Career and Learning Coach) are described as included with Copilot Chat at no extra cost. Your organisation still has to enable them, and a Microsoft setup page suggests some use may be metered where pay-as-you-go is on.</li>
 <li><strong>Pay-as-you-go:</strong> agents that use work data such as SharePoint files and Copilot connectors are billed by usage. They are off by default and your organisation has to set them up. That is a billing setting only an administrator can change.</li>
 <li><strong>Not available on Chat:</strong> knowledge from your email, people data, Teams messages and meetings needs a Copilot licence.</li>
 <li><strong>Researcher and Analyst:</strong> Microsoft's pages put these on the licensed side. See <a href="../researcher/#chat">Researcher</a>.</li>
@@ -85,6 +92,7 @@
 <p>An independent guide for people who use Microsoft Copilot at work. It is not made by, endorsed by, or affiliated with Microsoft. Microsoft, Copilot, Word, Excel, PowerPoint, Outlook and Teams are trademarks of Microsoft.</p>
 <p>Content is licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Format inspired by <a href="https://www.guidesforhumans.com/">Guides for Humans</a>. All text here is original. Prices and features change, so check Microsoft's own pages.</p>
 </div></footer>
+
 <script src="../assets/app.js" defer></script>
 </body>
 </html>

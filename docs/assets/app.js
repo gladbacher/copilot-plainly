@@ -61,20 +61,20 @@
   var n=0;
   each('.promptbox',function(box){
     var pre=box.querySelector('pre');if(!pre)return;
-    var tpl=pre.textContent,re=/\[([^\]\n]{1,90})\]/g,names=[],m,vals={};
+    var tpl=pre.textContent,re=/\[([^\]\n]{1,90})\]/g,names=[],m,vals={},inputs={},det;
     while((m=re.exec(tpl))){if(names.indexOf(m[1])<0)names.push(m[1])}
     function render(){
       var out='',last=0;
       tpl.replace(re,function(all,name,idx){
         out+=esc(tpl.slice(last,idx));
-        out+=vals[name]?'<mark class="filled">'+esc(vals[name])+'</mark>':'<span class="ph">['+esc(name)+']</span>';
+        out+=vals[name]?'<mark class="filled" data-n="'+names.indexOf(name)+'" title="Change this">'+esc(vals[name])+'</mark>':'<span class="ph" data-n="'+names.indexOf(name)+'" title="Fill this in">['+esc(name)+']</span>';
         last=idx+all.length;return all;
       });
       pre.innerHTML=out+esc(tpl.slice(last));
     }
     if(names.length){
       render();
-      var det=document.createElement('details');det.className='fill';
+      det=document.createElement('details');det.className='fill';
       var sum=document.createElement('summary');sum.textContent='Fill in the blanks ('+names.length+')';det.appendChild(sum);
       var f=document.createElement('div');f.className='fields';
       names.forEach(function(name){
@@ -91,10 +91,16 @@
             wrap.appendChild(dl);inp.setAttribute('list',dl.id);inp.placeholder='Pick or type your own';
           }else if(/^\d+$/.test(name)){inp.placeholder=name;inp.inputMode='numeric'}
         }
+        inputs[name]=inp;
         inp.addEventListener('input',function(){vals[name]=inp.value.trim();render()});
         wrap.appendChild(lab);wrap.appendChild(inp);f.appendChild(wrap);
       });
       det.appendChild(f);box.appendChild(det);
+      // Clicking a blank in the prompt jumps to its field.
+      pre.addEventListener('click',function(e){
+        var t=e.target.closest('[data-n]');if(!t)return;
+        det.open=true;var i=inputs[names[+t.getAttribute('data-n')]];if(i)i.focus();
+      });
     }
     var b=document.createElement('button');
     b.type='button';b.className='copy';b.textContent='Copy';
@@ -207,5 +213,66 @@
     if(saved==='chat'||saved==='premium'){
       tree.innerHTML='<div class="result"><p><strong>You are on the '+(saved==='chat'?'Chat':'Premium')+' track.</strong> Change it any time with the <em>My licence</em> switch at the top.</p></div><button type="button" class="restart" data-n="start">Check my label again</button>';
     }else show('start');
+  }
+  // ---- First visit to a page with two routes: offer to pick a licence ----
+  var home=(document.querySelector('.brand')||{getAttribute:function(){return './'}}).getAttribute('href');
+  var art=document.querySelector('article');
+  if(art&&!tree&&!get('tier')&&document.querySelector('.tier-sec')){
+    var nd=document.createElement('div');nd.className='nudge';nd.id='nudge';
+    nd.innerHTML='<span><strong>Which Copilot do you have?</strong> Pick one to see only your route.</span>'+
+      '<button type="button" data-t="chat">Copilot Chat</button><button type="button" data-t="premium">M365 Copilot (Premium)</button>'+
+      '<a href="'+home+'start/">Not sure?</a><button type="button" class="x" data-t="both">Keep showing both</button>';
+    nd.addEventListener('click',function(e){var b=e.target.closest('button[data-t]');if(!b)return;setTier(b.getAttribute('data-t'));nd.remove()});
+    art.insertBefore(nd,art.firstChild);
+    if(sw)sw.addEventListener('click',function(){nd.remove()});
+  }
+
+  // ---- Keep the current menu item in view on narrow screens ----
+  each('.nav a[aria-current], .secnav a[aria-current]',function(a){
+    var p=a.parentNode;p.scrollLeft=a.offsetLeft-p.offsetLeft-(p.clientWidth-a.clientWidth)/2;
+  });
+  // ---- "On this page" starts closed on small screens ----
+  var tocd=document.querySelector('.toc details');
+  if(tocd&&window.matchMedia&&matchMedia('(max-width:959px)').matches)tocd.open=false;
+
+  // ---- Back to top ----
+  if(document.body.scrollHeight>window.innerHeight*3){
+    var top=document.createElement('button');top.type='button';top.className='totop';top.textContent='↑ Top';top.hidden=true;
+    top.addEventListener('click',function(){window.scrollTo(0,0);var m=document.getElementById('main');if(m){m.setAttribute('tabindex','-1');m.focus({preventScroll:true})}});
+    document.body.appendChild(top);
+    window.addEventListener('scroll',function(){top.hidden=window.scrollY<900},{passive:true});
+  }
+
+  // ---- Site search ----
+  var sr=document.getElementById('searchresults');
+  if(sr&&window.SEARCH_INDEX){
+    var sq=document.getElementById('siteq'),st=document.getElementById('searchstatus'),form=document.getElementById('searchform');
+    function go(){
+      var words=sq.value.toLowerCase().trim().split(/\s+/).filter(Boolean);
+      if(!words.length){sr.innerHTML='';st.textContent='Type a word or two.';return}
+      var tier=root.getAttribute('data-tier'),hits=[];
+      window.SEARCH_INDEX.forEach(function(e){
+        if(tier&&e.t&&e.t!==tier)return;
+        var title=e.p.toLowerCase(),head=(e.p+' '+e.h).toLowerCase(),hay=head+' '+e.x.toLowerCase(),score=0;
+        for(var i=0;i<words.length;i++){
+          if(hay.indexOf(words[i])<0){score=0;break}
+          score+=title.indexOf(words[i])>-1?8:head.indexOf(words[i])>-1?5:1;
+        }
+        if(score)hits.push([score,e]);
+      });
+      hits.sort(function(a,b){return b[0]-a[0]});
+      st.textContent=hits.length+' result'+(hits.length===1?'':'s')+(tier?' for your licence':'')+(hits.length?'.':'. Try a different word, or browse the playbooks.');
+      var rx=new RegExp('('+words.map(function(w){return w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}).join('|')+')','gi');
+      sr.innerHTML=hits.slice(0,40).map(function(h){
+        var e=h[1],at=e.x.toLowerCase().indexOf(words[0]),from=Math.max(0,at-70);
+        var snip=(from?'… ':'')+e.x.slice(from,from+210)+(e.x.length>from+210?' …':'');
+        var badge=e.t?'<span class="tier tier-'+e.t+'">'+(e.t==='chat'?'Chat':'Premium')+'</span>':'';
+        return '<div class="result-item">'+badge+'<a href="'+home+e.u+'">'+esc(e.p)+(e.h&&e.h!==e.p?': '+esc(e.h):'')+'</a><p>'+esc(snip).replace(rx,'<mark>$1</mark>')+'</p></div>';
+      }).join('');
+    }
+    try{sq.value=new URLSearchParams(location.search).get('q')||''}catch(e){}
+    sq.addEventListener('input',go);
+    form.addEventListener('submit',function(e){e.preventDefault();go();try{history.replaceState(null,'','?q='+encodeURIComponent(sq.value))}catch(x){}});
+    window.__recount=go;go();sq.focus();
   }
 })();

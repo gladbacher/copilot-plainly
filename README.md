@@ -23,11 +23,14 @@ Not made by, endorsed by, or affiliated with Microsoft.
 - **Playbooks** (section `playbooks`): one page per job in `src/pages/20-pb-*.html`. Each has a `#chat` route, a `#premium` route, follow-up prompts and checks. The hub and the homepage list them automatically (`<!--PLAYBOOKS-->`).
 - **Prompts**: the build collects every `.promptbox` on the site into one searchable library (`<!--LIBRARY-->`). The block between `<!--LIB-SRC-->` and `<!--/LIB-SRC-->` on the prompts page holds prompts that live only in the library.
 - **Apps** (section `apps`), **Agents** (section `agents`), **Safety**, **Fix it**.
+- **Search** (`/search/`): the build writes `assets/search-index.js`, one entry per `<h2>` section; the search runs in the browser.
+- **Release files**: `404.html`, `sitemap.xml` and `robots.txt` are generated for the public build. `SITE_URL` at the top of `tools/build.py` must match the published address; change it if the repository is renamed.
 
 ## Interactive features (all in `src/assets/app.js`, no dependencies, nothing leaves the browser)
 - **Licence switch.** The build wraps each tiered `<h2>` section in `<section data-tier="chat|premium">`. The reader's choice is saved in `localStorage` and the other track is hidden. Any element with `data-tier` follows the switch. With JavaScript off, everything shows.
 - **Fill in the blanks.** Any `[text in square brackets]` inside a prompt becomes a form field; Copy takes the filled-in prompt. Options written as `[a / b / c]` become suggestions. Don't use square brackets in a prompt for anything else.
 - **Filters.** `<input class="filter" data-target="CSS selector">` filters matching elements as you type (used by the prompt library and the lookup table).
+- **First-visit nudge.** On a page with two routes, a reader who hasn't picked a licence is asked once.
 - **Checklists.** `<input type="checkbox" data-save="id">` is remembered in the browser (5-day challenge).
 
 ## Citations
@@ -36,6 +39,7 @@ Source files keep `(Microsoft, 2026x)` keys next to each claim. The build strips
 ## Page header keys
 `slug`, `title`, `nav` (yes/no), `navlabel`, `desc`, `toc` (yes/no), `order` (integer; pages sort by it), `verified` (yes adds the "last checked" line), plus:
 - `section: agents` marks a sub-page of a section. The build adds a section mini-nav and a pager that runs through the section. The top-nav item whose slug equals the section name shows as current. Sub-pages are `nav: no`. `secLabel` (optional) overrides the label in the mini-nav.
+- `checked: 10 November 2026` overrides the site-wide `VERIFIED` date for one page.
 - `cheat: yes` marks a printable cheat sheet (one A4 page via `@media print`).
 
 Orders go up in tens (agents sub-pages are 81 to 86) so a page such as a Cowork bonus can drop in at 90 without renumbering.

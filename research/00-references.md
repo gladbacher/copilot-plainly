@@ -1,6 +1,6 @@
 # Reference list (keys used as (Microsoft, 2026x) in the page text)
 
-Moved here from the site's Sources page, which was removed from the published guide. Retrieval: a to n on 16 Oct 2026; re-checked and s onwards added on 6 Nov 2026. Dates are those Microsoft shows.
+Moved here from the site's Sources page, which was removed from the published guide. Retrieval: a to n on 16 Oct 2026; re-checked and s onwards added on 6 Nov 2026; ba onwards added on 10 Nov 2026. Dates are those Microsoft shows.
 
 - **2026a.** Microsoft. (2026, October 14). *What is Microsoft Copilot?* Microsoft Learn. https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview
 - **2026b.** Microsoft. (n.d.). *Microsoft Copilot Chat: your AI assistant for work*. Microsoft Support. https://support.microsoft.com/copilot-microsoft365-chat (no page date shown)
@@ -37,6 +37,14 @@ Moved here from the site's Sources page, which was removed from the published gu
 - **2026ao.** Microsoft. (n.d.). *Build your own agent with Microsoft Copilot*. Microsoft Support. https://support.microsoft.com/en-us/microsoft-365-copilot/build-your-own-agent-with-microsoft-365-copilot
 - **2026aq.** Microsoft. (2026, November 4). *Microsoft Copilot requirements*. Microsoft Learn. https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-copilot-requirements
 - **2026ar.** Microsoft. (n.d.). *How Copilot Chat works with and without a Microsoft Copilot license*. Microsoft Support. https://support.microsoft.com/en-us/microsoft-365-copilot/how-copilot-chat-works-with-and-without-a-microsoft-365-copilot-license
+- **2026ba.** Microsoft. (n.d.). *Get started with Microsoft Copilot Pages*. Microsoft Support. https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-microsoft-365-copilot-pages (no page date shown)
+- **2026bb.** Microsoft. (2026, November). *Microsoft Copilot Notebooks licensing*. Microsoft Support. https://support.microsoft.com/en-us/microsoft-365-copilot/copilot-notebooks-licensing
+- **2026bc.** Microsoft. (n.d.). *Get started with Microsoft Copilot Notebooks*. Microsoft Support. https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-microsoft-365-copilot-notebooks (no page date shown)
+- **2026bd.** Microsoft. (n.d.). *Personalize what Microsoft Copilot remembers*. Microsoft Support. https://support.microsoft.com/en-us/microsoft-365-copilot/personalize-what-microsoft-365-copilot-remembers (no page date shown)
+- **2026be.** Microsoft. (n.d.). *Customize how Microsoft Copilot responds to you*. Microsoft Support. https://support.microsoft.com/en-us/microsoft-365-copilot/customize-how-microsoft-365-copilot-responds-to-you (no page date shown)
+- **2026bf.** Microsoft. (n.d.). *Save your favorite prompts to use again*. Microsoft Support. https://support.microsoft.com/en-us/microsoft-365-copilot/save-your-favorite-prompts-to-use-again (no page date shown)
+- **2026bg.** Microsoft. (n.d.). *Schedule your most used Copilot prompts*. Microsoft Support. https://support.microsoft.com/en-us/microsoft-365-copilot/schedule-your-most-used-copilot-prompts (no page date shown)
+- **2026bh.** Microsoft. (2026, September 2; updated November 3). *Manage Copilot personalization and memory*. Microsoft Learn. https://learn.microsoft.com/en-us/microsoft-365/copilot/copilot-personalization-memory
 
 ## Other material
 - Format inspiration: https://www.guidesforhumans.com/setup-claude/full-guide.html (no text copied).

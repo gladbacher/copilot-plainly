@@ -1,0 +1,16 @@
+slug: search
+order: 150
+nav: no
+navlabel: Search
+title: Search
+desc: Search every guide, playbook and prompt on Copilot Flight Deck.
+toc: no
+---
+<h1>Search</h1>
+<form class="lib-tools" id="searchform" action="./" method="get" role="search">
+<label for="siteq">Search the whole site</label>
+<input type="search" id="siteq" name="q" class="sitesearch" placeholder="e.g. meeting notes, Excel formula, agent" autocomplete="off">
+<button class="btn" type="submit">Search</button>
+</form>
+<p class="meta" id="searchstatus">Search runs in your browser and needs JavaScript. Without it, browse the <a href="../playbooks/">playbooks</a>, the <a href="../prompts/">prompt library</a> or the <a href="../apps/">app guides</a>.</p>
+<div id="searchresults"></div>

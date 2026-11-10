@@ -4,7 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Cheat sheet: Copilot Chat | Copilot Flight Deck</title>
-<meta name="description" content="One printable A4 page for people with Copilot Chat: where to open it, what it can see, the prompt recipe, five prompts, agents to try and safety basics.">
+<meta name="description" content="One printable A4 page for people with Copilot Chat: where to open it, what it can see, the prompt recipe, prompts, follow-ups, features to find and safety basics.">
+<meta property="og:title" content="Cheat sheet: Copilot Chat | Copilot Flight Deck">
+<meta property="og:description" content="One printable A4 page for people with Copilot Chat: where to open it, what it can see, the prompt recipe, prompts, follow-ups, features to find and safety basics.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Copilot Flight Deck">
+<meta name="theme-color" content="#0b6e6e">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%230b6e6e%22/%3E%3Cpath%20d%3D%22M14%2036l36-16-10%2030-8-12z%22%20fill%3D%22%23fff%22/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../assets/style.css">
 <script>try{var d=document.documentElement,t=localStorage.getItem('tier'),h=localStorage.getItem('theme');if(t==='chat'||t==='premium')d.setAttribute('data-tier',t);if(h==='light'||h==='dark')d.setAttribute('data-theme',h)}catch(e){}</script>
 </head>
@@ -13,6 +19,7 @@
 <header class="topbar"><div class="topbar-in">
 <a class="brand" href="../">Copilot <span>Flight Deck</span></a>
 <div class="tierswitch" id="tierswitch" role="group" aria-label="Show guidance for my licence" hidden><span>My licence</span><button type="button" data-t="chat">Chat</button><button type="button" data-t="premium">Premium</button><button type="button" data-t="both">Both</button></div>
+<a class="searchlink" href="../search/">Search</a>
 <button type="button" class="theme" id="theme">Dark mode</button>
 <nav class="nav" aria-label="Main"><a href="../start/">Start</a><a href="../playbooks/">Playbooks</a><a href="../prompts/">Prompts</a><a href="../apps/">Apps</a><a href="../agents/">Agents</a><a href="../safety/">Safety</a><a href="../troubleshooting/">Fix it</a></nav>
 </div></header>
@@ -21,29 +28,29 @@
 
 <main id="main"><article>
 
-<p class="eyebrow">Cheat sheet · print me (one A4 page)</p>
+<p class="eyebrow">Cheat sheet · prints on one A4 page</p>
 <h1><span class="tier tier-chat">Chat</span>Copilot Chat on one page</h1>
-<p class="lede noprint">Print this page with Ctrl+P or Cmd+P. Menus and footer are hidden when you print. Premium user? <a href="../cheatsheet-premium/">Use the Premium sheet</a>.</p>
+<p class="lede noprint">Print with Ctrl+P or Cmd+P. Menus and footer are left out. Premium user? <a href="../cheatsheet-premium/">Use the Premium sheet</a>.</p>
 <div class="sheet">
 <section><h2>Where to open it</h2>
-<ul><li><code>copilot.cloud.microsoft</code></li><li>The Copilot icon in the Edge sidebar</li><li>Inside Outlook and Teams</li><li>Sign in with your <strong>work</strong> account. Look for <em>Work</em> and the green shield.</li></ul></section>
+<ul><li><code>copilot.cloud.microsoft</code></li><li>The Copilot icon in Edge</li><li>Inside Outlook and Teams</li><li>Sign in with your <strong>work</strong> account. Look for <em>Work</em> and the green shield.</li></ul></section>
 <section><h2>What it can see</h2>
-<ul><li>The web</li><li>What you paste, upload or open beside it in Outlook or Teams</li><li><strong>Not</strong> your inbox, files or meetings by itself, except in Outlook</li></ul></section>
+<ul><li>The web</li><li>What you paste, upload or have open in Outlook, Teams or Edge</li><li>Your inbox and calendar, inside Outlook</li><li><strong>Not</strong> your files, chats or meetings by itself</li></ul></section>
 <section class="wide"><h2>The four-part recipe</h2>
-<p><strong>Goal</strong> (required) · <strong>Context</strong> (who it is for) · <strong>Source</strong> (paste or attach it) · <strong>Expectations</strong> (format, tone, length). Then refine: "shorter", "less formal".</p></section>
+<p><strong>Goal</strong> (required) · <strong>Context</strong> (who it is for) · <strong>Source</strong> (paste or attach it) · <strong>Expectations</strong> (format, tone, length).</p></section>
 <section class="wide"><h2>Five prompts to copy</h2>
-<ol>
-<li>"Using only the text below, summarise it in five bullets for [who]. If something is not in the text, say so."</li>
-<li>"Draft a reply to the email below. I want to [agree / decline]. Under 100 words, one clear next step."</li>
-<li>"From these notes, list the actions as a table: action, owner, due date. Write 'not stated' if missing."</li>
-<li>"Act as a sceptical colleague. Tell me the three weakest assumptions in my plan."</li>
-<li>"I want help with [task]. Ask me up to five questions, one at a time, then write the best prompt."</li></ol></section>
+<ol><li>"Using only the text below, summarise it in five bullets for [who]. If something is not in the text, say so."</li><li>"Draft a reply to the email below. I want to [agree / decline]. Under 100 words, one clear next step."</li><li>"From these notes, list the actions as a table: action, owner, due date. Write 'not stated' if missing."</li><li>"Summarise my unread emails into: needs a reply, for information, can wait." (in Outlook)</li><li>"I want help with [task]. Ask me up to five questions, one at a time, then write the best prompt."</li></ol></section>
+<section class="wide"><h2>Follow-ups that fix most answers</h2>
+<ul><li>"Shorter, less formal, and put the recommendation first."</li><li>"If it is not in the source, say 'not stated'. Do not guess."</li><li>"Act as a sceptical reviewer. List the three weakest points, then fix them."</li><li>"Show where each claim comes from."</li></ul></section>
+<section><h2>Features worth finding</h2>
+<ul><li><strong>Edit in Pages</strong>: keep and share a good answer</li><li><strong>Custom instructions</strong>: set your preferences once</li><li><strong>Notebooks</strong>: up to 50 files for one piece of work</li><li><strong>Edge</strong>: summarise the page you are on</li></ul></section>
 <section><h2>Agents to try</h2>
-<ul><li>Prompt Coach: sharpens your prompts</li><li>Writing Coach: tone, grammar, style</li><li>Visual Creator: turns descriptions into visuals</li></ul>
-<p class="meta">Which agents you see can vary. <a href="../agents/#chat">Details</a>.</p></section>
-<section><h2>Safety basics</h2>
-<ul><li>Check names, numbers and quotes</li><li>Never paste passwords, keys or restricted data</li><li>Your chats are stored and your employer can search them</li><li>Don't use a file you shouldn't see; report it</li></ul></section>
+<ul><li>Prompt Coach: sharpens your prompts</li><li>Writing Coach: tone, grammar, style</li><li>Visual Creator: descriptions into visuals</li></ul>
+<p class="meta noprint">Which agents you see can vary. <a href="../agents/#chat">Details</a>.</p></section>
+<section class="wide"><h2>Before you use the answer</h2>
+<ul><li>Check names, numbers, dates and quotes against the source.</li><li>Never paste passwords, keys or data your organisation restricts.</li><li>Your chats are stored and your employer can search them.</li><li>See something you shouldn't have access to? Don't use it. Report it.</li></ul></section>
 </div>
+<p class="sheetfoot">Copilot Flight Deck · gladbacher.github.io/copilot-plainly · an independent guide, not affiliated with Microsoft</p>
 
 
 
@@ -56,6 +63,7 @@
 <p>An independent guide for people who use Microsoft Copilot at work. It is not made by, endorsed by, or affiliated with Microsoft. Microsoft, Copilot, Word, Excel, PowerPoint, Outlook and Teams are trademarks of Microsoft.</p>
 <p>Content is licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Format inspired by <a href="https://www.guidesforhumans.com/">Guides for Humans</a>. All text here is original. Prices and features change, so check Microsoft's own pages.</p>
 </div></footer>
+
 <script src="../assets/app.js" defer></script>
 </body>
 </html>

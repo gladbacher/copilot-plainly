@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Safety and privacy | Copilot Flight Deck</title>
 <meta name="description" content="What Microsoft Copilot can see at work, what it keeps, what it does not do with your data, and what not to paste.">
+<meta property="og:title" content="Safety and privacy | Copilot Flight Deck">
+<meta property="og:description" content="What Microsoft Copilot can see at work, what it keeps, what it does not do with your data, and what not to paste.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Copilot Flight Deck">
+<meta name="theme-color" content="#0b6e6e">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%230b6e6e%22/%3E%3Cpath%20d%3D%22M14%2036l36-16-10%2030-8-12z%22%20fill%3D%22%23fff%22/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../assets/style.css">
 <script>try{var d=document.documentElement,t=localStorage.getItem('tier'),h=localStorage.getItem('theme');if(t==='chat'||t==='premium')d.setAttribute('data-tier',t);if(h==='light'||h==='dark')d.setAttribute('data-theme',h)}catch(e){}</script>
 </head>
@@ -13,12 +19,13 @@
 <header class="topbar"><div class="topbar-in">
 <a class="brand" href="../">Copilot <span>Flight Deck</span></a>
 <div class="tierswitch" id="tierswitch" role="group" aria-label="Show guidance for my licence" hidden><span>My licence</span><button type="button" data-t="chat">Chat</button><button type="button" data-t="premium">Premium</button><button type="button" data-t="both">Both</button></div>
+<a class="searchlink" href="../search/">Search</a>
 <button type="button" class="theme" id="theme">Dark mode</button>
 <nav class="nav" aria-label="Main"><a href="../start/">Start</a><a href="../playbooks/">Playbooks</a><a href="../prompts/">Prompts</a><a href="../apps/">Apps</a><a href="../agents/">Agents</a><a href="../safety/" aria-current=page>Safety</a><a href="../troubleshooting/">Fix it</a></nav>
 </div></header>
 <div class="wrap">
 <div class="layout has-toc">
-<nav class="toc" aria-label="On this page"><div class="toc-in"><h2>On this page</h2><ol><li><a href="#sees">What Copilot can see</a></li><li><a href="#overshare">The real risk: oversharing</a></li><li><a href="#kept">What is stored, and who can see it</a></li><li><a href="#training">What Microsoft says it does not do</a></li><li><a href="#dont">What not to paste</a></li><li><a href="#wrong">Wrong answers</a></li><li><a href="#web">Web search and agents</a></li><li><a href="#ask">Before you paste: a self-check</a></li></ol></div></nav>
+<nav class="toc" aria-label="On this page"><details class="toc-in" open><summary>On this page</summary><ol><li><a href="#sees">What Copilot can see</a></li><li><a href="#overshare">The real risk: oversharing</a></li><li><a href="#kept">What is stored, and who can see it</a></li><li><a href="#training">What Microsoft says it does not do</a></li><li><a href="#dont">What not to paste</a></li><li><a href="#wrong">Wrong answers</a></li><li><a href="#web">Web search and agents</a></li><li><a href="#ask">Before you paste: a self-check</a></li></ol></details></nav>
 <main id="main"><article>
 
 <p class="eyebrow">Guide</p>
@@ -55,6 +62,7 @@
 <ul>
 <li>Your prompts, Copilot's responses and the citations are stored as your <strong>Copilot activity history</strong>. It is encrypted and handled under the same commitments as your company's other Microsoft 365 content.</li>
 <li><strong>Administrators</strong> can search and set retention for that history using tools such as Content search and Microsoft Purview. Assume a prompt is as visible to your employer as an email.</li>
+<li><strong>Memory</strong> works the same way: what Copilot remembers about you is stored in your mailbox and administrators can search it. You can see and delete it yourself. See <a href="../extras/#memory">Power features</a>.</li>
 <li><strong>You</strong> can delete your own activity history in the My Account portal (<a href="https://myaccount.microsoft.com/">myaccount.microsoft.com</a>).</li>
 </ul>
 
@@ -102,7 +110,7 @@
 
 
 
-<details class="src"><summary>Where this comes from (3 Microsoft pages)</summary><ul><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-privacy">Data, privacy, and security for Microsoft Copilot</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview">What is Microsoft Copilot?</a></li><li><a href="https://learn.microsoft.com/en-us/copilot/manage">Manage Microsoft Copilot Chat</a></li></ul></details><p class="meta">Last checked against Microsoft's documentation: 6 November 2026. Copilot changes often.</p>
+<details class="src"><summary>Where this comes from (4 Microsoft pages)</summary><ul><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-privacy">Data, privacy, and security for Microsoft Copilot</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview">What is Microsoft Copilot?</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/copilot-personalization-memory">Manage Copilot personalization and memory</a></li><li><a href="https://learn.microsoft.com/en-us/copilot/manage">Manage Microsoft Copilot Chat</a></li></ul></details><p class="meta">Last checked against Microsoft's documentation: 6 November 2026. Copilot changes often.</p>
 <div class="pager"><a href="../agent-prompts/">&larr; Agent prompts</a><a href="../troubleshooting/">Fix it &rarr;</a></div>
 </article></main>
 </div>
@@ -112,6 +120,7 @@
 <p>An independent guide for people who use Microsoft Copilot at work. It is not made by, endorsed by, or affiliated with Microsoft. Microsoft, Copilot, Word, Excel, PowerPoint, Outlook and Teams are trademarks of Microsoft.</p>
 <p>Content is licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Format inspired by <a href="https://www.guidesforhumans.com/">Guides for Humans</a>. All text here is original. Prices and features change, so check Microsoft's own pages.</p>
 </div></footer>
+
 <script src="../assets/app.js" defer></script>
 </body>
 </html>

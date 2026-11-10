@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>The prompt library | Copilot Flight Deck</title>
 <meta name="description" content="Copy-and-paste Copilot prompts for common work jobs, built on Microsoft&#x27;s goal, context, source and expectations recipe. Separate sets for Chat and Premium.">
+<meta property="og:title" content="The prompt library | Copilot Flight Deck">
+<meta property="og:description" content="Copy-and-paste Copilot prompts for common work jobs, built on Microsoft&#x27;s goal, context, source and expectations recipe. Separate sets for Chat and Premium.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Copilot Flight Deck">
+<meta name="theme-color" content="#0b6e6e">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%230b6e6e%22/%3E%3Cpath%20d%3D%22M14%2036l36-16-10%2030-8-12z%22%20fill%3D%22%23fff%22/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../assets/style.css">
 <script>try{var d=document.documentElement,t=localStorage.getItem('tier'),h=localStorage.getItem('theme');if(t==='chat'||t==='premium')d.setAttribute('data-tier',t);if(h==='light'||h==='dark')d.setAttribute('data-theme',h)}catch(e){}</script>
 </head>
@@ -13,12 +19,13 @@
 <header class="topbar"><div class="topbar-in">
 <a class="brand" href="../">Copilot <span>Flight Deck</span></a>
 <div class="tierswitch" id="tierswitch" role="group" aria-label="Show guidance for my licence" hidden><span>My licence</span><button type="button" data-t="chat">Chat</button><button type="button" data-t="premium">Premium</button><button type="button" data-t="both">Both</button></div>
+<a class="searchlink" href="../search/">Search</a>
 <button type="button" class="theme" id="theme">Dark mode</button>
 <nav class="nav" aria-label="Main"><a href="../start/">Start</a><a href="../playbooks/">Playbooks</a><a href="../prompts/" aria-current=page>Prompts</a><a href="../apps/">Apps</a><a href="../agents/">Agents</a><a href="../safety/">Safety</a><a href="../troubleshooting/">Fix it</a></nav>
 </div></header>
 <div class="wrap">
 <div class="layout has-toc">
-<nav class="toc" aria-label="On this page"><div class="toc-in"><h2>On this page</h2><ol><li><a href="#library">Every prompt on this site</a></li><li><a href="#recipe">The recipe</a></li><li><a href="#habit">Habits worth keeping</a></li></ol></div></nav>
+<nav class="toc" aria-label="On this page"><details class="toc-in" open><summary>On this page</summary><ol><li><a href="#library">Every prompt on this site</a></li><li><a href="#recipe">The recipe</a></li><li><a href="#habit">Habits worth keeping</a></li></ol></details></nav>
 <main id="main"><article>
 
 <p class="eyebrow">Guide</p>
@@ -32,7 +39,7 @@
 <li>If the first result is off, say what to change instead of starting again.</li>
 <li><a href="#library">Search every prompt on the site</a>, filtered to your licence.</li>
 </ul></div>
-<div class="callout warn"><strong>About these prompts</strong><p>I wrote them from Microsoft's four-part pattern. I have not run each one against every Copilot version, and results differ by licence and by what is in your files. Treat them as starting points, then keep the ones that work for you.</p></div>
+<div class="callout warn"><strong>About these prompts</strong><p>They are built on Microsoft's four-part pattern and have not all been tested on every licence. Results differ by licence and by what is in your files, so treat each one as a starting point, fix it with a follow-up, and keep the ones that work for you.</p></div>
 
 <h2 id="library">Every prompt on this site</h2>
 <p>Search by job or app, or pick a group. With <em>My licence</em> set at the top, you only see prompts for your licence. Open <em>Fill in the blanks</em> under any prompt, type your details, then copy.</p>
@@ -61,6 +68,12 @@ Write the new one in the same style and length.</pre></div></div>
 <div class="pitem" data-cat="Start"><h3>The 12 moves: 10. Forbid guessing</h3> <span class="meta">From <a href="../moves/">The 12 moves</a></span><div class="promptbox"><span class="label">Start</span><pre>If the answer is not in the source, say "not stated". Do not guess or fill gaps.</pre></div></div>
 <div class="pitem" data-cat="Start"><h3>The 12 moves: 11. Make it criticise its own work</h3> <span class="meta">From <a href="../moves/">The 12 moves</a></span><div class="promptbox"><span class="label">Start</span><pre>Now act as a sceptical reviewer. List the three weakest points in what you just wrote, then fix them.</pre></div></div>
 <div class="pitem" data-cat="Start"><h3>The 12 moves: 12. Ask where it came from</h3> <span class="meta">From <a href="../moves/">The 12 moves</a></span><div class="promptbox"><span class="label">Start</span><pre>For each claim, show where it comes from: quote the line or give the link. Mark anything you could not verify.</pre></div></div>
+<div class="pitem" data-cat="Start"><h3>Power features: Custom instructions to start from</h3> <span class="meta">From <a href="../extras/">Power features</a></span><div class="promptbox"><span class="label">Start</span><pre>I work as [role] in [team or industry]. Use UK spelling and plain words.
+Lead with the answer, then the reasoning. Use short bullets for lists.
+If you are not sure, say so. Never guess a number, a name or a date.</pre></div></div>
+<div class="pitem" data-cat="Start"><h3>Power features</h3> <span class="meta">From <a href="../extras/">Power features</a></span><div class="promptbox"><span class="label">Start</span><pre>Summarise this page for [who]. Give me the five points that matter, anything that looks out of date, and what I should read in full.</pre></div></div>
+<div class="pitem" data-tier="premium" data-cat="Start"><h3><span class="tier tier-premium">Premium</span>Power features: Scheduled prompts</h3> <span class="meta">From <a href="../extras/">Power features</a></span><div class="promptbox"><span class="label">Start</span><pre>Summarise what needs my attention this week from my emails, meetings and chats.
+List deadlines, things waiting on me, and meetings I should prepare for. Name the source of each.</pre></div></div>
 <div class="pitem" data-tier="chat" data-cat="Playbooks"><h3><span class="tier tier-chat">Chat</span>Clear my inbox</h3> <span class="meta">From <a href="../inbox/">Clear my inbox</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>Summarise my unread emails from [this week] into three groups: needs a reply from me, for information only, and can wait.
 For each one give the sender and a one-line reason.
 Then name the three I should answer first, and why.</pre></div></div>
@@ -357,6 +370,7 @@ You are not a decision-maker. For exceptions or doubt, say who to ask. Never gue
 <p>An independent guide for people who use Microsoft Copilot at work. It is not made by, endorsed by, or affiliated with Microsoft. Microsoft, Copilot, Word, Excel, PowerPoint, Outlook and Teams are trademarks of Microsoft.</p>
 <p>Content is licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Format inspired by <a href="https://www.guidesforhumans.com/">Guides for Humans</a>. All text here is original. Prices and features change, so check Microsoft's own pages.</p>
 </div></footer>
+
 <script src="../assets/app.js" defer></script>
 </body>
 </html>

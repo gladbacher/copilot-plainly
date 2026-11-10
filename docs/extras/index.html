@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Power features | Copilot Flight Deck</title>
+<meta name="description" content="The Copilot features most people never find: Pages, Notebooks, memory, custom instructions, saved and scheduled prompts, and Copilot in Edge, by licence.">
+<meta property="og:title" content="Power features | Copilot Flight Deck">
+<meta property="og:description" content="The Copilot features most people never find: Pages, Notebooks, memory, custom instructions, saved and scheduled prompts, and Copilot in Edge, by licence.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Copilot Flight Deck">
+<meta name="theme-color" content="#0b6e6e">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%230b6e6e%22/%3E%3Cpath%20d%3D%22M14%2036l36-16-10%2030-8-12z%22%20fill%3D%22%23fff%22/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var d=document.documentElement,t=localStorage.getItem('tier'),h=localStorage.getItem('theme');if(t==='chat'||t==='premium')d.setAttribute('data-tier',t);if(h==='light'||h==='dark')d.setAttribute('data-theme',h)}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar"><div class="topbar-in">
+<a class="brand" href="../">Copilot <span>Flight Deck</span></a>
+<div class="tierswitch" id="tierswitch" role="group" aria-label="Show guidance for my licence" hidden><span>My licence</span><button type="button" data-t="chat">Chat</button><button type="button" data-t="premium">Premium</button><button type="button" data-t="both">Both</button></div>
+<a class="searchlink" href="../search/">Search</a>
+<button type="button" class="theme" id="theme">Dark mode</button>
+<nav class="nav" aria-label="Main"><a href="../start/" aria-current=page>Start</a><a href="../playbooks/">Playbooks</a><a href="../prompts/">Prompts</a><a href="../apps/">Apps</a><a href="../agents/">Agents</a><a href="../safety/">Safety</a><a href="../troubleshooting/">Fix it</a></nav>
+</div></header>
+<div class="wrap">
+<div class="layout has-toc">
+<nav class="toc" aria-label="On this page"><details class="toc-in" open><summary>On this page</summary><ol><li><a href="#instructions">Custom instructions: set it once</a></li><li><a href="#memory">Memory: what Copilot keeps about you</a></li><li><a href="#pages">Pages: keep and share a good answer</a></li><li><a href="#edge">Edge: summarise what is in front of you</a></li><li><a href="#saved">Saved prompts: stop retyping</a></li><li><a href="#images">Images</a></li><li data-tier=chat><a href="#chat">Chat: Notebooks on Copilot Chat</a></li><li data-tier=premium><a href="#premium">Premium: Notebooks, scheduling and search on Premium</a></li></ol></details></nav>
+<main id="main"><article>
+<nav class="secnav" aria-label="In this section"><a href="../start/">Start here</a><a href="../what-is-copilot/">Your licence</a><a href="../moves/">The 12 moves</a><a href="../extras/" aria-current=page>Power features</a><a href="../copilot-way/">The Copilot way</a><a href="../challenge/">5-day challenge</a></nav>
+<p class="eyebrow">Beyond the chat box</p>
+<h1>Power features</h1>
+<p class="lede">The features most people never find. Several of them work on the free Copilot Chat licence.</p>
+
+<div class="short"><h2>The short version</h2>
+<ul>
+<li><strong>Custom instructions</strong> and <strong>memory</strong>: tell Copilot once how you like things.</li>
+<li><strong>Pages</strong>: turn a good answer into a document you can edit and share.</li>
+<li><strong>Notebooks</strong>: gather the files for one piece of work and question them together.</li>
+<li><strong>Edge</strong>: summarise the web page or PDF in front of you.</li>
+<li><strong>Saved prompts</strong>: stop retyping. <span class="tier tier-premium">Premium</span> can also run prompts on a schedule.</li>
+</ul></div>
+<p class="meta">Microsoft is rolling out a new Copilot home screen, so a menu may sit in a slightly different place from the steps below. Your organisation can also switch any of these off.</p>
+
+<h2 id="instructions">Custom instructions: set it once</h2>
+<p>Custom instructions tell Copilot your preferences, and it applies them in future chats.</p>
+<ol>
+<li>In Copilot Chat, select <strong>… Settings and more</strong> at the top right, then <strong>Chat settings</strong>.</li>
+<li>Choose <strong>Personalization</strong>, find <strong>Custom instructions</strong> and select <strong>Edit instructions</strong>.</li>
+<li>Write your preferences and select <strong>Save instructions</strong>.</li>
+</ol>
+<div class="promptbox"><span class="label">Custom instructions to start from</span><pre>I work as [role] in [team or industry]. Use UK spelling and plain words.
+Lead with the answer, then the reasoning. Use short bullets for lists.
+If you are not sure, say so. Never guess a number, a name or a date.</pre></div>
+<p class="meta">If the toggle is off and won't turn on, your organisation has switched personalisation off.</p>
+
+<h2 id="memory">Memory: what Copilot keeps about you</h2>
+<ul>
+<li>With Copilot Memory on, Copilot saves key details from your chats, such as your style and recurring tasks. Microsoft says memory is available with and without a Copilot licence.</li>
+<li>Ask <em>"What do you know about me?"</em> to see it. Delete memories in <strong>Chat settings</strong>.</li>
+<li>For a chat you don't want remembered, select <strong>Start a new temporary chat</strong> at the top right. Your organisation's retention rules can still keep a copy.</li>
+<li>Memories are stored in your mailbox and administrators can search them, like the rest of your Copilot history. See <a href="../safety/#kept">Safety</a>.</li>
+</ul>
+
+
+<h2 id="pages">Pages: keep and share a good answer</h2>
+<p>A Copilot Page turns a chat answer into content you can edit, refine with Copilot and work on with colleagues. Work accounts with SharePoint or OneDrive storage have it, including people without a Copilot licence.</p>
+<ol>
+<li>Under a Copilot answer, select the <strong>…</strong> menu, then <strong>Edit in Pages</strong>. Choose a new or existing page.</li>
+<li>The page opens beside the chat. Rename it, edit it, and keep asking Copilot to improve it.</li>
+<li>Share it with colleagues. Earlier pages are in the Copilot Library.</li>
+</ol>
+<p>Use it whenever an answer is worth keeping: a draft, a plan, meeting notes, a comparison table.</p>
+
+<h2 id="edge">Edge: summarise what is in front of you</h2>
+<p>Select the Copilot icon at the top right of Edge, signed in with your work account. Copilot Chat can summarise website content and some document types shown in Edge.</p>
+<div class="promptbox"><span class="label">Prompt · in Edge</span><pre>Summarise this page for [who]. Give me the five points that matter, anything that looks out of date, and what I should read in full.</pre></div>
+
+<h2 id="saved">Saved prompts: stop retyping</h2>
+<p>After a prompt has run, hover over it and select the bookmark icon, <strong>Save prompt</strong>. It appears under <strong>Your saved prompts</strong> in the Copilot Prompt Lab, visible only to you. Microsoft's page doesn't state a licence for this, so look for the bookmark. If it isn't there, keep a "My prompts" note instead.</p>
+
+<h2 id="images">Images</h2>
+<p>Where your organisation allows image generation, ask for an image in Copilot Chat, or use the Visual Creator agent.</p>
+
+<section class="tier-sec" data-tier="chat"><h2 id="chat" class="tiered"><span class="tier tier-chat">Chat</span>Notebooks on Copilot Chat</h2>
+<p>A notebook gathers the files, pages and notes for one piece of work, so Copilot answers from all of them. Eligible Copilot Chat users get a streamlined version.</p>
+<ol>
+<li>Go to <code>m365.cloud.microsoft</code> and select <strong>Notebooks</strong> in the left menu, or find it in the app launcher.</li>
+<li>Select <strong>New notebook</strong>, name it, and add references: upload, drag and drop, or pick from OneDrive.</li>
+<li>Select <strong>Create</strong>, then ask questions across everything in it.</li>
+</ol>
+<ul>
+<li><strong>You get:</strong> up to 50 sources per notebook, plus mind maps, infographics, study guides, reports, flashcards and quizzes.</li>
+<li><strong>You can add:</strong> PDFs, text and media files, Word, Excel and PowerPoint files, OneNote and Loop pages, and email threads.</li>
+<li><strong>Not on Chat:</strong> web links, Teams chats and meetings as sources, suggested references, Audio Overviews, and Researcher inside a notebook.</li>
+</ul>
+<p class="meta">If Notebooks is missing or shows a licence message, it is not switched on for you. Uploading the files to an ordinary chat is the fallback.</p>
+<p><strong>Scheduled prompts</strong> need a Copilot licence, so they are not on this track.</p>
+
+</section><section class="tier-sec" data-tier="premium"><h2 id="premium" class="tiered"><span class="tier tier-premium">Premium</span>Notebooks, scheduling and search on Premium</h2>
+<h3>Notebooks, in full</h3>
+<p>Create one the same way: <code>m365.cloud.microsoft</code>, <strong>Notebooks</strong>, <strong>New notebook</strong>, add references, <strong>Create</strong>. With a licence you get:</p>
+<ul>
+<li>Up to 300 sources per notebook, with suggested references.</li>
+<li>Web links, Teams chats, meetings, and SharePoint and OneDrive content as sources.</li>
+<li>Researcher inside the notebook, up to 25 a month.</li>
+<li>Audio Overviews, up to 20 a day, and Live Capture.</li>
+<li>A Word, Excel or PowerPoint document created from the notebook in one go.</li>
+</ul>
+<h3>Scheduled prompts</h3>
+<p>Have a prompt run by itself, for example a Monday summary of what needs your attention.</p>
+<ol>
+<li>In Copilot Chat, hover over a prompt you have sent and select <strong>Schedule this prompt</strong>.</li>
+<li>Choose when and how often, and whether to get an email when it is ready. Select <strong>Save</strong>.</li>
+<li>Manage them under <strong>… Settings and more</strong>, then <strong>Scheduled prompts</strong>. You can have up to 10.</li>
+</ol>
+<div class="promptbox"><span class="label">Prompt · worth scheduling</span><pre>Summarise what needs my attention this week from my emails, meetings and chats.
+List deadlines, things waiting on me, and meetings I should prepare for. Name the source of each.</pre></div>
+<h3>Copilot Search</h3>
+<p>Copilot Search is one search across your Microsoft 365 apps and connected sources. Microsoft lists it with the Premium licence.</p></section>
+<details class="src"><summary>Where this comes from (10 Microsoft pages)</summary><ul><li><a href="https://support.microsoft.com/en-us/microsoft-365-copilot/customize-how-microsoft-365-copilot-responds-to-you">Customize how Microsoft Copilot responds to you</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/copilot-personalization-memory">Manage Copilot personalization and memory</a></li><li><a href="https://support.microsoft.com/en-us/microsoft-365-copilot/personalize-what-microsoft-365-copilot-remembers">Personalize what Microsoft Copilot remembers</a></li><li><a href="https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-microsoft-365-copilot-pages">Get started with Microsoft Copilot Pages</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview">What is Microsoft Copilot?</a></li><li><a href="https://support.microsoft.com/en-us/microsoft-365-copilot/save-your-favorite-prompts-to-use-again">Save your favorite prompts to use again</a></li><li><a href="https://support.microsoft.com/en-us/microsoft-365-copilot/agents-built-by-microsoft">Agents built by Microsoft</a></li><li><a href="https://support.microsoft.com/en-us/microsoft-365-copilot/copilot-notebooks-licensing">Microsoft Copilot Notebooks licensing</a></li><li><a href="https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-microsoft-365-copilot-notebooks">Get started with Microsoft Copilot Notebooks</a></li><li><a href="https://support.microsoft.com/en-us/microsoft-365-copilot/schedule-your-most-used-copilot-prompts">Schedule your most used Copilot prompts</a></li></ul></details><p class="meta">Last checked against Microsoft's documentation: 10 November 2026. Copilot changes often.</p>
+<div class="pager"><a href="../moves/">&larr; The 12 moves</a><a href="../copilot-way/">The Copilot way &rarr;</a></div>
+</article></main>
+</div>
+</div>
+<footer><div class="wrap">
+<p class="feedback">Was this useful? <a href="https://github.com/gladbacher/copilot-plainly/issues/new?title=Feedback%3A%20Power%20features">Report a problem or suggest a fix</a>.</p>
+<p>An independent guide for people who use Microsoft Copilot at work. It is not made by, endorsed by, or affiliated with Microsoft. Microsoft, Copilot, Word, Excel, PowerPoint, Outlook and Teams are trademarks of Microsoft.</p>
+<p>Content is licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Format inspired by <a href="https://www.guidesforhumans.com/">Guides for Humans</a>. All text here is original. Prices and features change, so check Microsoft's own pages.</p>
+</div></footer>
+
+<script src="../assets/app.js" defer></script>
+</body>
+</html>

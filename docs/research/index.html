@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Research a topic | Copilot Flight Deck</title>
 <meta name="description" content="A sourced answer you can check, not a confident guess.">
+<meta property="og:title" content="Research a topic | Copilot Flight Deck">
+<meta property="og:description" content="A sourced answer you can check, not a confident guess.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Copilot Flight Deck">
+<meta name="theme-color" content="#0b6e6e">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%230b6e6e%22/%3E%3Cpath%20d%3D%22M14%2036l36-16-10%2030-8-12z%22%20fill%3D%22%23fff%22/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../assets/style.css">
 <script>try{var d=document.documentElement,t=localStorage.getItem('tier'),h=localStorage.getItem('theme');if(t==='chat'||t==='premium')d.setAttribute('data-tier',t);if(h==='light'||h==='dark')d.setAttribute('data-theme',h)}catch(e){}</script>
 </head>
@@ -13,6 +19,7 @@
 <header class="topbar"><div class="topbar-in">
 <a class="brand" href="../">Copilot <span>Flight Deck</span></a>
 <div class="tierswitch" id="tierswitch" role="group" aria-label="Show guidance for my licence" hidden><span>My licence</span><button type="button" data-t="chat">Chat</button><button type="button" data-t="premium">Premium</button><button type="button" data-t="both">Both</button></div>
+<a class="searchlink" href="../search/">Search</a>
 <button type="button" class="theme" id="theme">Dark mode</button>
 <nav class="nav" aria-label="Main"><a href="../start/">Start</a><a href="../playbooks/" aria-current=page>Playbooks</a><a href="../prompts/">Prompts</a><a href="../apps/">Apps</a><a href="../agents/">Agents</a><a href="../safety/">Safety</a><a href="../troubleshooting/">Fix it</a></nav>
 </div></header>
@@ -30,6 +37,7 @@
 <li><strong>Use Copilot Chat on the web</strong>It searches the web when that helps.</li>
 <li><strong>Pick the slower setting</strong>Choose <strong>Think deeper</strong> in the model selector for a more thorough answer.</li>
 <li><strong>Demand sources and disagreements</strong>Use the prompt below, then open the links.</li>
+<li><strong>Collecting documents?</strong>Put them in a <a href="../extras/#chat">notebook</a>, up to 50 sources, and question them together.</li>
 </ol>
 <div class="promptbox"><span class="label">Prompt · Chat</span><pre>Research [topic] using public web sources, for a decision on [decision].
 Give me the key findings, where sources disagree, the risks, and a recommendation.
@@ -59,8 +67,8 @@ Cite every claim. Mark anything you could not verify.</pre></div>
 <li>Run it twice. Answers vary.</li>
 </ul>
 
-<p class="meta">I wrote these prompts from Microsoft's guidance. They have not yet been tested on every licence, so tell me what works and what doesn't.</p>
-<details class="src"><summary>Where this comes from (4 Microsoft pages)</summary><ul><li><a href="https://learn.microsoft.com/en-us/copilot/manage">Manage Microsoft Copilot Chat</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview">What is Microsoft Copilot?</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/researcher-agent">What is Researcher agent in Microsoft Copilot?</a></li><li><a href="https://support.microsoft.com/en-us/topic/learn-about-copilot-prompts-f6c3b467-f07c-4db1-ae54-ffac96184dd5">Get started writing prompts in Microsoft Copilot</a></li></ul></details><p class="meta">Last checked against Microsoft's documentation: 6 November 2026. Copilot changes often.</p>
+<p class="meta">Prompt not working on your licence? Tell us with the link at the bottom of the page.</p>
+<details class="src"><summary>Where this comes from (5 Microsoft pages)</summary><ul><li><a href="https://learn.microsoft.com/en-us/copilot/manage">Manage Microsoft Copilot Chat</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview">What is Microsoft Copilot?</a></li><li><a href="https://support.microsoft.com/en-us/microsoft-365-copilot/copilot-notebooks-licensing">Microsoft Copilot Notebooks licensing</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/researcher-agent">What is Researcher agent in Microsoft Copilot?</a></li><li><a href="https://support.microsoft.com/en-us/topic/learn-about-copilot-prompts-f6c3b467-f07c-4db1-ae54-ffac96184dd5">Get started writing prompts in Microsoft Copilot</a></li></ul></details><p class="meta">Last checked against Microsoft's documentation: 6 November 2026. Copilot changes often.</p>
 <div class="pager"><a href="../deck/">&larr; Build a deck</a><a href="../plan/">Plan a piece of work &rarr;</a></div>
 </article></main>
 </div>
@@ -70,6 +78,7 @@ Cite every claim. Mark anything you could not verify.</pre></div>
 <p>An independent guide for people who use Microsoft Copilot at work. It is not made by, endorsed by, or affiliated with Microsoft. Microsoft, Copilot, Word, Excel, PowerPoint, Outlook and Teams are trademarks of Microsoft.</p>
 <p>Content is licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Format inspired by <a href="https://www.guidesforhumans.com/">Guides for Humans</a>. All text here is original. Prices and features change, so check Microsoft's own pages.</p>
 </div></footer>
+
 <script src="../assets/app.js" defer></script>
 </body>
 </html>

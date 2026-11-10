@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gladbacher.github.io/copilot-plainly/sitemap.xml

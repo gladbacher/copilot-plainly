@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Word and Outlook | Copilot Flight Deck</title>
 <meta name="description" content="Using Microsoft Copilot to draft and edit in Word and to handle email in Outlook, with separate sections for Chat and Premium.">
+<meta property="og:title" content="Word and Outlook | Copilot Flight Deck">
+<meta property="og:description" content="Using Microsoft Copilot to draft and edit in Word and to handle email in Outlook, with separate sections for Chat and Premium.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Copilot Flight Deck">
+<meta name="theme-color" content="#0b6e6e">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%230b6e6e%22/%3E%3Cpath%20d%3D%22M14%2036l36-16-10%2030-8-12z%22%20fill%3D%22%23fff%22/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../assets/style.css">
 <script>try{var d=document.documentElement,t=localStorage.getItem('tier'),h=localStorage.getItem('theme');if(t==='chat'||t==='premium')d.setAttribute('data-tier',t);if(h==='light'||h==='dark')d.setAttribute('data-theme',h)}catch(e){}</script>
 </head>
@@ -13,12 +19,13 @@
 <header class="topbar"><div class="topbar-in">
 <a class="brand" href="../">Copilot <span>Flight Deck</span></a>
 <div class="tierswitch" id="tierswitch" role="group" aria-label="Show guidance for my licence" hidden><span>My licence</span><button type="button" data-t="chat">Chat</button><button type="button" data-t="premium">Premium</button><button type="button" data-t="both">Both</button></div>
+<a class="searchlink" href="../search/">Search</a>
 <button type="button" class="theme" id="theme">Dark mode</button>
 <nav class="nav" aria-label="Main"><a href="../start/">Start</a><a href="../playbooks/">Playbooks</a><a href="../prompts/">Prompts</a><a href="../apps/" aria-current=page>Apps</a><a href="../agents/">Agents</a><a href="../safety/">Safety</a><a href="../troubleshooting/">Fix it</a></nav>
 </div></header>
 <div class="wrap">
 <div class="layout has-toc">
-<nav class="toc" aria-label="On this page"><div class="toc-in"><h2>On this page</h2><ol><li><a href="#shared">For both tracks: check before you send</a></li><li data-tier=chat><a href="#chat">Chat: With Copilot Chat</a></li><li data-tier=premium><a href="#premium">Premium: With M365 Copilot (Premium)</a></li></ol></div></nav>
+<nav class="toc" aria-label="On this page"><details class="toc-in" open><summary>On this page</summary><ol><li><a href="#shared">For both tracks: check before you send</a></li><li data-tier=chat><a href="#chat">Chat: With Copilot Chat</a></li><li data-tier=premium><a href="#premium">Premium: With M365 Copilot (Premium)</a></li></ol></details></nav>
 <main id="main"><article>
 <nav class="secnav" aria-label="In this section"><a href="../apps/">All apps</a><a href="../copilot-chat/">Copilot Chat</a><a href="../word-outlook/" aria-current=page>Word/Outlook</a><a href="../excel/">Excel</a><a href="../powerpoint/">PowerPoint</a><a href="../teams-meetings/">Teams</a></nav>
 <p class="eyebrow">App guide</p>
@@ -39,14 +46,14 @@
 
 <section class="tier-sec" data-tier="chat"><h2 id="chat" class="tiered"><span class="tier tier-chat">Chat</span>With Copilot Chat</h2>
 <h3 id="word-chat">Word</h3>
-<p>Microsoft says the <em>Copilot Chat (Basic)</em> label has no Copilot inside Word, while <em>M365 Copilot (Basic)</em> has standard access. I couldn't confirm what decides which one you have; see <a href="../what-is-copilot/#chat">What you get</a>. Open Word and look for the Copilot icon at the bottom right to find out.</p>
+<p>Microsoft says the <em>Copilot Chat (Basic)</em> label has no Copilot inside Word, while <em>M365 Copilot (Basic)</em> has standard access. Open Word and look for the Copilot icon at the bottom right to see which you have.</p>
 <p>If you do not have it, you can still use Chat in your browser: paste the paragraph or upload the file, and ask for a rewrite.</p>
 <div class="promptbox"><span class="label">Prompt · Chat</span><pre>Rewrite the text below for a [client / executive / new starter] audience.
 Keep it factual and under [80] words. Keep all dates and figures unchanged.
 
 [Paste the text here]</pre></div>
 <h3 id="outlook">Outlook</h3>
-<p>In Outlook, Copilot is a chat panel beside your mail. Sign in with your work or school account and select the Copilot button near the top of the app. Microsoft's Outlook support page lists Outlook for Microsoft 365, Outlook for Mac and New Outlook for Windows. Its Learn requirements page says Copilot works with "supported versions" of classic Outlook too, and needs an Exchange Online mailbox; Copilot isn't available in group mailboxes. I couldn't find which classic builds count as supported, so check that your Outlook shows the Copilot button.</p>
+<p>In Outlook, Copilot is a chat panel beside your mail. Sign in with your work or school account and select the Copilot button near the top of the app. Microsoft's Outlook support page lists Outlook for Microsoft 365, Outlook for Mac and New Outlook for Windows. Its Learn requirements page says Copilot works with "supported versions" of classic Outlook too, and needs an Exchange Online mailbox; Copilot isn't available in group mailboxes. Microsoft doesn't list which classic builds count, so the test is whether your Outlook shows the Copilot button.</p>
 <p>On the Chat track, Copilot in Outlook can answer questions about your inbox, calendar and meetings and other limited data. It can take actions in Outlook: summarise emails, check meeting times, draft emails, schedule meetings, flag emails and set up automatic replies.</p>
 <div class="promptbox"><span class="label">Prompt · Chat</span><pre>Summarise my unread emails from this week into: needs a reply from me, for information only, and can wait.
 List the sender and a one-line reason for each.</pre></div>
@@ -80,6 +87,7 @@ Give me a short agenda, the last three decisions we made, and anything outstandi
 <p>An independent guide for people who use Microsoft Copilot at work. It is not made by, endorsed by, or affiliated with Microsoft. Microsoft, Copilot, Word, Excel, PowerPoint, Outlook and Teams are trademarks of Microsoft.</p>
 <p>Content is licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Format inspired by <a href="https://www.guidesforhumans.com/">Guides for Humans</a>. All text here is original. Prices and features change, so check Microsoft's own pages.</p>
 </div></footer>
+
 <script src="../assets/app.js" defer></script>
 </body>
 </html>
