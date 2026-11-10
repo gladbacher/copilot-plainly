@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Make sense of a spreadsheet | Copilot Flight Deck</title>
+<meta name="description" content="Trends, outliers and formulas without breaking the file.">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var d=document.documentElement,t=localStorage.getItem('tier'),h=localStorage.getItem('theme');if(t==='chat'||t==='premium')d.setAttribute('data-tier',t);if(h==='light'||h==='dark')d.setAttribute('data-theme',h)}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar"><div class="topbar-in">
+<a class="brand" href="../">Copilot <span>Flight Deck</span></a>
+<div class="tierswitch" id="tierswitch" role="group" aria-label="Show guidance for my licence" hidden><span>My licence</span><button type="button" data-t="chat">Chat</button><button type="button" data-t="premium">Premium</button><button type="button" data-t="both">Both</button></div>
+<button type="button" class="theme" id="theme">Dark mode</button>
+<nav class="nav" aria-label="Main"><a href="../start/">Start</a><a href="../playbooks/" aria-current=page>Playbooks</a><a href="../prompts/">Prompts</a><a href="../apps/">Apps</a><a href="../agents/">Agents</a><a href="../safety/">Safety</a><a href="../troubleshooting/">Fix it</a></nav>
+</div></header>
+<div class="wrap">
+<div class="layout">
+
+<main id="main"><article>
+<nav class="secnav" aria-label="In this section"><a href="../playbooks/">All playbooks</a><a href="../inbox/">Clear my inbox</a><a href="../first-draft/">Write a first draft</a><a href="../rewrite/">Shorten or sharpen</a><a href="../summarise/">Summarise a long document</a><a href="../meeting-prep/">Prepare for a meeting</a><a href="../meeting-follow-up/">Follow up a meeting</a><a href="../spreadsheet/" aria-current=page>Make sense of a spreadsheet</a><a href="../deck/">Build a deck</a><a href="../research/">Research a topic</a><a href="../plan/">Plan a piece of work</a><a href="../learn/">Learn something fast</a><a href="../catch-up/">Catch up after time away</a></nav>
+<p class="eyebrow">Playbook</p>
+<h1>Make sense of a spreadsheet</h1>
+<p class="lede">Ask questions of the data first. Change the workbook second, on a copy.</p>
+
+<section class="tier-sec" data-tier="chat"><h2 id="chat" class="tiered"><span class="tier tier-chat">Chat</span>With Copilot Chat</h2>
+<ol class="steps">
+<li><strong>Give it the data</strong>Upload the file to Copilot Chat or paste a small table. Check <a href="../safety/#dont">what you may share</a> first.</li>
+<li><strong>Ask what stands out</strong>Chat explains and writes formulas. It does not change your workbook.</li>
+<li><strong>Copy the formula across</strong>Paste it into Excel and test it on a few rows.</li>
+<li><strong>Have Copilot in Excel?</strong>If the button is there, use <strong>Chat only</strong> mode to explore safely.</li>
+</ol>
+<div class="promptbox"><span class="label">Prompt · Chat</span><pre>Here is a table of data:
+[Paste the data here]
+Tell me three things that stand out and one thing that looks like an error or an outlier. Explain how you know.
+Then write a formula for column [D] that [describes what it should calculate], and explain it in one sentence.</pre></div>
+
+</section><section class="tier-sec" data-tier="premium"><h2 id="premium" class="tiered"><span class="tier tier-premium">Premium</span>With M365 Copilot (Premium)</h2>
+<ol class="steps">
+<li><strong>Open Copilot in Excel</strong>Pick the mode before you ask: <strong>Chat only</strong> to explore, <strong>Plan</strong> to see changes first, <strong>Allow editing</strong> on a copy.</li>
+<li><strong>Explore, then build</strong>Ask what stands out. Then ask for the summary table or chart.</li>
+<li><strong>Bigger question?</strong>Try the <a href="../analyst/">Analyst agent</a>.</li>
+</ol>
+<div class="promptbox"><span class="label">Prompt · Premium</span><pre>Look at the data on this sheet. Tell me three things that stand out and one thing that looks like an error or an outlier.
+Then show me your plan for a summary table of [measure] by [category] and [month], with a chart of the trend.
+Use formulas, not pasted values. Do not change anything until I say so.</pre></div>
+
+</section><h2 id="further">Push it further</h2>
+<p>The first answer is a draft. Send one of these next:</p>
+<div class="promptbox"><span class="label">Follow-up</span><pre>Explain this formula step by step: [Paste the formula here]</pre></div>
+<div class="promptbox"><span class="label">Follow-up</span><pre>What happens to the result if a cell in column [B] is empty?</pre></div>
+<div class="promptbox"><span class="label">Follow-up</span><pre>Which rows did you exclude, and why?</pre></div>
+
+<h2 id="check">Before you use it</h2>
+<ul>
+<li>Click into the formulas. Do they point at the right ranges?</li>
+<li>Recalculate one total by hand.</li>
+<li>After a sort or filter, count the rows.</li>
+</ul>
+
+<p class="meta">I wrote these prompts from Microsoft's guidance. They have not yet been tested on every licence, so tell me what works and what doesn't.</p>
+<details class="src"><summary>Where this comes from (1 Microsoft page)</summary><ul><li><a href="https://support.microsoft.com/en-us/copilot-excel">Copilot in Excel</a></li></ul></details><p class="meta">Last checked against Microsoft's documentation: 6 November 2026. Copilot changes often.</p>
+<div class="pager"><a href="../meeting-follow-up/">&larr; Follow up a meeting</a><a href="../deck/">Build a deck &rarr;</a></div>
+</article></main>
+</div>
+</div>
+<footer><div class="wrap">
+<p class="feedback">Was this useful? <a href="https://github.com/gladbacher/copilot-plainly/issues/new?title=Feedback%3A%20Make%20sense%20of%20a%20spreadsheet">Report a problem or suggest a fix</a>.</p>
+<p>An independent guide for people who use Microsoft Copilot at work. It is not made by, endorsed by, or affiliated with Microsoft. Microsoft, Copilot, Word, Excel, PowerPoint, Outlook and Teams are trademarks of Microsoft.</p>
+<p>Content is licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Format inspired by <a href="https://www.guidesforhumans.com/">Guides for Humans</a>. All text here is original. Prices and features change, so check Microsoft's own pages.</p>
+</div></footer>
+<script src="../assets/app.js" defer></script>
+</body>
+</html>

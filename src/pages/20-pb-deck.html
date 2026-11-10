@@ -1,0 +1,53 @@
+slug: deck
+order: 28
+nav: no
+navlabel: Build a deck
+section: playbooks
+title: Build a deck
+desc: A structured first deck from a prompt or a document.
+toc: no
+verified: yes
+---
+<p class="eyebrow">Playbook</p>
+<h1>Build a deck</h1>
+<p class="lede">Get the story right in outline form. Slides come second.</p>
+
+<h2 id="chat" class="tiered"><span class="tier tier-chat">Chat</span>With Copilot Chat</h2>
+<ol class="steps">
+<li><strong>Outline in Copilot Chat</strong>Paste your notes and ask for a slide-by-slide outline.</li>
+<li><strong>Tighten the story</strong>Ask it to cut slides and sharpen titles until each title makes one point.</li>
+<li><strong>Build the slides yourself</strong>Paste titles and bullets into your organisation's template.</li>
+<li><strong>Have Copilot in PowerPoint?</strong>If the Copilot button is there, follow the Premium route.</li>
+</ol>
+<div class="promptbox"><span class="label">Prompt · Chat</span><pre>Draft an outline for an [8]-slide presentation for [audience] about [topic].
+Purpose: help them decide [decision].
+For each slide give a title that makes one point, three short bullets, and one suggested visual.
+Use only the notes below.
+
+[Paste your notes here]</pre></div>
+
+<h2 id="premium" class="tiered"><span class="tier tier-premium">Premium</span>With M365 Copilot (Premium)</h2>
+<ol class="steps">
+<li><strong>Start from your template</strong>Open a new presentation from your organisation's template (Microsoft, 2026k).</li>
+<li><strong>Open Copilot, then Add Content</strong>Choose Agent Mode. It may ask about audience and style, then shows an outline first (Microsoft, 2026k).</li>
+<li><strong>Or start from a Word document</strong>It pulls the structure and images across. Smaller files work best (Microsoft, 2026k).</li>
+</ol>
+<div class="promptbox"><span class="label">Prompt · Premium</span><pre>Create an [8]-slide presentation for [audience] about [topic].
+Purpose: help them decide [decision].
+Structure: the problem, three options with pros and cons, a recommendation, next steps.
+One idea per slide. Keep slide text short. Show me the outline before you build it.</pre></div>
+
+<h2 id="further">Push it further</h2>
+<p>The first answer is a draft. Send one of these next:</p>
+<div class="promptbox"><span class="label">Follow-up</span><pre>Rewrite every slide title so it states the conclusion.</pre></div>
+<div class="promptbox"><span class="label">Follow-up</span><pre>Write speaker notes for slide [3], about 60 seconds long.</pre></div>
+<div class="promptbox"><span class="label">Follow-up</span><pre>What questions will this audience ask? Add a backup slide for the hardest one.</pre></div>
+
+<h2 id="check">Before you use it</h2>
+<ul>
+<li>Never trust a generated statistic. Trace each number.</li>
+<li>Check images for brand and audience fit.</li>
+<li>Cut. First drafts have too much text.</li>
+</ul>
+<aside class="org" data-key="data-rules"></aside>
+<p class="meta">I wrote these prompts from Microsoft's guidance. They have not yet been tested on every licence, so tell me what works and what doesn't.</p>

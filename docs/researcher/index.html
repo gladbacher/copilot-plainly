@@ -3,20 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Researcher | Copilot, plainly</title>
+<title>Researcher | Copilot Flight Deck</title>
 <meta name="description" content="When to use Researcher instead of ordinary chat, how to scope it, how to read the cited report, and who has it.">
 <link rel="stylesheet" href="../assets/style.css">
+<script>try{var d=document.documentElement,t=localStorage.getItem('tier'),h=localStorage.getItem('theme');if(t==='chat'||t==='premium')d.setAttribute('data-tier',t);if(h==='light'||h==='dark')d.setAttribute('data-theme',h)}catch(e){}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="topbar"><div class="topbar-in">
-<a class="brand" href="../">Copilot<span>, plainly</span></a>
-<nav class="nav" aria-label="Main"><a href="../">Home</a><a href="../start/">Start here</a><a href="../what-is-copilot/">What it is</a><a href="../copilot-chat/">Copilot Chat</a><a href="../word-outlook/">Word/Outlook</a><a href="../excel/">Excel</a><a href="../powerpoint/">PowerPoint</a><a href="../teams-meetings/">Teams</a><a href="../agents/" aria-current=page>Agents</a><a href="../prompts/">Prompts</a><a href="../safety/">Safety</a><a href="../troubleshooting/">Troubleshooting</a></nav>
+<a class="brand" href="../">Copilot <span>Flight Deck</span></a>
+<div class="tierswitch" id="tierswitch" role="group" aria-label="Show guidance for my licence" hidden><span>My licence</span><button type="button" data-t="chat">Chat</button><button type="button" data-t="premium">Premium</button><button type="button" data-t="both">Both</button></div>
 <button type="button" class="theme" id="theme">Dark mode</button>
+<nav class="nav" aria-label="Main"><a href="../start/">Start</a><a href="../playbooks/">Playbooks</a><a href="../prompts/">Prompts</a><a href="../apps/">Apps</a><a href="../agents/" aria-current=page>Agents</a><a href="../safety/">Safety</a><a href="../troubleshooting/">Fix it</a></nav>
 </div></header>
 <div class="wrap">
 <div class="layout has-toc">
-<nav class="toc" aria-label="On this page"><div class="toc-in"><h2>On this page</h2><ol><li><a href="#when">When to use it</a></li><li><a href="#scope">Scope it, then answer its questions</a></li><li><a href="#read">Reading the report</a></li><li><a href="#chat">Chat: On Copilot Chat</a></li><li><a href="#premium">Premium: With M365 Copilot (Premium)</a></li></ol></div></nav>
+<nav class="toc" aria-label="On this page"><div class="toc-in"><h2>On this page</h2><ol><li><a href="#when">When to use it</a></li><li><a href="#scope">Scope it, then answer its questions</a></li><li><a href="#read">Reading the report</a></li><li data-tier=chat><a href="#chat">Chat: On Copilot Chat</a></li><li data-tier=premium><a href="#premium">Premium: With M365 Copilot (Premium)</a></li></ol></div></nav>
 <main id="main"><article>
 <nav class="secnav" aria-label="In this section"><a href="../agents/">Overview</a><a href="../researcher/" aria-current=page>Researcher</a><a href="../analyst/">Analyst</a><a href="../other-agents/">Other agents</a><a href="../make-an-agent/">Make your own</a><a href="../agents-safely/">Using agents safely</a><a href="../agent-prompts/">Agent prompts</a></nav>
 <p class="eyebrow">Agents · Researcher</p>
@@ -31,7 +33,7 @@
 </ul></div>
 
 <h2 id="when">When to use it</h2>
-<p>Researcher handles complex, multi-step research. It draws on the web and, where you have access, your work content (files, emails, meetings and chats you can open) and produces a report with organised sections, cited sources and often visuals. It follows the same permissions as the rest of Copilot (Microsoft, 2026m).</p>
+<p>Researcher handles complex, multi-step research. It draws on the web and, where you have access, your work content (files, emails, meetings and chats you can open) and produces a report with organised sections, cited sources and often visuals. It follows the same permissions as the rest of Copilot.</p>
 <table>
 <thead><tr><th>You need…</th><th>Choose</th></tr></thead>
 <tbody>
@@ -40,13 +42,13 @@
 <tr><td>Citations and clean structure for a decision</td><td>Researcher</td></tr>
 <tr><td>A back-and-forth without heavy analysis</td><td>Ordinary Copilot chat</td></tr>
 </tbody></table>
-<p class="meta">Source: Microsoft (2026m). Researcher deliberately spends longer retrieving and analysing. I have not published a typical run time because I couldn't confirm one on a Microsoft page.</p>
+<p class="meta">Researcher deliberately spends longer retrieving and analysing. I have not published a typical run time because I couldn't confirm one on a Microsoft page.</p>
 
 <h2 id="scope">Scope it, then answer its questions</h2>
 <ul>
-<li><strong>Be specific.</strong> Clear, detailed questions give more focused results (Microsoft, 2026m).</li>
-<li><strong>Define the scope.</strong> Say whether you want the web, work sources, or both (Microsoft, 2026m).</li>
-<li><strong>Answer the clarifying questions.</strong> It may ask first. That step steers the final report (Microsoft, 2026m).</li>
+<li><strong>Be specific.</strong> Clear, detailed questions give more focused results.</li>
+<li><strong>Define the scope.</strong> Say whether you want the web, work sources, or both.</li>
+<li><strong>Answer the clarifying questions.</strong> It may ask first. That step steers the final report.</li>
 </ul>
 
 <h2 id="read">Reading the report</h2>
@@ -57,22 +59,22 @@
 <li>Ask a follow-up in the same chat: "expand section 3", "what do the sources disagree on?"</li>
 </ol>
 
-<h2 id="chat" class="tiered"><span class="tier tier-chat">Chat</span>On Copilot Chat</h2>
-<p>I couldn't find any Microsoft page that gives Researcher to work users without a Copilot licence. Microsoft's Support comparison puts "advanced agents like Researcher" on the licensed side and lists the unlicensed side as "Limited (no advanced agents)" (Microsoft, 2026ar). If you can't see it in the Agents pane, that is the likely reason.</p>
+<section class="tier-sec" data-tier="chat"><h2 id="chat" class="tiered"><span class="tier tier-chat">Chat</span>On Copilot Chat</h2>
+<p>I couldn't find any Microsoft page that gives Researcher to work users without a Copilot licence. Microsoft's Support comparison puts "advanced agents like Researcher" on the licensed side and lists the unlicensed side as "Limited (no advanced agents)". If you can't see it in the Agents pane, that is the likely reason.</p>
 <p>For similar help with web research, use ordinary chat with a prompt that asks for sources:</p>
 <div class="promptbox"><span class="label">Prompt · Chat</span><pre>Research [topic] using public web sources for a decision on [decision].
 Give me the key findings, where sources disagree, risks, and a recommendation.
 Cite every claim with its link. Mark anything you could not verify.</pre></div>
 
-<h2 id="premium" class="tiered"><span class="tier tier-premium">Premium</span>With M365 Copilot (Premium)</h2>
-<p>Researcher is listed with the licensed agents (Microsoft, 2026ar, 2026ah). Find it in the Agents pane (Microsoft, 2026m). If it isn't there, Microsoft says your administrator may not have enabled it (Microsoft, 2026v). That is an organisation setting.</p>
-<div class="callout"><strong>An earlier disagreement, now settled</strong><p>I previously noted that a Microsoft Learn page and a Support page seemed to disagree on Researcher. On re-reading (6 November 2026), the Support page's "Premium and Pro" wording refers to personal subscriptions. For work accounts, the pages I read agree that Researcher comes with a Copilot licence (Microsoft, 2026v, 2026ah). I did not find a page that gives it to unlicensed work users.</p></div>
+</section><section class="tier-sec" data-tier="premium"><h2 id="premium" class="tiered"><span class="tier tier-premium">Premium</span>With M365 Copilot (Premium)</h2>
+<p>Researcher is listed with the licensed agents. Find it in the Agents pane. If it isn't there, Microsoft says your administrator may not have enabled it. That is an organisation setting.</p>
+<div class="callout"><strong>An earlier disagreement, now settled</strong><p>I previously noted that a Microsoft Learn page and a Support page seemed to disagree on Researcher. On re-reading (6 November 2026), the Support page's "Premium and Pro" wording refers to personal subscriptions. For work accounts, the pages I read agree that Researcher comes with a Copilot licence. I did not find a page that gives it to unlicensed work users.</p></div>
 <div class="promptbox"><span class="label">Prompt · Premium</span><pre>Research [topic] for a decision on [decision].
 Scope: [the web only / our internal documents and emails only / both].
 I need: the key findings, where sources disagree, risks, and a recommendation.
 Cite every claim. Mark anything you could not verify.</pre></div>
-<p class="meta">Sources: Microsoft (2026m, 2026v, 2026ah, 2026ar).</p>
-<p class="meta">Last checked against Microsoft's documentation: 6 November 2026. Copilot changes often, so check the sources at the end of the page.</p>
+</section>
+<details class="src"><summary>Where this comes from (4 Microsoft pages)</summary><ul><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/researcher-agent">What is Researcher agent in Microsoft Copilot?</a></li><li><a href="https://support.microsoft.com/en-us/microsoft-365-copilot/how-copilot-chat-works-with-and-without-a-microsoft-365-copilot-license">How Copilot Chat works with and without a Microsoft Copilot license</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/agent-essentials/m365-agents-admin-guide">Agents admin guide for Microsoft 365</a></li><li><a href="https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-researcher-in-microsoft-365-copilot">Get started with Researcher</a></li></ul></details><p class="meta">Last checked against Microsoft's documentation: 6 November 2026. Copilot changes often.</p>
 <div class="pager"><a href="../agents/">&larr; Agents</a><a href="../analyst/">Analyst &rarr;</a></div>
 </article></main>
 </div>

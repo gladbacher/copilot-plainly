@@ -20,13 +20,14 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC, DOCS = ROOT / "src", ROOT / "docs"
-SITE = "Copilot, plainly"
+SITE = "Copilot Flight Deck"
 VERIFIED = "6 November 2026"
 ISSUES = "https://github.com/gladbacher/copilot-plainly/issues/new"
 MARKER = ".copilot-plainly-build"
 
 # Pages must be self-sufficient: never send readers to "IT".
-ASK_IT = re.compile(r"(?i:\b(ask|tell|check with|contact)\s+(your\s+)?IT\b)|\bIT team\b|to IT\b")
+# "IT" is matched in capitals only, so "ask it to..." is fine.
+ASK_IT = re.compile(r"\b(?i:ask|tell|check with|contact)\s+(?i:your\s+)?IT\b|\bIT team\b|\bto IT\b")
 
 # Keys an organisation can fill in. Each appears as <aside class="org" data-key="..."></aside>.
 ORG_KEYS = {
@@ -51,6 +52,101 @@ def parse(path):
         key, _, value = line.partition(":")
         meta[key.strip()] = value.strip()
     return meta, body.strip()
+
+
+def load_refs():
+    """Citation key -> (title, url), from research/00-references.md."""
+    refs = {}
+    f = ROOT / "research" / "00-references.md"
+    if f.exists():
+        for line in f.read_text(encoding="utf-8").splitlines():
+            m = re.match(r"- \*\*2026([a-z]+)\.\*\* .*?\*(.+?)\*.*?(https://\S+)", line)
+            if m:
+                refs[m.group(1)] = (m.group(2).rstrip(".?") + ("?" if m.group(2).endswith("?") else ""), m.group(3))
+    return refs
+
+
+def strip_cites(body, refs):
+    """Source files keep (Microsoft, 2026x) citation keys. Readers get clean text
+    plus one 'Where this comes from' list per page."""
+    keys = []
+    for k in re.findall(r"2026([a-z]{1,2})\b", body):
+        if k in refs and k not in keys:
+            keys.append(k)
+    body = re.sub(r"Sources?(?: for the recipe and tips)?: Microsoft \([^)]*\)(?:, Microsoft \([^)]*\))*(?:, [a-z ]+)?\.\s*", "", body)
+    body = re.sub(r"\s*\((?:Microsoft, )?2026[a-z]{1,2}(?:, 2026[a-z]{1,2})*\)", "", body)
+    body = re.sub(r'<p class="meta">\s*</p>\n?', "", body)
+    seen, items = set(), ""
+    for k in keys:
+        title, url = refs[k]
+        if url not in seen:
+            seen.add(url)
+            items += f'<li><a href="{html.escape(url)}">{html.escape(title)}</a></li>'
+    src = f'<details class="src"><summary>Where this comes from ({len(seen)} Microsoft page{'' if len(seen) == 1 else 's'})</summary><ul>{items}</ul></details>' if items else ""
+    return body, src
+
+
+TIER_H2 = re.compile(r'<h2[^>]*class="tiered"[^>]*>\s*<span class="tier tier-(chat|premium)">')
+PROMPTBOX = re.compile(r'<div class="promptbox"><span class="label">(.*?)</span><pre>(.*?)</pre></div>', re.S)
+
+
+def text_of(fragment):
+    return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", re.sub(r'<span class="tier[^>]*>.*?</span>', "", fragment))).strip()
+
+
+def wrap_tiers(body):
+    """Wrap each tier section so the licence switch can hide the other one.
+    With JavaScript off nothing is hidden."""
+    out = []
+    for part in re.split(r"(?=<h2[ >])", body):
+        m = TIER_H2.match(part)
+        out.append(f'<section class="tier-sec" data-tier="{m.group(1)}">{part}</section>' if m else part)
+    body = "".join(out)
+    return re.sub(r'<li><span class="tier tier-(chat|premium)">', r'<li data-tier="\1"><span class="tier tier-\1">', body)
+
+
+def collect_prompts(pages, hubs):
+    """Every prompt box on the site, for the searchable library."""
+    items, seen = [], set()
+    for meta, body in pages:
+        slug = meta["slug"]
+        if not slug or slug == "troubleshooting":
+            continue
+        sec = meta.get("section", "")
+        cat = "Everyday" if slug == "prompts" else hubs.get(sec, meta["navlabel"]) if sec in ("playbooks", "agents", "start") else meta["navlabel"]
+        for part in re.split(r"(?=<h2[ >])", body):
+            m = TIER_H2.match(part)
+            tier = m.group(1) if m else ""
+            for pb in PROMPTBOX.finditer(part):
+                key = re.sub(r"\s+", " ", pb.group(2)).strip()
+                if key in seen:
+                    continue
+                seen.add(key)
+                h3s = re.findall(r"<h3[^>]*>(.*?)</h3>", part[: pb.start()], re.S)
+                h3 = text_of(h3s[-1]) if h3s else ""
+                label = text_of(pb.group(1))
+                if slug == "prompts":
+                    title = h3 or "Prompt"
+                elif h3:
+                    title = f'{meta["navlabel"]}: {h3}'
+                elif not label.lower().startswith(("prompt", "chat", "premium")):
+                    title = f'{meta["navlabel"]}: {label}'
+                else:
+                    title = meta["navlabel"]
+                items.append({"tier": tier, "cat": cat, "title": title, "slug": slug, "page": meta["navlabel"], "text": pb.group(2)})
+    return items
+
+
+def render_library(items, href):
+    out = ['<div class="lib-tools"><label for="libq">Search the prompts</label><input type="search" id="libq" class="filter" data-target=".pitem" placeholder="e.g. email, meeting, formula"><span id="libcount" class="meta"></span></div>',
+           '<div class="chips" id="libcats" hidden></div>']
+    for it in items:
+        tier = f' data-tier="{it["tier"]}"' if it["tier"] else ""
+        badge = f'<span class="tier tier-{it["tier"]}">{it["tier"].capitalize()}</span>' if it["tier"] else ""
+        src = "" if it["slug"] == "prompts" else f' <span class="meta">From <a href="{href(it["slug"])}">{html.escape(it["page"])}</a></span>'
+        out.append(f'<div class="pitem"{tier} data-cat="{html.escape(it["cat"])}"><h3>{badge}{html.escape(it["title"])}</h3>{src}'
+                   f'<div class="promptbox"><span class="label">{html.escape(it["cat"])}</span><pre>{it["text"]}</pre></div></div>')
+    return "\n".join(out)
 
 
 def org_box(key, org):
@@ -107,7 +203,7 @@ def write_summary(out, org):
 <style>body{{font:16px/1.6 Segoe UI,Arial,sans-serif;max-width:46rem;margin:2rem auto;padding:0 1rem;color:#222}}h1{{font-size:1.9rem}}h2{{font-size:1.25rem;margin-top:1.8em;border-bottom:1px solid #ddd;padding-bottom:.2em}}</style>
 </head><body>
 <h1>Copilot at {name}</h1>
-<p>Everything {name}-specific that goes with the independent guide <em>Copilot, plainly</em>.</p>
+<p>Everything {name}-specific that goes with the independent guide <em>{SITE}</em>.</p>
 {rows}
 </body></html>
 """
@@ -153,7 +249,10 @@ def main():
         shutil.copy(f, out / "assets" / f.name)
     (out / ".nojekyll").write_text("")
 
+    refs = load_refs()
     nav_pages = [m for m, _ in pages if m.get("nav") == "yes"]
+    hubs = {m["slug"]: m["navlabel"] for m in nav_pages}
+    library = collect_prompts(pages, hubs)
     # Reading order for pagers: nav pages, with each section's sub-pages right after its hub.
     sequence = []
     for m, _ in pages:
@@ -173,12 +272,23 @@ def main():
             for m in nav_pages
         )
         body = fill_asides(body, org)
+        if "<!--LIBRARY-->" in body:
+            a, b = body.index("<!--LIB-SRC-->"), body.index("<!--/LIB-SRC-->")
+            body = body[:a] + body[b:]
+            body = body.replace("<!--LIBRARY-->", render_library(library, href))
+        if "<!--PLAYBOOKS-->" in body:
+            cards = "".join(
+                f'<li><a class="card" href="{href(m["slug"])}"><b>{html.escape(m["navlabel"])}</b><span>{html.escape(m["desc"])}</span></a></li>'
+                for m, _ in pages if m.get("section") == "playbooks" and m["slug"] != "playbooks")
+            body = body.replace("<!--PLAYBOOKS-->", f'<ul class="cards">{cards}</ul>')
+        body, sources = strip_cites(body, refs)
+        body = wrap_tiers(body)
         heads = re.findall(r'<h2 id="([^"]+)"[^>]*>(.*?)</h2>', body, flags=re.S)
         has_toc = meta.get("toc") == "yes" and len(heads) > 1
         toc = ""
         if has_toc:
             items = "".join(
-                f'<li><a href="#{i_}">{re.sub(r"<[^>]+>", "", re.sub(r"<span class=.sec-num.>.*?</span>", "", re.sub(r"<span class=.tier [^>]*>(.*?)</span>", r"\1: ", t))).strip()}</a></li>'
+                f'<li{" data-tier=" + i_ if i_ in ("chat", "premium") else ""}><a href="#{i_}">{re.sub(r"<[^>]+>", "", re.sub(r"<span class=.sec-num.>.*?</span>", "", re.sub(r"<span class=.tier [^>]*>(.*?)</span>", r"\1: ", t))).strip()}</a></li>'
                 for i_, t in heads
             )
             toc = f'<nav class="toc" aria-label="On this page"><div class="toc-in"><h2>On this page</h2><ol>{items}</ol></div></nav>'
@@ -205,7 +315,7 @@ def main():
         title = meta["title"] if slug == "" else f'{meta["title"]} | {SITE}'
         verified = ""
         if meta.get("verified") == "yes":
-            verified = f'<p class="meta">Last checked against Microsoft\'s documentation: {VERIFIED}. Copilot changes often, so check the sources at the end of the page.</p>'
+            verified = f'{sources}<p class="meta">Last checked against Microsoft\'s documentation: {VERIFIED}. Copilot changes often.</p>'
 
         if org and org["answers"].get("feedback", {}).get("url"):
             fb_url = org["answers"]["feedback"]["url"]
@@ -222,13 +332,15 @@ def main():
 <title>{html.escape(title)}</title>
 <meta name="description" content="{html.escape(meta['desc'])}">
 <link rel="stylesheet" href="{up}assets/style.css">
+<script>try{{var d=document.documentElement,t=localStorage.getItem('tier'),h=localStorage.getItem('theme');if(t==='chat'||t==='premium')d.setAttribute('data-tier',t);if(h==='light'||h==='dark')d.setAttribute('data-theme',h)}}catch(e){{}}</script>
 </head>
 <body{' class="cheat"' if meta.get("cheat") == "yes" else ''}>
 <a class="skip" href="#main">Skip to content</a>
 <header class="topbar"><div class="topbar-in">
-<a class="brand" href="{href('')}">Copilot<span>, plainly</span></a>{badge}
-<nav class="nav" aria-label="Main">{nav}</nav>
+<a class="brand" href="{href('')}">Copilot <span>Flight Deck</span></a>{badge}
+<div class="tierswitch" id="tierswitch" role="group" aria-label="Show guidance for my licence" hidden><span>My licence</span><button type="button" data-t="chat">Chat</button><button type="button" data-t="premium">Premium</button><button type="button" data-t="both">Both</button></div>
 <button type="button" class="theme" id="theme">Dark mode</button>
+<nav class="nav" aria-label="Main">{nav}</nav>
 </div></header>
 <div class="wrap">
 <div class="layout{' has-toc' if has_toc else ''}">

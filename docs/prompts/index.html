@@ -3,34 +3,330 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>The prompt library | Copilot, plainly</title>
+<title>The prompt library | Copilot Flight Deck</title>
 <meta name="description" content="Copy-and-paste Copilot prompts for common work jobs, built on Microsoft&#x27;s goal, context, source and expectations recipe. Separate sets for Chat and Premium.">
 <link rel="stylesheet" href="../assets/style.css">
+<script>try{var d=document.documentElement,t=localStorage.getItem('tier'),h=localStorage.getItem('theme');if(t==='chat'||t==='premium')d.setAttribute('data-tier',t);if(h==='light'||h==='dark')d.setAttribute('data-theme',h)}catch(e){}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="topbar"><div class="topbar-in">
-<a class="brand" href="../">Copilot<span>, plainly</span></a>
-<nav class="nav" aria-label="Main"><a href="../">Home</a><a href="../start/">Start here</a><a href="../what-is-copilot/">What it is</a><a href="../copilot-chat/">Copilot Chat</a><a href="../word-outlook/">Word/Outlook</a><a href="../excel/">Excel</a><a href="../powerpoint/">PowerPoint</a><a href="../teams-meetings/">Teams</a><a href="../agents/">Agents</a><a href="../prompts/" aria-current=page>Prompts</a><a href="../safety/">Safety</a><a href="../troubleshooting/">Troubleshooting</a></nav>
+<a class="brand" href="../">Copilot <span>Flight Deck</span></a>
+<div class="tierswitch" id="tierswitch" role="group" aria-label="Show guidance for my licence" hidden><span>My licence</span><button type="button" data-t="chat">Chat</button><button type="button" data-t="premium">Premium</button><button type="button" data-t="both">Both</button></div>
 <button type="button" class="theme" id="theme">Dark mode</button>
+<nav class="nav" aria-label="Main"><a href="../start/">Start</a><a href="../playbooks/">Playbooks</a><a href="../prompts/" aria-current=page>Prompts</a><a href="../apps/">Apps</a><a href="../agents/">Agents</a><a href="../safety/">Safety</a><a href="../troubleshooting/">Fix it</a></nav>
 </div></header>
 <div class="wrap">
 <div class="layout has-toc">
-<nav class="toc" aria-label="On this page"><div class="toc-in"><h2>On this page</h2><ol><li><a href="#recipe">The recipe</a></li><li><a href="#habit">Habits worth keeping</a></li><li><a href="#chat">Chat: Prompts for Copilot Chat</a></li><li><a href="#premium">Premium: Prompts for M365 Copilot (Premium)</a></li></ol></div></nav>
+<nav class="toc" aria-label="On this page"><div class="toc-in"><h2>On this page</h2><ol><li><a href="#library">Every prompt on this site</a></li><li><a href="#recipe">The recipe</a></li><li><a href="#habit">Habits worth keeping</a></li></ol></div></nav>
 <main id="main"><article>
 
-<p class="eyebrow">Guide 8</p>
+<p class="eyebrow">Guide</p>
 <h1>The prompt library</h1>
-<p class="lede">Prompts you can copy, edit the brackets, and send. Each one follows a recipe Microsoft publishes.</p>
+<p class="lede">Every prompt on this site in one searchable list. Fill in the blanks, copy, send.</p>
 
 <div class="short"><h2>The short version</h2>
 <ul>
 <li>A prompt has four parts: <strong>goal</strong> (required), <strong>context</strong>, <strong>source</strong>, <strong>expectations</strong>.</li>
 <li>Replace everything in [square brackets].</li>
 <li>If the first result is off, say what to change instead of starting again.</li>
-<li>Pick the section for your track: <a href="#chat">Chat</a> or <a href="#premium">Premium</a>.</li>
+<li><a href="#library">Search every prompt on the site</a>, filtered to your licence.</li>
 </ul></div>
 <div class="callout warn"><strong>About these prompts</strong><p>I wrote them from Microsoft's four-part pattern. I have not run each one against every Copilot version, and results differ by licence and by what is in your files. Treat them as starting points, then keep the ones that work for you.</p></div>
+
+<h2 id="library">Every prompt on this site</h2>
+<p>Search by job or app, or pick a group. With <em>My licence</em> set at the top, you only see prompts for your licence. Open <em>Fill in the blanks</em> under any prompt, type your details, then copy.</p>
+<div class="lib-tools"><label for="libq">Search the prompts</label><input type="search" id="libq" class="filter" data-target=".pitem" placeholder="e.g. email, meeting, formula"><span id="libcount" class="meta"></span></div>
+<div class="chips" id="libcats" hidden></div>
+<div class="pitem" data-cat="Start"><h3>Start</h3> <span class="meta">From <a href="../start/">Start</a></span><div class="promptbox"><span class="label">Start</span><pre>I need to explain [topic or decision] to [who: my manager / a client / my team].
+They know [what they already know] and care about [what they care about].
+Write a first draft in under 150 words, in a friendly and direct tone.
+Then list the three questions they are most likely to ask.</pre></div></div>
+<div class="pitem" data-tier="chat" data-cat="Start"><h3><span class="tier tier-chat">Chat</span>Start</h3> <span class="meta">From <a href="../start/">Start</a></span><div class="promptbox"><span class="label">Start</span><pre>Using only the document I have attached, summarise it in five bullet points for [who].
+If something is not in the document, say so instead of guessing.</pre></div></div>
+<div class="pitem" data-tier="premium" data-cat="Start"><h3><span class="tier tier-premium">Premium</span>Start</h3> <span class="meta">From <a href="../start/">Start</a></span><div class="promptbox"><span class="label">Start</span><pre>Look at my emails and meetings from the last week about [project].
+Summarise what has been decided, what is still open, and anything waiting on me.
+Name the source of each point.</pre></div></div>
+<div class="pitem" data-cat="Start"><h3>The 12 moves: 1. Lead with the goal</h3> <span class="meta">From <a href="../moves/">The 12 moves</a></span><div class="promptbox"><span class="label">Start</span><pre>Write a short update for [audience] so they can decide whether to [decision].</pre></div></div>
+<div class="pitem" data-cat="Start"><h3>The 12 moves: 2. Say who it is for</h3> <span class="meta">From <a href="../moves/">The 12 moves</a></span><div class="promptbox"><span class="label">Start</span><pre>The reader is [who]. They know [what they already know] and care most about [what they care about].</pre></div></div>
+<div class="pitem" data-cat="Start"><h3>The 12 moves: 3. Hand it the source</h3> <span class="meta">From <a href="../moves/">The 12 moves</a></span><div class="promptbox"><span class="label">Start</span><pre>Using only [the text below / the attached file], and nothing else, answer this: [question]</pre></div></div>
+<div class="pitem" data-cat="Start"><h3>The 12 moves: 4. Describe the output</h3> <span class="meta">From <a href="../moves/">The 12 moves</a></span><div class="promptbox"><span class="label">Start</span><pre>Give me a table with columns [column names]. No more than [8] rows. Plain words, no jargon.</pre></div></div>
+<div class="pitem" data-cat="Start"><h3>The 12 moves: 5. Show an example</h3> <span class="meta">From <a href="../moves/">The 12 moves</a></span><div class="promptbox"><span class="label">Start</span><pre>Here is an example of the style I want:
+[Paste an example here]
+Write the new one in the same style and length.</pre></div></div>
+<div class="pitem" data-cat="Start"><h3>The 12 moves: 6. Reply, don&#x27;t restart</h3> <span class="meta">From <a href="../moves/">The 12 moves</a></span><div class="promptbox"><span class="label">Start</span><pre>Shorter, less formal, and put the recommendation first.</pre></div></div>
+<div class="pitem" data-cat="Start"><h3>The 12 moves: 7. Ask for options</h3> <span class="meta">From <a href="../moves/">The 12 moves</a></span><div class="promptbox"><span class="label">Start</span><pre>Give me three versions: one cautious, one direct, one persuasive. Say which you would send and why.</pre></div></div>
+<div class="pitem" data-cat="Start"><h3>The 12 moves: 8. Make it interview you</h3> <span class="meta">From <a href="../moves/">The 12 moves</a></span><div class="promptbox"><span class="label">Start</span><pre>I want help with [task]. Ask me up to five questions, one at a time. When you have enough, write the best prompt for the job and then answer it.</pre></div></div>
+<div class="pitem" data-cat="Start"><h3>The 12 moves: 9. Work in steps</h3> <span class="meta">From <a href="../moves/">The 12 moves</a></span><div class="promptbox"><span class="label">Start</span><pre>Step 1 only: give me an outline. Wait for my OK before you write anything else.</pre></div></div>
+<div class="pitem" data-cat="Start"><h3>The 12 moves: 10. Forbid guessing</h3> <span class="meta">From <a href="../moves/">The 12 moves</a></span><div class="promptbox"><span class="label">Start</span><pre>If the answer is not in the source, say "not stated". Do not guess or fill gaps.</pre></div></div>
+<div class="pitem" data-cat="Start"><h3>The 12 moves: 11. Make it criticise its own work</h3> <span class="meta">From <a href="../moves/">The 12 moves</a></span><div class="promptbox"><span class="label">Start</span><pre>Now act as a sceptical reviewer. List the three weakest points in what you just wrote, then fix them.</pre></div></div>
+<div class="pitem" data-cat="Start"><h3>The 12 moves: 12. Ask where it came from</h3> <span class="meta">From <a href="../moves/">The 12 moves</a></span><div class="promptbox"><span class="label">Start</span><pre>For each claim, show where it comes from: quote the line or give the link. Mark anything you could not verify.</pre></div></div>
+<div class="pitem" data-tier="chat" data-cat="Playbooks"><h3><span class="tier tier-chat">Chat</span>Clear my inbox</h3> <span class="meta">From <a href="../inbox/">Clear my inbox</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>Summarise my unread emails from [this week] into three groups: needs a reply from me, for information only, and can wait.
+For each one give the sender and a one-line reason.
+Then name the three I should answer first, and why.</pre></div></div>
+<div class="pitem" data-tier="premium" data-cat="Playbooks"><h3><span class="tier tier-premium">Premium</span>Clear my inbox</h3> <span class="meta">From <a href="../inbox/">Clear my inbox</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>Summarise my unread emails from [this week] into three groups: needs a reply from me, for information only, and can wait.
+For the three most urgent, check related files and Teams chats and say what I need to know before I reply.
+Name the source of each point.</pre></div></div>
+<div class="pitem" data-cat="Playbooks"><h3>Clear my inbox: Follow-up</h3> <span class="meta">From <a href="../inbox/">Clear my inbox</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>Draft a reply to the first one. I want to [accept / decline / ask for more time]. Under 100 words, one clear next step.</pre></div></div>
+<div class="pitem" data-cat="Playbooks"><h3>Clear my inbox: Follow-up</h3> <span class="meta">From <a href="../inbox/">Clear my inbox</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>Which of these are waiting on someone else, and since when?</pre></div></div>
+<div class="pitem" data-cat="Playbooks"><h3>Clear my inbox: Follow-up</h3> <span class="meta">From <a href="../inbox/">Clear my inbox</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>Flag the ones that can wait until Friday.</pre></div></div>
+<div class="pitem" data-tier="chat" data-cat="Playbooks"><h3><span class="tier tier-chat">Chat</span>Write a first draft</h3> <span class="meta">From <a href="../first-draft/">Write a first draft</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>I need to write [document type] for [audience] about [topic].
+Here are my notes:
+[Paste your notes here]
+First give me an outline of five headings with one line under each. Wait for my OK before you write anything.</pre></div></div>
+<div class="pitem" data-tier="premium" data-cat="Playbooks"><h3><span class="tier tier-premium">Premium</span>Write a first draft</h3> <span class="meta">From <a href="../first-draft/">Write a first draft</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>Draft [document type] for [audience] about [topic], using /[file name] and my recent emails with [person].
+Start with a three-line summary. Use short headings. Keep it to [one page].
+Mark anything you were unsure of with the word CHECK.</pre></div></div>
+<div class="pitem" data-cat="Playbooks"><h3>Write a first draft: Follow-up</h3> <span class="meta">From <a href="../first-draft/">Write a first draft</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>Rewrite the opening three ways: formal, friendly and blunt.</pre></div></div>
+<div class="pitem" data-cat="Playbooks"><h3>Write a first draft: Follow-up</h3> <span class="meta">From <a href="../first-draft/">Write a first draft</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>What would a sceptical reader challenge? List the three weakest points.</pre></div></div>
+<div class="pitem" data-cat="Playbooks"><h3>Write a first draft: Follow-up</h3> <span class="meta">From <a href="../first-draft/">Write a first draft</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>Cut this by a third without losing any number or date.</pre></div></div>
+<div class="pitem" data-tier="chat" data-cat="Playbooks"><h3><span class="tier tier-chat">Chat</span>Shorten or sharpen</h3> <span class="meta">From <a href="../rewrite/">Shorten or sharpen</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>Rewrite the text below for [audience] in about half the length.
+Keep every number, date and name. Use plain words and short sentences.
+After the rewrite, list anything you removed that they might still ask about.
+
+[Paste the text here]</pre></div></div>
+<div class="pitem" data-tier="premium" data-cat="Playbooks"><h3><span class="tier tier-premium">Premium</span>Shorten or sharpen</h3> <span class="meta">From <a href="../rewrite/">Shorten or sharpen</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>Rewrite the selected text for [audience] in about half the length.
+Keep every number, date and name. Use plain words and short sentences.
+Then list anything you removed that they might still ask about.</pre></div></div>
+<div class="pitem" data-cat="Playbooks"><h3>Shorten or sharpen: Follow-up</h3> <span class="meta">From <a href="../rewrite/">Shorten or sharpen</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>Give me three versions: neutral, warmer, firmer.</pre></div></div>
+<div class="pitem" data-cat="Playbooks"><h3>Shorten or sharpen: Follow-up</h3> <span class="meta">From <a href="../rewrite/">Shorten or sharpen</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>Turn this into five bullet points for a slide.</pre></div></div>
+<div class="pitem" data-cat="Playbooks"><h3>Shorten or sharpen: Follow-up</h3> <span class="meta">From <a href="../rewrite/">Shorten or sharpen</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>What is unclear or ambiguous in this text? Quote the phrase.</pre></div></div>
+<div class="pitem" data-tier="chat" data-cat="Playbooks"><h3><span class="tier tier-chat">Chat</span>Summarise a long document</h3> <span class="meta">From <a href="../summarise/">Summarise a long document</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>Using only the attached document, summarise it for [who], who must decide [what].
+Give me: the three most important points, the risks or open questions, and what is missing from the document.
+If something is not in the document, say so. Do not guess.</pre></div></div>
+<div class="pitem" data-tier="premium" data-cat="Playbooks"><h3><span class="tier tier-premium">Premium</span>Summarise a long document</h3> <span class="meta">From <a href="../summarise/">Summarise a long document</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>Using only /[file name], summarise it for [who], who must decide [what].
+Give me: the three most important points, the risks or open questions, and what is missing from the document.
+If something is not in the document, say so. Do not guess.</pre></div></div>
+<div class="pitem" data-cat="Playbooks"><h3>Summarise a long document: Follow-up</h3> <span class="meta">From <a href="../summarise/">Summarise a long document</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>List every date, number and commitment in a table, with the page or section.</pre></div></div>
+<div class="pitem" data-cat="Playbooks"><h3>Summarise a long document: Follow-up</h3> <span class="meta">From <a href="../summarise/">Summarise a long document</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>What are the three weakest arguments in this document?</pre></div></div>
+<div class="pitem" data-cat="Playbooks"><h3>Summarise a long document: Follow-up</h3> <span class="meta">From <a href="../summarise/">Summarise a long document</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>Write five questions I should ask the author.</pre></div></div>
+<div class="pitem" data-tier="chat" data-cat="Playbooks"><h3><span class="tier tier-chat">Chat</span>Prepare for a meeting</h3> <span class="meta">From <a href="../meeting-prep/">Prepare for a meeting</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>I have a [30]-minute meeting with [who] about [topic]. My goal is [outcome].
+Background:
+[Paste any background here]
+Give me a timed agenda, three questions I should ask, and two objections I should be ready for. Keep it to one page.</pre></div></div>
+<div class="pitem" data-tier="premium" data-cat="Playbooks"><h3><span class="tier tier-premium">Premium</span>Prepare for a meeting</h3> <span class="meta">From <a href="../meeting-prep/">Prepare for a meeting</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>Prepare me for my meeting with [person] on [day]. Use our recent emails, chats and shared files.
+Give me: a one-line goal, where we left things, three questions to ask, two objections to expect, and anything I promised and have not done.
+Name the source of each point.</pre></div></div>
+<div class="pitem" data-cat="Playbooks"><h3>Prepare for a meeting: Follow-up</h3> <span class="meta">From <a href="../meeting-prep/">Prepare for a meeting</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>Draft a two-line message I can send beforehand to set the agenda.</pre></div></div>
+<div class="pitem" data-cat="Playbooks"><h3>Prepare for a meeting: Follow-up</h3> <span class="meta">From <a href="../meeting-prep/">Prepare for a meeting</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>Play the other side. What will they want from this meeting?</pre></div></div>
+<div class="pitem" data-cat="Playbooks"><h3>Prepare for a meeting: Follow-up</h3> <span class="meta">From <a href="../meeting-prep/">Prepare for a meeting</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>What decision should we leave the room with?</pre></div></div>
+<div class="pitem" data-tier="chat" data-cat="Playbooks"><h3><span class="tier tier-chat">Chat</span>Follow up a meeting</h3> <span class="meta">From <a href="../meeting-follow-up/">Follow up a meeting</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>Below are the notes from our meeting. Write follow-up notes for the people who attended.
+Include decisions, action items as a table (action, owner, due date), and open questions.
+Use only what is in the notes. Write "not stated" if an owner or date is missing.
+
+[Paste the notes here]</pre></div></div>
+<div class="pitem" data-tier="premium" data-cat="Playbooks"><h3><span class="tier tier-premium">Premium</span>Follow up a meeting</h3> <span class="meta">From <a href="../meeting-follow-up/">Follow up a meeting</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>Write follow-up notes for the people who attended this meeting.
+Include decisions, action items as a table (action, owner, due date), and open questions.
+Use only what was said. Write "not stated" if an owner or date is missing, and quote the line each action came from.</pre></div></div>
+<div class="pitem" data-cat="Playbooks"><h3>Follow up a meeting: Follow-up</h3> <span class="meta">From <a href="../meeting-follow-up/">Follow up a meeting</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>Draft the email that sends these notes. Three lines, then the table.</pre></div></div>
+<div class="pitem" data-cat="Playbooks"><h3>Follow up a meeting: Follow-up</h3> <span class="meta">From <a href="../meeting-follow-up/">Follow up a meeting</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>What was discussed but not decided?</pre></div></div>
+<div class="pitem" data-cat="Playbooks"><h3>Follow up a meeting: Follow-up</h3> <span class="meta">From <a href="../meeting-follow-up/">Follow up a meeting</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>Which actions are mine?</pre></div></div>
+<div class="pitem" data-tier="chat" data-cat="Playbooks"><h3><span class="tier tier-chat">Chat</span>Make sense of a spreadsheet</h3> <span class="meta">From <a href="../spreadsheet/">Make sense of a spreadsheet</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>Here is a table of data:
+[Paste the data here]
+Tell me three things that stand out and one thing that looks like an error or an outlier. Explain how you know.
+Then write a formula for column [D] that [describes what it should calculate], and explain it in one sentence.</pre></div></div>
+<div class="pitem" data-tier="premium" data-cat="Playbooks"><h3><span class="tier tier-premium">Premium</span>Make sense of a spreadsheet</h3> <span class="meta">From <a href="../spreadsheet/">Make sense of a spreadsheet</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>Look at the data on this sheet. Tell me three things that stand out and one thing that looks like an error or an outlier.
+Then show me your plan for a summary table of [measure] by [category] and [month], with a chart of the trend.
+Use formulas, not pasted values. Do not change anything until I say so.</pre></div></div>
+<div class="pitem" data-cat="Playbooks"><h3>Make sense of a spreadsheet: Follow-up</h3> <span class="meta">From <a href="../spreadsheet/">Make sense of a spreadsheet</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>Explain this formula step by step: [Paste the formula here]</pre></div></div>
+<div class="pitem" data-cat="Playbooks"><h3>Make sense of a spreadsheet: Follow-up</h3> <span class="meta">From <a href="../spreadsheet/">Make sense of a spreadsheet</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>What happens to the result if a cell in column [B] is empty?</pre></div></div>
+<div class="pitem" data-cat="Playbooks"><h3>Make sense of a spreadsheet: Follow-up</h3> <span class="meta">From <a href="../spreadsheet/">Make sense of a spreadsheet</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>Which rows did you exclude, and why?</pre></div></div>
+<div class="pitem" data-tier="chat" data-cat="Playbooks"><h3><span class="tier tier-chat">Chat</span>Build a deck</h3> <span class="meta">From <a href="../deck/">Build a deck</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>Draft an outline for an [8]-slide presentation for [audience] about [topic].
+Purpose: help them decide [decision].
+For each slide give a title that makes one point, three short bullets, and one suggested visual.
+Use only the notes below.
+
+[Paste your notes here]</pre></div></div>
+<div class="pitem" data-tier="premium" data-cat="Playbooks"><h3><span class="tier tier-premium">Premium</span>Build a deck</h3> <span class="meta">From <a href="../deck/">Build a deck</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>Create an [8]-slide presentation for [audience] about [topic].
+Purpose: help them decide [decision].
+Structure: the problem, three options with pros and cons, a recommendation, next steps.
+One idea per slide. Keep slide text short. Show me the outline before you build it.</pre></div></div>
+<div class="pitem" data-cat="Playbooks"><h3>Build a deck: Follow-up</h3> <span class="meta">From <a href="../deck/">Build a deck</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>Rewrite every slide title so it states the conclusion.</pre></div></div>
+<div class="pitem" data-cat="Playbooks"><h3>Build a deck: Follow-up</h3> <span class="meta">From <a href="../deck/">Build a deck</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>Write speaker notes for slide [3], about 60 seconds long.</pre></div></div>
+<div class="pitem" data-cat="Playbooks"><h3>Build a deck: Follow-up</h3> <span class="meta">From <a href="../deck/">Build a deck</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>What questions will this audience ask? Add a backup slide for the hardest one.</pre></div></div>
+<div class="pitem" data-tier="chat" data-cat="Playbooks"><h3><span class="tier tier-chat">Chat</span>Research a topic</h3> <span class="meta">From <a href="../research/">Research a topic</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>Research [topic] using public web sources, for a decision on [decision].
+Give me the key findings, where sources disagree, the risks, and a recommendation.
+Cite every claim with its link. Mark anything you could not verify.</pre></div></div>
+<div class="pitem" data-tier="premium" data-cat="Playbooks"><h3><span class="tier tier-premium">Premium</span>Research a topic</h3> <span class="meta">From <a href="../research/">Research a topic</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>Research [topic] for a decision on [decision].
+Scope: [the web only / our internal documents and emails only / both].
+I need the key findings, where sources disagree, the risks, and a recommendation.
+Cite every claim. Mark anything you could not verify.</pre></div></div>
+<div class="pitem" data-cat="Playbooks"><h3>Research a topic: Follow-up</h3> <span class="meta">From <a href="../research/">Research a topic</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>What is the strongest argument against your recommendation?</pre></div></div>
+<div class="pitem" data-cat="Playbooks"><h3>Research a topic: Follow-up</h3> <span class="meta">From <a href="../research/">Research a topic</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>Which of these sources is least reliable, and why?</pre></div></div>
+<div class="pitem" data-cat="Playbooks"><h3>Research a topic: Follow-up</h3> <span class="meta">From <a href="../research/">Research a topic</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>Summarise this in five lines for someone senior.</pre></div></div>
+<div class="pitem" data-tier="chat" data-cat="Playbooks"><h3><span class="tier tier-chat">Chat</span>Plan a piece of work</h3> <span class="meta">From <a href="../plan/">Plan a piece of work</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>I need to plan [piece of work]. The deadline is [date] and the people involved are [who].
+Ask me up to five questions, one at a time, to understand it.
+Then write a plan: steps in order, who does each, the main risks, and what I should do in the first week.</pre></div></div>
+<div class="pitem" data-tier="premium" data-cat="Playbooks"><h3><span class="tier tier-premium">Premium</span>Plan a piece of work</h3> <span class="meta">From <a href="../plan/">Plan a piece of work</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>I need to plan [piece of work]. Use my emails, meetings and files about [project] for context.
+Write a plan: steps in order, who does each, the main risks, and what I should do in the first week.
+Say where you are assuming something the sources do not confirm.</pre></div></div>
+<div class="pitem" data-cat="Playbooks"><h3>Plan a piece of work: Follow-up</h3> <span class="meta">From <a href="../plan/">Plan a piece of work</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>Act as a sceptical colleague. What are the three weakest assumptions?</pre></div></div>
+<div class="pitem" data-cat="Playbooks"><h3>Plan a piece of work: Follow-up</h3> <span class="meta">From <a href="../plan/">Plan a piece of work</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>What could go wrong in the first month, and what would I see first?</pre></div></div>
+<div class="pitem" data-cat="Playbooks"><h3>Plan a piece of work: Follow-up</h3> <span class="meta">From <a href="../plan/">Plan a piece of work</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>Turn this into a one-page update for my manager.</pre></div></div>
+<div class="pitem" data-tier="chat" data-cat="Playbooks"><h3><span class="tier tier-chat">Chat</span>Learn something fast</h3> <span class="meta">From <a href="../learn/">Learn something fast</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>Teach me [topic]. I already know [what you know] and I need it for [why].
+Explain it in plain words with one worked example from [my kind of work].
+Then ask me five questions, one at a time, and tell me what I got wrong.</pre></div></div>
+<div class="pitem" data-tier="premium" data-cat="Playbooks"><h3><span class="tier tier-premium">Premium</span>Learn something fast</h3> <span class="meta">From <a href="../learn/">Learn something fast</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>Teach me [topic]. I already know [what you know] and I need it for [why].
+Explain it in plain words, then show how we handle it here, using our internal documents on [topic].
+Then ask me five questions, one at a time, and tell me what I got wrong.</pre></div></div>
+<div class="pitem" data-cat="Playbooks"><h3>Learn something fast: Follow-up</h3> <span class="meta">From <a href="../learn/">Learn something fast</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>Explain that again as if I were new to the industry.</pre></div></div>
+<div class="pitem" data-cat="Playbooks"><h3>Learn something fast: Follow-up</h3> <span class="meta">From <a href="../learn/">Learn something fast</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>Give me a 20-minute-a-day plan for the next two weeks.</pre></div></div>
+<div class="pitem" data-cat="Playbooks"><h3>Learn something fast: Follow-up</h3> <span class="meta">From <a href="../learn/">Learn something fast</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>What do people most often get wrong about this?</pre></div></div>
+<div class="pitem" data-tier="chat" data-cat="Playbooks"><h3><span class="tier tier-chat">Chat</span>Catch up after time away</h3> <span class="meta">From <a href="../catch-up/">Catch up after time away</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>I have been away since [date]. Summarise the emails I received since then.
+Group them into: decisions made without me, things waiting on me, and things I can ignore.
+Then list my meetings for the next [three] days and what I should read before each.</pre></div></div>
+<div class="pitem" data-tier="premium" data-cat="Playbooks"><h3><span class="tier tier-premium">Premium</span>Catch up after time away</h3> <span class="meta">From <a href="../catch-up/">Catch up after time away</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>I have been away since [date]. Catch me up using my emails, meetings, Teams chats and files.
+Give me: decisions made without me, things waiting on me, and what changed on [project].
+Name the source of each point and put the most urgent first.</pre></div></div>
+<div class="pitem" data-cat="Playbooks"><h3>Catch up after time away: Follow-up</h3> <span class="meta">From <a href="../catch-up/">Catch up after time away</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>Draft a short "I am back" message to [person] that picks up the open points.</pre></div></div>
+<div class="pitem" data-cat="Playbooks"><h3>Catch up after time away: Follow-up</h3> <span class="meta">From <a href="../catch-up/">Catch up after time away</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>What did I miss in the [meeting name] meeting?</pre></div></div>
+<div class="pitem" data-cat="Playbooks"><h3>Catch up after time away: Follow-up</h3> <span class="meta">From <a href="../catch-up/">Catch up after time away</a></span><div class="promptbox"><span class="label">Playbooks</span><pre>Which of these can I delegate?</pre></div></div>
+<div class="pitem" data-tier="chat" data-cat="Everyday"><h3><span class="tier tier-chat">Chat</span>Reply to a difficult email</h3><div class="promptbox"><span class="label">Everyday</span><pre>Draft a reply to the email below.
+Context: the sender is [role], and I want to [agree / decline / buy time] without sounding defensive.
+Keep it under 120 words, polite and direct, and end with one clear next step.
+
+[Paste the email here]</pre></div></div>
+<div class="pitem" data-tier="chat" data-cat="Everyday"><h3><span class="tier tier-chat">Chat</span>Make something shorter without losing the point</h3><div class="promptbox"><span class="label">Everyday</span><pre>Rewrite the text below for [audience] in about half the length.
+Keep every number and date. Use plain words and short sentences.
+After the rewrite, list anything you removed that they might still ask about.
+
+[Paste the text here]</pre></div></div>
+<div class="pitem" data-tier="chat" data-cat="Everyday"><h3><span class="tier tier-chat">Chat</span>Summarise an attached document for a decision</h3><div class="promptbox"><span class="label">Everyday</span><pre>Using only the attached document, summarise it for a busy manager who must decide [what].
+Give me: the three most important points, any risks or open questions, and what is missing from the document.
+If something is not in the document, say so rather than guessing.</pre></div></div>
+<div class="pitem" data-tier="chat" data-cat="Everyday"><h3><span class="tier tier-chat">Chat</span>Turn notes into actions</h3><div class="promptbox"><span class="label">Everyday</span><pre>From these notes, list the action items as a table with columns: action, owner, due date.
+If an owner or date is not stated, write "not stated" rather than inventing one.
+
+[Paste the notes here]</pre></div></div>
+<div class="pitem" data-tier="chat" data-cat="Everyday"><h3><span class="tier tier-chat">Chat</span>Prepare for a meeting</h3><div class="promptbox"><span class="label">Everyday</span><pre>I have a [length]-minute meeting with [who] about [topic]. My goal is [outcome].
+Suggest an agenda with timings, three questions I should ask, and two objections I should be ready for.
+Keep it to one page.</pre></div></div>
+<div class="pitem" data-tier="chat" data-cat="Everyday"><h3><span class="tier tier-chat">Chat</span>Challenge my plan</h3><div class="promptbox"><span class="label">Everyday</span><pre>Here is my plan: [paste or describe it].
+Act as a sceptical colleague. Tell me the three weakest assumptions, what could go wrong in the first month, and one thing I haven't considered.
+Be specific, not generic.</pre></div></div>
+<div class="pitem" data-tier="chat" data-cat="Everyday"><h3><span class="tier tier-chat">Chat</span>When you don&#x27;t know what to ask</h3><div class="promptbox"><span class="label">Everyday</span><pre>I want help with [task] but I'm not sure how to ask.
+Ask me up to five questions, one at a time, to understand what I need.
+When you have enough, write the best prompt for the job and then answer it.</pre></div></div>
+<div class="pitem" data-tier="premium" data-cat="Everyday"><h3><span class="tier tier-premium">Premium</span>Reply to a difficult email</h3><div class="promptbox"><span class="label">Everyday</span><pre>Draft a reply to the open email from [name].
+Context: I want to [agree / decline / buy time] without sounding defensive. Check our earlier emails on this so the reply is consistent.
+Keep it under 120 words, polite and direct, and end with one clear next step.</pre></div></div>
+<div class="pitem" data-tier="premium" data-cat="Everyday"><h3><span class="tier tier-premium">Premium</span>Summarise a file for a decision</h3><div class="promptbox"><span class="label">Everyday</span><pre>Using only /[file name], summarise it for a busy manager who must decide [what].
+Give me: the three most important points, any risks or open questions, and what is missing from the document.
+If something is not in the document, say so rather than guessing.</pre></div></div>
+<div class="pitem" data-tier="premium" data-cat="Everyday"><h3><span class="tier tier-premium">Premium</span>Catch me up on a project</h3><div class="promptbox"><span class="label">Everyday</span><pre>Catch me up on [project] from the last [two weeks]: key decisions, what is blocked, and what is waiting on me.
+Use my emails, meetings and files. Name the source for each point.</pre></div></div>
+<div class="pitem" data-tier="premium" data-cat="Everyday"><h3><span class="tier tier-premium">Premium</span>Prepare for a meeting</h3><div class="promptbox"><span class="label">Everyday</span><pre>I have a [length]-minute meeting with [who] about [topic]. My goal is [outcome].
+Use our recent emails and shared files to suggest an agenda with timings, three questions I should ask, and two objections I should be ready for.
+Keep it to one page.</pre></div></div>
+<div class="pitem" data-tier="premium" data-cat="Everyday"><h3><span class="tier tier-premium">Premium</span>Turn meeting notes into actions</h3><div class="promptbox"><span class="label">Everyday</span><pre>From the notes in /[file name], list the action items as a table with columns: action, owner, due date.
+If an owner or date is not stated, write "not stated" rather than inventing one.</pre></div></div>
+<div class="pitem" data-tier="premium" data-cat="Everyday"><h3><span class="tier tier-premium">Premium</span>Challenge my plan</h3><div class="promptbox"><span class="label">Everyday</span><pre>Here is my plan: /[file name].
+Act as a sceptical colleague. Tell me the three weakest assumptions, what could go wrong in the first month, and one thing I haven't considered.
+Be specific, not generic.</pre></div></div>
+<div class="pitem" data-tier="chat" data-cat="Copilot Chat"><h3><span class="tier tier-chat">Chat</span>Copilot Chat: What to expect</h3> <span class="meta">From <a href="../copilot-chat/">Copilot Chat</a></span><div class="promptbox"><span class="label">Copilot Chat</span><pre>Using only the text I have pasted below, list the decisions made and the open questions.
+If something is not in the text, say so.
+
+[Paste the text here]</pre></div></div>
+<div class="pitem" data-tier="premium" data-cat="Copilot Chat"><h3><span class="tier tier-premium">Premium</span>Copilot Chat: Work data, automatically</h3> <span class="meta">From <a href="../copilot-chat/">Copilot Chat</a></span><div class="promptbox"><span class="label">Copilot Chat</span><pre>Find the latest version of the [project name] proposal and the email thread about it.
+Summarise where we have landed and what is still open.
+Link to the sources you used.</pre></div></div>
+<div class="pitem" data-tier="chat" data-cat="Word/Outlook"><h3><span class="tier tier-chat">Chat</span>Word/Outlook: Word</h3> <span class="meta">From <a href="../word-outlook/">Word/Outlook</a></span><div class="promptbox"><span class="label">Word/Outlook</span><pre>Rewrite the text below for a [client / executive / new starter] audience.
+Keep it factual and under [80] words. Keep all dates and figures unchanged.
+
+[Paste the text here]</pre></div></div>
+<div class="pitem" data-tier="chat" data-cat="Word/Outlook"><h3><span class="tier tier-chat">Chat</span>Word/Outlook: Outlook</h3> <span class="meta">From <a href="../word-outlook/">Word/Outlook</a></span><div class="promptbox"><span class="label">Word/Outlook</span><pre>Summarise my unread emails from this week into: needs a reply from me, for information only, and can wait.
+List the sender and a one-line reason for each.</pre></div></div>
+<div class="pitem" data-tier="chat" data-cat="Word/Outlook"><h3><span class="tier tier-chat">Chat</span>Word/Outlook: Outlook</h3> <span class="meta">From <a href="../word-outlook/">Word/Outlook</a></span><div class="promptbox"><span class="label">Word/Outlook</span><pre>Draft a reply to the open email. I want to [accept / decline / ask for more time].
+Keep it under 100 words, polite and direct, with one clear next step.</pre></div></div>
+<div class="pitem" data-tier="premium" data-cat="Word/Outlook"><h3><span class="tier tier-premium">Premium</span>Word/Outlook: Word</h3> <span class="meta">From <a href="../word-outlook/">Word/Outlook</a></span><div class="promptbox"><span class="label">Word/Outlook</span><pre>Draft a one-page briefing on [topic] for [audience], using /[file name] and my recent emails with [person].
+Keep it factual, with a short summary at the top and next steps at the end.</pre></div></div>
+<div class="pitem" data-tier="premium" data-cat="Word/Outlook"><h3><span class="tier tier-premium">Premium</span>Word/Outlook: Outlook</h3> <span class="meta">From <a href="../word-outlook/">Word/Outlook</a></span><div class="promptbox"><span class="label">Word/Outlook</span><pre>Prepare me for my meeting with [person] tomorrow. Use our recent emails and shared files.
+Give me a short agenda, the last three decisions we made, and anything outstanding.</pre></div></div>
+<div class="pitem" data-tier="chat" data-cat="Excel"><h3><span class="tier tier-chat">Chat</span>Excel</h3> <span class="meta">From <a href="../excel/">Excel</a></span><div class="promptbox"><span class="label">Excel</span><pre>Here is a table of data: [paste it].
+Write a formula for column [D] that [describes what it should calculate].
+Explain it in one sentence, and tell me what happens if a cell in [B] is empty.</pre></div></div>
+<div class="pitem" data-tier="chat" data-cat="Excel"><h3><span class="tier tier-chat">Chat</span>Excel</h3> <span class="meta">From <a href="../excel/">Excel</a></span><div class="promptbox"><span class="label">Excel</span><pre>Look at the pasted data. Tell me three things that stand out, and one thing that looks like an error or an outlier.
+Explain how you know.
+
+[Paste the data here]</pre></div></div>
+<div class="pitem" data-tier="premium" data-cat="Excel"><h3><span class="tier tier-premium">Premium</span>Excel</h3> <span class="meta">From <a href="../excel/">Excel</a></span><div class="promptbox"><span class="label">Excel</span><pre>Look at the data on this sheet. Tell me three things that stand out, and one thing that looks like an error or an outlier.
+Explain how you know. Don't change anything.</pre></div></div>
+<div class="pitem" data-tier="premium" data-cat="Excel"><h3><span class="tier tier-premium">Premium</span>Excel</h3> <span class="meta">From <a href="../excel/">Excel</a></span><div class="promptbox"><span class="label">Excel</span><pre>I want a summary table of [measure] by [category] and [month], plus a chart that shows the trend.
+Show me your plan first. Use formulas, not pasted values, so the table updates when the data does.</pre></div></div>
+<div class="pitem" data-tier="chat" data-cat="PowerPoint"><h3><span class="tier tier-chat">Chat</span>PowerPoint</h3> <span class="meta">From <a href="../powerpoint/">PowerPoint</a></span><div class="promptbox"><span class="label">PowerPoint</span><pre>Draft an outline for an [8]-slide presentation for [audience] about [topic].
+Purpose: help them decide [decision].
+For each slide give a title, three short bullet points and a suggestion for one visual.
+Use only the notes I have pasted below.
+
+[Paste your notes here]</pre></div></div>
+<div class="pitem" data-tier="premium" data-cat="PowerPoint"><h3><span class="tier tier-premium">Premium</span>PowerPoint: Turning a Word document into a deck</h3> <span class="meta">From <a href="../powerpoint/">PowerPoint</a></span><div class="promptbox"><span class="label">PowerPoint</span><pre>Create a [8]-slide presentation for [audience] about [topic].
+Purpose: help them decide [decision].
+Structure: the problem, three options with pros and cons, a recommendation, and next steps.
+Tone: plain and confident. One main idea per slide, and keep slide text short.</pre></div></div>
+<div class="pitem" data-cat="Teams"><h3>Teams</h3> <span class="meta">From <a href="../teams-meetings/">Teams</a></span><div class="promptbox"><span class="label">Teams</span><pre>What has been decided so far, and what is still open?
+List any action items with the person responsible, if one was named.</pre></div></div>
+<div class="pitem" data-cat="Teams"><h3>Teams</h3> <span class="meta">From <a href="../teams-meetings/">Teams</a></span><div class="promptbox"><span class="label">Teams</span><pre>Write follow-up notes for the people who attended.
+Include decisions, action items (owner and date if mentioned), and open questions.
+Use only what was said in the meeting. If something is unclear, flag it instead of filling it in.</pre></div></div>
+<div class="pitem" data-tier="chat" data-cat="Teams"><h3><span class="tier tier-chat">Chat</span>Teams</h3> <span class="meta">From <a href="../teams-meetings/">Teams</a></span><div class="promptbox"><span class="label">Teams</span><pre>Below are the notes from our meeting. Write follow-up notes for the people who attended.
+Include decisions, action items (owner and date if mentioned), and open questions.
+Use only what is in the notes. If something is unclear, flag it instead of filling it in.
+
+[Paste the notes here]</pre></div></div>
+<div class="pitem" data-tier="premium" data-cat="Teams"><h3><span class="tier tier-premium">Premium</span>Teams</h3> <span class="meta">From <a href="../teams-meetings/">Teams</a></span><div class="promptbox"><span class="label">Teams</span><pre>Summarise the meeting for someone who missed it.
+Give the decisions, the action items with owners, and the open questions.
+Quote the part of the discussion each one came from.</pre></div></div>
+<div class="pitem" data-tier="chat" data-cat="Agents"><h3><span class="tier tier-chat">Chat</span>Researcher</h3> <span class="meta">From <a href="../researcher/">Researcher</a></span><div class="promptbox"><span class="label">Agents</span><pre>Research [topic] using public web sources for a decision on [decision].
+Give me the key findings, where sources disagree, risks, and a recommendation.
+Cite every claim with its link. Mark anything you could not verify.</pre></div></div>
+<div class="pitem" data-tier="premium" data-cat="Agents"><h3><span class="tier tier-premium">Premium</span>Researcher</h3> <span class="meta">From <a href="../researcher/">Researcher</a></span><div class="promptbox"><span class="label">Agents</span><pre>Research [topic] for a decision on [decision].
+Scope: [the web only / our internal documents and emails only / both].
+I need: the key findings, where sources disagree, risks, and a recommendation.
+Cite every claim. Mark anything you could not verify.</pre></div></div>
+<div class="pitem" data-tier="chat" data-cat="Agents"><h3><span class="tier tier-chat">Chat</span>Analyst</h3> <span class="meta">From <a href="../analyst/">Analyst</a></span><div class="promptbox"><span class="label">Agents</span><pre>Here is a table: [paste it].
+What are the three biggest trends, and one number that doesn't fit?
+Explain how you calculated each, and say what you could not tell from this data.</pre></div></div>
+<div class="pitem" data-tier="premium" data-cat="Agents"><h3><span class="tier tier-premium">Premium</span>Analyst</h3> <span class="meta">From <a href="../analyst/">Analyst</a></span><div class="promptbox"><span class="label">Agents</span><pre>Here is my data: [attach file].
+What are the three biggest trends, and one number that doesn't fit?
+Show a chart for each trend and explain how you calculated it.</pre></div></div>
+<div class="pitem" data-cat="Agents"><h3>Other agents: Visual Creator</h3> <span class="meta">From <a href="../other-agents/">Other agents</a></span><div class="promptbox"><span class="label">Agents</span><pre>Create a simple visual that explains [idea] to [audience].
+Style: clean and minimal, using [two colours]. Add a short caption.</pre></div></div>
+<div class="pitem" data-cat="Agents"><h3>Other agents: Idea Coach</h3> <span class="meta">From <a href="../other-agents/">Other agents</a></span><div class="promptbox"><span class="label">Agents</span><pre>I need ideas for [goal]. Give me five, then help me pick one and turn it into a three-step plan with a first action for this week.</pre></div></div>
+<div class="pitem" data-cat="Agents"><h3>Other agents: Writing Coach</h3> <span class="meta">From <a href="../other-agents/">Other agents</a></span><div class="promptbox"><span class="label">Agents</span><pre>Review the text below for tone, grammar and clarity for [audience].
+Point out the three changes that would help most, and explain why.
+
+[Paste the text here]</pre></div></div>
+<div class="pitem" data-cat="Agents"><h3>Other agents</h3> <span class="meta">From <a href="../other-agents/">Other agents</a></span><div class="promptbox"><span class="label">Agents</span><pre>Here is a prompt I use: [paste it].
+Improve it using goal, context, source and expectations, and explain each change.</pre></div></div>
+<div class="pitem" data-cat="Agents"><h3>Other agents: Learning Coach</h3> <span class="meta">From <a href="../other-agents/">Other agents</a></span><div class="promptbox"><span class="label">Agents</span><pre>I want to learn [skill] in [four weeks], at [30 minutes a day]. Build me a study plan with a weekly goal and a short quiz at the end of each week.</pre></div></div>
+<div class="pitem" data-cat="Agents"><h3>Other agents: Career Coach</h3> <span class="meta">From <a href="../other-agents/">Other agents</a></span><div class="promptbox"><span class="label">Agents</span><pre>My current role is [role]. I want to move towards [goal]. List the skills I should build, in order, and one small step for each.</pre></div></div>
+<div class="pitem" data-cat="Agents"><h3>Make your own: Instruction template</h3> <span class="meta">From <a href="../make-an-agent/">Make your own</a></span><div class="promptbox"><span class="label">Agents</span><pre>Role: You are [role] for [team/audience].
+Purpose: Help people with [the jobs it should do].
+Use only: [the knowledge sources]. If the answer isn't there, say "I don't know" and say who to ask.
+Format: [short answers / bullets / steps]. Keep a [friendly, plain] tone.
+Never: [give legal or HR advice / guess / share personal data].
+Always: end with the source you used.</pre></div></div>
+<div class="pitem" data-tier="chat" data-cat="Agents"><h3><span class="tier tier-chat">Chat</span>Make your own</h3> <span class="meta">From <a href="../make-an-agent/">Make your own</a></span><div class="promptbox"><span class="label">Agents</span><pre>You are a plain-English explainer for [team]. Use only the websites listed as knowledge.
+Answer in five lines or fewer, link the page you used, and say "I don't know" if the sites don't say.</pre></div></div>
+<div class="pitem" data-tier="premium" data-cat="Agents"><h3><span class="tier tier-premium">Premium</span>Make your own</h3> <span class="meta">From <a href="../make-an-agent/">Make your own</a></span><div class="promptbox"><span class="label">Agents</span><pre>You are the project assistant for [project]. Use the SharePoint folder and the project's Teams meetings as knowledge.
+Answer questions on decisions, owners and next steps. Quote the source, and say when the sources are silent.</pre></div></div>
+<div class="pitem" data-cat="Agents"><h3>Agent prompts: Researcher</h3> <span class="meta">From <a href="../agent-prompts/">Agent prompts</a></span><div class="promptbox"><span class="label">Agents</span><pre>Research [topic] for a decision on [decision]. Scope: [web only / work sources / both].
+Give key findings, where sources disagree, risks and a recommendation. Cite every claim and mark anything unverified.</pre></div></div>
+<div class="pitem" data-cat="Agents"><h3>Agent prompts: Analyst</h3> <span class="meta">From <a href="../agent-prompts/">Agent prompts</a></span><div class="promptbox"><span class="label">Agents</span><pre>Here is my data: [attach file]. What are the three biggest trends, and one number that doesn't fit?
+Show a chart for each and explain the calculation.</pre></div></div>
+<div class="pitem" data-cat="Agents"><h3>Agent prompts: Team FAQ agent</h3> <span class="meta">From <a href="../agent-prompts/">Agent prompts</a></span><div class="promptbox"><span class="label">Agents</span><pre>You are the team assistant for [team]. Answer questions about how we work using only the knowledge sources.
+Keep answers to five lines. Name the document you used. If it isn't covered, say "I don't know" and name [person] to ask.</pre></div></div>
+<div class="pitem" data-cat="Agents"><h3>Agent prompts: Onboarding buddy</h3> <span class="meta">From <a href="../agent-prompts/">Agent prompts</a></span><div class="promptbox"><span class="label">Agents</span><pre>You help new starters in [team] in their first 30 days. Use only the onboarding documents.
+Answer in plain words, give steps in order, and finish each answer with "What would you like to know next?"
+Never give HR, legal or pay advice; point to [person] instead.</pre></div></div>
+<div class="pitem" data-cat="Agents"><h3>Agent prompts: Writing-style checker</h3> <span class="meta">From <a href="../agent-prompts/">Agent prompts</a></span><div class="promptbox"><span class="label">Agents</span><pre>You check text against our style guide (in the knowledge source). For any text I paste, list up to five changes that would bring it in line, quote the rule for each, then give a corrected version.
+Do not change facts, figures or names.</pre></div></div>
+<div class="pitem" data-cat="Agents"><h3>Agent prompts: Meeting prep</h3> <span class="meta">From <a href="../agent-prompts/">Agent prompts</a></span><div class="promptbox"><span class="label">Agents</span><pre>You prepare me for meetings. When I give a meeting topic and attendees, produce: a one-line goal, a timed agenda, three questions to ask, and two likely objections.
+Use only the project documents in the knowledge source. Say what is missing.</pre></div></div>
+<div class="pitem" data-cat="Agents"><h3>Agent prompts: Policy explainer</h3> <span class="meta">From <a href="../agent-prompts/">Agent prompts</a></span><div class="promptbox"><span class="label">Agents</span><pre>You explain our policies in plain English using only the policy documents in the knowledge source.
+Give the short answer first, then the policy wording you relied on and its document name.
+You are not a decision-maker. For exceptions or doubt, say who to ask. Never guess.</pre></div></div>
+<!--/LIB-SRC-->
 
 <h2 id="recipe">The recipe</h2>
 <table>
@@ -41,7 +337,6 @@
 <tr><td>Source</td><td>What to draw on: your own pasted text, a file, or a web page</td><td>No</td></tr>
 <tr><td>Expectations</td><td>Format, tone, length</td><td>No</td></tr>
 </tbody></table>
-<p class="meta">Source: Microsoft (2026c).</p>
 
 <h2 id="habit">Habits worth keeping</h2>
 <ul>
@@ -51,70 +346,9 @@
 </ul>
 
 
-<h2 id="chat" class="tiered"><span class="tier tier-chat">Chat</span>Prompts for Copilot Chat</h2>
-<p>Paste the text, or upload or select the file first. Chat does not search your files for you.</p>
-<h3>Reply to a difficult email</h3>
-<div class="promptbox"><span class="label">Prompt</span><pre>Draft a reply to the email below.
-Context: the sender is [role], and I want to [agree / decline / buy time] without sounding defensive.
-Keep it under 120 words, polite and direct, and end with one clear next step.
 
-[Paste the email here]</pre></div>
-<h3>Make something shorter without losing the point</h3>
-<div class="promptbox"><span class="label">Prompt</span><pre>Rewrite the text below for [audience] in about half the length.
-Keep every number and date. Use plain words and short sentences.
-After the rewrite, list anything you removed that they might still ask about.
-
-[Paste the text here]</pre></div>
-<h3>Summarise an attached document for a decision</h3>
-<div class="promptbox"><span class="label">Prompt</span><pre>Using only the attached document, summarise it for a busy manager who must decide [what].
-Give me: the three most important points, any risks or open questions, and what is missing from the document.
-If something is not in the document, say so rather than guessing.</pre></div>
-<h3>Turn notes into actions</h3>
-<div class="promptbox"><span class="label">Prompt</span><pre>From these notes, list the action items as a table with columns: action, owner, due date.
-If an owner or date is not stated, write "not stated" rather than inventing one.
-
-[Paste the notes here]</pre></div>
-<h3>Prepare for a meeting</h3>
-<div class="promptbox"><span class="label">Prompt</span><pre>I have a [length]-minute meeting with [who] about [topic]. My goal is [outcome].
-Suggest an agenda with timings, three questions I should ask, and two objections I should be ready for.
-Keep it to one page.</pre></div>
-<h3>Challenge my plan</h3>
-<div class="promptbox"><span class="label">Prompt</span><pre>Here is my plan: [paste or describe it].
-Act as a sceptical colleague. Tell me the three weakest assumptions, what could go wrong in the first month, and one thing I haven't considered.
-Be specific, not generic.</pre></div>
-<h3>When you don't know what to ask</h3>
-<div class="promptbox"><span class="label">Prompt</span><pre>I want help with [task] but I'm not sure how to ask.
-Ask me up to five questions, one at a time, to understand what I need.
-When you have enough, write the best prompt for the job and then answer it.</pre></div>
-
-<h2 id="premium" class="tiered"><span class="tier tier-premium">Premium</span>Prompts for M365 Copilot (Premium)</h2>
-<p>Name the file, person or project instead of pasting. Copilot finds it, within what you can already open.</p>
-<h3>Reply to a difficult email</h3>
-<div class="promptbox"><span class="label">Prompt</span><pre>Draft a reply to the open email from [name].
-Context: I want to [agree / decline / buy time] without sounding defensive. Check our earlier emails on this so the reply is consistent.
-Keep it under 120 words, polite and direct, and end with one clear next step.</pre></div>
-<h3>Summarise a file for a decision</h3>
-<div class="promptbox"><span class="label">Prompt</span><pre>Using only /[file name], summarise it for a busy manager who must decide [what].
-Give me: the three most important points, any risks or open questions, and what is missing from the document.
-If something is not in the document, say so rather than guessing.</pre></div>
-<h3>Catch me up on a project</h3>
-<div class="promptbox"><span class="label">Prompt</span><pre>Catch me up on [project] from the last [two weeks]: key decisions, what is blocked, and what is waiting on me.
-Use my emails, meetings and files. Name the source for each point.</pre></div>
-<h3>Prepare for a meeting</h3>
-<div class="promptbox"><span class="label">Prompt</span><pre>I have a [length]-minute meeting with [who] about [topic]. My goal is [outcome].
-Use our recent emails and shared files to suggest an agenda with timings, three questions I should ask, and two objections I should be ready for.
-Keep it to one page.</pre></div>
-<h3>Turn meeting notes into actions</h3>
-<div class="promptbox"><span class="label">Prompt</span><pre>From the notes in /[file name], list the action items as a table with columns: action, owner, due date.
-If an owner or date is not stated, write "not stated" rather than inventing one.</pre></div>
-<h3>Challenge my plan</h3>
-<div class="promptbox"><span class="label">Prompt</span><pre>Here is my plan: /[file name].
-Act as a sceptical colleague. Tell me the three weakest assumptions, what could go wrong in the first month, and one thing I haven't considered.
-Be specific, not generic.</pre></div>
-<p>Agent-specific prompts are in the <a href="../agent-prompts/">agent prompt pack</a>.</p>
-<p class="meta">Source for the recipe and tips: Microsoft (2026c).</p>
-<p class="meta">Last checked against Microsoft's documentation: 6 November 2026. Copilot changes often, so check the sources at the end of the page.</p>
-<div class="pager"><a href="../agent-prompts/">&larr; Agent prompts</a><a href="../safety/">Safety &rarr;</a></div>
+<details class="src"><summary>Where this comes from (1 Microsoft page)</summary><ul><li><a href="https://support.microsoft.com/en-us/topic/learn-about-copilot-prompts-f6c3b467-f07c-4db1-ae54-ffac96184dd5">Get started writing prompts in Microsoft Copilot</a></li></ul></details><p class="meta">Last checked against Microsoft's documentation: 6 November 2026. Copilot changes often.</p>
+<div class="pager"><a href="../catch-up/">&larr; Catch up after time away</a><a href="../apps/">Apps &rarr;</a></div>
 </article></main>
 </div>
 </div>

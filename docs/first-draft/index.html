@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Write a first draft | Copilot Flight Deck</title>
+<meta name="description" content="From rough notes to a structured draft you can edit.">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var d=document.documentElement,t=localStorage.getItem('tier'),h=localStorage.getItem('theme');if(t==='chat'||t==='premium')d.setAttribute('data-tier',t);if(h==='light'||h==='dark')d.setAttribute('data-theme',h)}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar"><div class="topbar-in">
+<a class="brand" href="../">Copilot <span>Flight Deck</span></a>
+<div class="tierswitch" id="tierswitch" role="group" aria-label="Show guidance for my licence" hidden><span>My licence</span><button type="button" data-t="chat">Chat</button><button type="button" data-t="premium">Premium</button><button type="button" data-t="both">Both</button></div>
+<button type="button" class="theme" id="theme">Dark mode</button>
+<nav class="nav" aria-label="Main"><a href="../start/">Start</a><a href="../playbooks/" aria-current=page>Playbooks</a><a href="../prompts/">Prompts</a><a href="../apps/">Apps</a><a href="../agents/">Agents</a><a href="../safety/">Safety</a><a href="../troubleshooting/">Fix it</a></nav>
+</div></header>
+<div class="wrap">
+<div class="layout">
+
+<main id="main"><article>
+<nav class="secnav" aria-label="In this section"><a href="../playbooks/">All playbooks</a><a href="../inbox/">Clear my inbox</a><a href="../first-draft/" aria-current=page>Write a first draft</a><a href="../rewrite/">Shorten or sharpen</a><a href="../summarise/">Summarise a long document</a><a href="../meeting-prep/">Prepare for a meeting</a><a href="../meeting-follow-up/">Follow up a meeting</a><a href="../spreadsheet/">Make sense of a spreadsheet</a><a href="../deck/">Build a deck</a><a href="../research/">Research a topic</a><a href="../plan/">Plan a piece of work</a><a href="../learn/">Learn something fast</a><a href="../catch-up/">Catch up after time away</a></nav>
+<p class="eyebrow">Playbook</p>
+<h1>Write a first draft</h1>
+<p class="lede">Never start from a blank page. Start from an outline you agreed with Copilot.</p>
+
+<section class="tier-sec" data-tier="chat"><h2 id="chat" class="tiered"><span class="tier tier-chat">Chat</span>With Copilot Chat</h2>
+<ol class="steps">
+<li><strong>Open Copilot Chat</strong>Go to <code>copilot.cloud.microsoft</code>, or the Copilot icon in the Edge sidebar.</li>
+<li><strong>Agree the outline first</strong>Paste your notes and send the prompt below. Fix the outline before any writing happens.</li>
+<li><strong>Draft section by section</strong>Say "write section 1". Shorter requests give better text. Paste the result into Word.</li>
+<li><strong>Have Copilot in Word?</strong>If your label is <em>M365 Copilot (Basic)</em>, look for the Copilot button in Word and work there.</li>
+</ol>
+<div class="promptbox"><span class="label">Prompt · Chat</span><pre>I need to write [document type] for [audience] about [topic].
+Here are my notes:
+[Paste your notes here]
+First give me an outline of five headings with one line under each. Wait for my OK before you write anything.</pre></div>
+
+</section><section class="tier-sec" data-tier="premium"><h2 id="premium" class="tiered"><span class="tier tier-premium">Premium</span>With M365 Copilot (Premium)</h2>
+<ol class="steps">
+<li><strong>Open Copilot in Word</strong>Blank document, then the Copilot icon at the bottom right.</li>
+<li><strong>Point it at your sources</strong>Type <code>/</code> to pick a file. It can also use your recent emails.</li>
+<li><strong>Generate, then steer</strong>Keep, regenerate or refine with a follow-up. Select any paragraph to rewrite just that part.</li>
+</ol>
+<div class="promptbox"><span class="label">Prompt · Premium</span><pre>Draft [document type] for [audience] about [topic], using /[file name] and my recent emails with [person].
+Start with a three-line summary. Use short headings. Keep it to [one page].
+Mark anything you were unsure of with the word CHECK.</pre></div>
+
+</section><h2 id="further">Push it further</h2>
+<p>The first answer is a draft. Send one of these next:</p>
+<div class="promptbox"><span class="label">Follow-up</span><pre>Rewrite the opening three ways: formal, friendly and blunt.</pre></div>
+<div class="promptbox"><span class="label">Follow-up</span><pre>What would a sceptical reader challenge? List the three weakest points.</pre></div>
+<div class="promptbox"><span class="label">Follow-up</span><pre>Cut this by a third without losing any number or date.</pre></div>
+
+<h2 id="check">Before you use it</h2>
+<ul>
+<li>Facts, figures, names and policy statements: verify each one.</li>
+<li>Does it sound like you? Rewrite the first and last paragraph yourself.</li>
+<li>Check the sensitivity label on the finished document.</li>
+</ul>
+
+<p class="meta">I wrote these prompts from Microsoft's guidance. They have not yet been tested on every licence, so tell me what works and what doesn't.</p>
+<details class="src"><summary>Where this comes from (2 Microsoft pages)</summary><ul><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview">What is Microsoft Copilot?</a></li><li><a href="https://support.microsoft.com/en-us/copilot-word">Copilot in Word</a></li></ul></details><p class="meta">Last checked against Microsoft's documentation: 6 November 2026. Copilot changes often.</p>
+<div class="pager"><a href="../inbox/">&larr; Clear my inbox</a><a href="../rewrite/">Shorten or sharpen &rarr;</a></div>
+</article></main>
+</div>
+</div>
+<footer><div class="wrap">
+<p class="feedback">Was this useful? <a href="https://github.com/gladbacher/copilot-plainly/issues/new?title=Feedback%3A%20Write%20a%20first%20draft">Report a problem or suggest a fix</a>.</p>
+<p>An independent guide for people who use Microsoft Copilot at work. It is not made by, endorsed by, or affiliated with Microsoft. Microsoft, Copilot, Word, Excel, PowerPoint, Outlook and Teams are trademarks of Microsoft.</p>
+<p>Content is licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Format inspired by <a href="https://www.guidesforhumans.com/">Guides for Humans</a>. All text here is original. Prices and features change, so check Microsoft's own pages.</p>
+</div></footer>
+<script src="../assets/app.js" defer></script>
+</body>
+</html>

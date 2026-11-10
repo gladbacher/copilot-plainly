@@ -3,20 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Analyst | Copilot, plainly</title>
+<title>Analyst | Copilot Flight Deck</title>
 <meta name="description" content="What Analyst does with your data, how to check its calculations, and how it differs from Copilot in Excel.">
 <link rel="stylesheet" href="../assets/style.css">
+<script>try{var d=document.documentElement,t=localStorage.getItem('tier'),h=localStorage.getItem('theme');if(t==='chat'||t==='premium')d.setAttribute('data-tier',t);if(h==='light'||h==='dark')d.setAttribute('data-theme',h)}catch(e){}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="topbar"><div class="topbar-in">
-<a class="brand" href="../">Copilot<span>, plainly</span></a>
-<nav class="nav" aria-label="Main"><a href="../">Home</a><a href="../start/">Start here</a><a href="../what-is-copilot/">What it is</a><a href="../copilot-chat/">Copilot Chat</a><a href="../word-outlook/">Word/Outlook</a><a href="../excel/">Excel</a><a href="../powerpoint/">PowerPoint</a><a href="../teams-meetings/">Teams</a><a href="../agents/" aria-current=page>Agents</a><a href="../prompts/">Prompts</a><a href="../safety/">Safety</a><a href="../troubleshooting/">Troubleshooting</a></nav>
+<a class="brand" href="../">Copilot <span>Flight Deck</span></a>
+<div class="tierswitch" id="tierswitch" role="group" aria-label="Show guidance for my licence" hidden><span>My licence</span><button type="button" data-t="chat">Chat</button><button type="button" data-t="premium">Premium</button><button type="button" data-t="both">Both</button></div>
 <button type="button" class="theme" id="theme">Dark mode</button>
+<nav class="nav" aria-label="Main"><a href="../start/">Start</a><a href="../playbooks/">Playbooks</a><a href="../prompts/">Prompts</a><a href="../apps/">Apps</a><a href="../agents/" aria-current=page>Agents</a><a href="../safety/">Safety</a><a href="../troubleshooting/">Fix it</a></nav>
 </div></header>
 <div class="wrap">
 <div class="layout has-toc">
-<nav class="toc" aria-label="On this page"><div class="toc-in"><h2>On this page</h2><ol><li><a href="#what">What goes in, and what comes out</a></li><li><a href="#check">Checking its calculations</a></li><li><a href="#vs-excel">Analyst or Copilot in Excel?</a></li><li><a href="#chat">Chat: On Copilot Chat</a></li><li><a href="#premium">Premium: With M365 Copilot (Premium)</a></li></ol></div></nav>
+<nav class="toc" aria-label="On this page"><div class="toc-in"><h2>On this page</h2><ol><li><a href="#what">What goes in, and what comes out</a></li><li><a href="#check">Checking its calculations</a></li><li><a href="#vs-excel">Analyst or Copilot in Excel?</a></li><li data-tier=chat><a href="#chat">Chat: On Copilot Chat</a></li><li data-tier=premium><a href="#premium">Premium: With M365 Copilot (Premium)</a></li></ol></div></nav>
 <main id="main"><article>
 <nav class="secnav" aria-label="In this section"><a href="../agents/">Overview</a><a href="../researcher/">Researcher</a><a href="../analyst/" aria-current=page>Analyst</a><a href="../other-agents/">Other agents</a><a href="../make-an-agent/">Make your own</a><a href="../agents-safely/">Using agents safely</a><a href="../agent-prompts/">Agent prompts</a></nav>
 <p class="eyebrow">Agents · Analyst</p>
@@ -25,7 +27,7 @@
 
 <div class="short"><h2>The short version</h2>
 <ul>
-<li>Microsoft describes Analyst as turning raw data into insights and clear visualisations for metrics, trends and forecasts (Microsoft, 2026n).</li>
+<li>Microsoft describes Analyst as turning raw data into insights and clear visualisations for metrics, trends and forecasts.</li>
 <li>Always request its working, then check one number by hand.</li>
 <li>Analyst is a licensed agent. I couldn't find a Microsoft page that gives it to Chat-only users.</li>
 </ul></div>
@@ -48,19 +50,19 @@
 </tbody></table>
 <p class="meta">This split is my rule of thumb, not a Microsoft statement.</p>
 
-<h2 id="chat" class="tiered"><span class="tier tier-chat">Chat</span>On Copilot Chat</h2>
-<p>Microsoft's Support comparison lists Analyst under the advanced agents on the licensed side (Microsoft, 2026ar). If it isn't in your Agents pane, use ordinary chat: paste a small table and ask for trends and a formula, as in the <a href="../excel/#chat">Excel Chat section</a>.</p>
+<section class="tier-sec" data-tier="chat"><h2 id="chat" class="tiered"><span class="tier tier-chat">Chat</span>On Copilot Chat</h2>
+<p>Microsoft's Support comparison lists Analyst under the advanced agents on the licensed side. If it isn't in your Agents pane, use ordinary chat: paste a small table and ask for trends and a formula, as in the <a href="../excel/#chat">Excel Chat section</a>.</p>
 <div class="promptbox"><span class="label">Prompt · Chat</span><pre>Here is a table: [paste it].
 What are the three biggest trends, and one number that doesn't fit?
 Explain how you calculated each, and say what you could not tell from this data.</pre></div>
 
-<h2 id="premium" class="tiered"><span class="tier tier-premium">Premium</span>With M365 Copilot (Premium)</h2>
-<p>Analyst is pinned by default where you have it (Microsoft, 2026ah). Open it from the Agents pane and attach your file.</p>
+</section><section class="tier-sec" data-tier="premium"><h2 id="premium" class="tiered"><span class="tier tier-premium">Premium</span>With M365 Copilot (Premium)</h2>
+<p>Analyst is pinned by default where you have it. Open it from the Agents pane and attach your file.</p>
 <div class="promptbox"><span class="label">Prompt · Premium</span><pre>Here is my data: [attach file].
 What are the three biggest trends, and one number that doesn't fit?
 Show a chart for each trend and explain how you calculated it.</pre></div>
-<p class="meta">Sources: Microsoft (2026n, 2026ah, 2026ar).</p>
-<p class="meta">Last checked against Microsoft's documentation: 6 November 2026. Copilot changes often, so check the sources at the end of the page.</p>
+</section>
+<details class="src"><summary>Where this comes from (3 Microsoft pages)</summary><ul><li><a href="https://support.microsoft.com/en-us/microsoft-365-copilot/agents-built-by-microsoft">Agents built by Microsoft</a></li><li><a href="https://support.microsoft.com/en-us/microsoft-365-copilot/how-copilot-chat-works-with-and-without-a-microsoft-365-copilot-license">How Copilot Chat works with and without a Microsoft Copilot license</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/agent-essentials/m365-agents-admin-guide">Agents admin guide for Microsoft 365</a></li></ul></details><p class="meta">Last checked against Microsoft's documentation: 6 November 2026. Copilot changes often.</p>
 <div class="pager"><a href="../researcher/">&larr; Researcher</a><a href="../other-agents/">Other agents &rarr;</a></div>
 </article></main>
 </div>

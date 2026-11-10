@@ -3,20 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Using agents safely | Copilot, plainly</title>
+<title>Using agents safely | Copilot Flight Deck</title>
 <meta name="description" content="What data each kind of agent can reach, third-party agent privacy, what not to put in instructions or knowledge, and retiring agents.">
 <link rel="stylesheet" href="../assets/style.css">
+<script>try{var d=document.documentElement,t=localStorage.getItem('tier'),h=localStorage.getItem('theme');if(t==='chat'||t==='premium')d.setAttribute('data-tier',t);if(h==='light'||h==='dark')d.setAttribute('data-theme',h)}catch(e){}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="topbar"><div class="topbar-in">
-<a class="brand" href="../">Copilot<span>, plainly</span></a>
-<nav class="nav" aria-label="Main"><a href="../">Home</a><a href="../start/">Start here</a><a href="../what-is-copilot/">What it is</a><a href="../copilot-chat/">Copilot Chat</a><a href="../word-outlook/">Word/Outlook</a><a href="../excel/">Excel</a><a href="../powerpoint/">PowerPoint</a><a href="../teams-meetings/">Teams</a><a href="../agents/" aria-current=page>Agents</a><a href="../prompts/">Prompts</a><a href="../safety/">Safety</a><a href="../troubleshooting/">Troubleshooting</a></nav>
+<a class="brand" href="../">Copilot <span>Flight Deck</span></a>
+<div class="tierswitch" id="tierswitch" role="group" aria-label="Show guidance for my licence" hidden><span>My licence</span><button type="button" data-t="chat">Chat</button><button type="button" data-t="premium">Premium</button><button type="button" data-t="both">Both</button></div>
 <button type="button" class="theme" id="theme">Dark mode</button>
+<nav class="nav" aria-label="Main"><a href="../start/">Start</a><a href="../playbooks/">Playbooks</a><a href="../prompts/">Prompts</a><a href="../apps/">Apps</a><a href="../agents/" aria-current=page>Agents</a><a href="../safety/">Safety</a><a href="../troubleshooting/">Fix it</a></nav>
 </div></header>
 <div class="wrap">
 <div class="layout has-toc">
-<nav class="toc" aria-label="On this page"><div class="toc-in"><h2>On this page</h2><ol><li><a href="#reach">What each kind of agent can reach</a></li><li><a href="#third">Third-party and organisation agents</a></li><li><a href="#dont">What not to put in instructions or knowledge</a></li><li><a href="#check">Checking outputs</a></li><li><a href="#retire">Retiring agents you no longer use</a></li><li><a href="#chat">Chat: On Copilot Chat</a></li><li><a href="#premium">Premium: With M365 Copilot (Premium)</a></li></ol></div></nav>
+<nav class="toc" aria-label="On this page"><div class="toc-in"><h2>On this page</h2><ol><li><a href="#reach">What each kind of agent can reach</a></li><li><a href="#third">Third-party and organisation agents</a></li><li><a href="#dont">What not to put in instructions or knowledge</a></li><li><a href="#check">Checking outputs</a></li><li><a href="#retire">Retiring agents you no longer use</a></li><li data-tier=chat><a href="#chat">Chat: On Copilot Chat</a></li><li data-tier=premium><a href="#premium">Premium: With M365 Copilot (Premium)</a></li></ol></div></nav>
 <main id="main"><article>
 <nav class="secnav" aria-label="In this section"><a href="../agents/">Overview</a><a href="../researcher/">Researcher</a><a href="../analyst/">Analyst</a><a href="../other-agents/">Other agents</a><a href="../make-an-agent/">Make your own</a><a href="../agents-safely/" aria-current=page>Using agents safely</a><a href="../agent-prompts/">Agent prompts</a></nav>
 <p class="eyebrow">Agents · Safety</p>
@@ -35,25 +37,25 @@
 <table>
 <thead><tr><th>Kind</th><th>What it can reach</th></tr></thead>
 <tbody>
-<tr><td>Microsoft-built agents</td><td>Depend on the agent. Researcher uses the web and your work content within your permissions (Microsoft, 2026m).</td></tr>
-<tr><td>Agents you or a colleague built</td><td>Their knowledge sources, filtered by the permissions of whoever is chatting (Microsoft, 2026ab).</td></tr>
-<tr><td>Agents from partners or other companies</td><td>Whatever the administrator allowed. Copilot may send them a search query based on your prompt, your activity history and data you can access (Microsoft, 2026d).</td></tr>
+<tr><td>Microsoft-built agents</td><td>Depend on the agent. Researcher uses the web and your work content within your permissions.</td></tr>
+<tr><td>Agents you or a colleague built</td><td>Their knowledge sources, filtered by the permissions of whoever is chatting.</td></tr>
+<tr><td>Agents from partners or other companies</td><td>Whatever the administrator allowed. Copilot may send them a search query based on your prompt, your activity history and data you can access.</td></tr>
 </tbody></table>
-<p>Encrypted content can exclude programmatic access, which can stop an agent reading it (Microsoft, 2026d).</p>
+<p>Encrypted content can exclude programmatic access, which can stop an agent reading it.</p>
 
 <h2 id="third">Third-party and organisation agents</h2>
 <ul>
-<li>Check the agent's privacy statement and terms before using it. Microsoft says these determine how your organisation's data is handled (Microsoft, 2026d).</li>
-<li>An agent builder can add their own privacy and terms links; the defaults are placeholders, so don't assume they've been filled in (Microsoft, 2026ab).</li>
+<li>Check the agent's privacy statement and terms before using it. Microsoft says these determine how your organisation's data is handled.</li>
+<li>An agent builder can add their own privacy and terms links; the defaults are placeholders, so don't assume they've been filled in.</li>
 <li>I couldn't find a Microsoft statement that third-party agents are covered by its "no training" commitments, so don't assume it.</li>
-<li>Administrators decide which agents are allowed and can see their permissions (Microsoft, 2026d, 2026ad). That is an organisation setting.</li>
+<li>Administrators decide which agents are allowed and can see their permissions. That is an organisation setting.</li>
 </ul>
 
 
 <h2 id="dont">What not to put in instructions or knowledge</h2>
 <ul>
 <li>Passwords, keys, tokens or personal data.</li>
-<li>Files you wouldn't want every user of the agent to see answers from. Anyone who can use the agent can see answers grounded in embedded files (Microsoft, 2026aa).</li>
+<li>Files you wouldn't want every user of the agent to see answers from. Anyone who can use the agent can see answers grounded in embedded files.</li>
 <li>Whole mailboxes in a shared agent.</li>
 <li>Anything your organisation classes as restricted.</li>
 </ul>
@@ -68,16 +70,16 @@
 
 <h2 id="retire">Retiring agents you no longer use</h2>
 <ol>
-<li>Remove people you shared it with. Removing someone from an agent does not remove their access to its files (Microsoft, 2026y), so fix the file permissions too.</li>
-<li>Delete the agent. For Agent Builder agents this is permanent (Microsoft, 2026ab). For SharePoint agents, delete the <code>.agent</code> file (Microsoft, 2026ak).</li>
+<li>Remove people you shared it with. Removing someone from an agent does not remove their access to its files, so fix the file permissions too.</li>
+<li>Delete the agent. For Agent Builder agents this is permanent. For SharePoint agents, delete the <code>.agent</code> file.</li>
 <li>Unpin agents you no longer use from your Agents list.</li>
 </ol>
-<h2 id="chat" class="tiered"><span class="tier tier-chat">Chat</span>On Copilot Chat</h2>
-<p>Agents with work data are off by default and billed by use. An administrator turns them on (Microsoft, 2026ah). If an agent says you can't use it, that is most likely a setting or a billing choice, not something you did.</p>
-<h2 id="premium" class="tiered"><span class="tier tier-premium">Premium</span>With M365 Copilot (Premium)</h2>
+<section class="tier-sec" data-tier="chat"><h2 id="chat" class="tiered"><span class="tier tier-chat">Chat</span>On Copilot Chat</h2>
+<p>Agents with work data are off by default and billed by use. An administrator turns them on. If an agent says you can't use it, that is most likely a setting or a billing choice, not something you did.</p>
+</section><section class="tier-sec" data-tier="premium"><h2 id="premium" class="tiered"><span class="tier tier-premium">Premium</span>With M365 Copilot (Premium)</h2>
 <p>An agent built on your mailbox or meetings can surface sensitive material. Build shared agents on SharePoint sources, not on your email.</p>
-<p class="meta">Sources: Microsoft (2026aa, 2026ab, 2026ad, 2026ah, 2026ak, 2026d, 2026m, 2026y). Also read <a href="../safety/">Safety and privacy</a>.</p>
-<p class="meta">Last checked against Microsoft's documentation: 6 November 2026. Copilot changes often, so check the sources at the end of the page.</p>
+<p class="meta">Also read <a href="../safety/">Safety and privacy</a>.</p></section>
+<details class="src"><summary>Where this comes from (8 Microsoft pages)</summary><ul><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/researcher-agent">What is Researcher agent in Microsoft Copilot?</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-share-manage-agents">Share and manage agents built in Agent Builder</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-privacy">Data, privacy, and security for Microsoft Copilot</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-agent-365/admin/manage-copilot-agents-integrated-apps">Manage agents in the Microsoft 365 admin center</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-add-knowledge">Add knowledge sources to an agent in Agent Builder</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder">Agent Builder overview</a></li><li><a href="https://support.microsoft.com/en-us/office/manage-agents-in-sharepoint-bcab837a-835c-4a1a-8ad4-d53a353c369f">Manage agents in SharePoint</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/agent-essentials/m365-agents-admin-guide">Agents admin guide for Microsoft 365</a></li></ul></details><p class="meta">Last checked against Microsoft's documentation: 6 November 2026. Copilot changes often.</p>
 <div class="pager"><a href="../make-an-agent/">&larr; Make your own</a><a href="../agent-prompts/">Agent prompts &rarr;</a></div>
 </article></main>
 </div>

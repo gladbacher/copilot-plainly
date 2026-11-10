@@ -3,90 +3,100 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>What Copilot is, and what it costs | Copilot, plainly</title>
-<meta name="description" content="The two tiers of Microsoft Copilot at work, what changed in the names, what each can see, and the price reality check.">
+<title>Your licence: what you&#x27;ve got | Copilot Flight Deck</title>
+<meta name="description" content="What your Copilot label means, what each licence can and can&#x27;t do, and a lookup to check any feature.">
 <link rel="stylesheet" href="../assets/style.css">
+<script>try{var d=document.documentElement,t=localStorage.getItem('tier'),h=localStorage.getItem('theme');if(t==='chat'||t==='premium')d.setAttribute('data-tier',t);if(h==='light'||h==='dark')d.setAttribute('data-theme',h)}catch(e){}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="topbar"><div class="topbar-in">
-<a class="brand" href="../">Copilot<span>, plainly</span></a>
-<nav class="nav" aria-label="Main"><a href="../">Home</a><a href="../start/">Start here</a><a href="../what-is-copilot/" aria-current=page>What it is</a><a href="../copilot-chat/">Copilot Chat</a><a href="../word-outlook/">Word/Outlook</a><a href="../excel/">Excel</a><a href="../powerpoint/">PowerPoint</a><a href="../teams-meetings/">Teams</a><a href="../agents/">Agents</a><a href="../prompts/">Prompts</a><a href="../safety/">Safety</a><a href="../troubleshooting/">Troubleshooting</a></nav>
+<a class="brand" href="../">Copilot <span>Flight Deck</span></a>
+<div class="tierswitch" id="tierswitch" role="group" aria-label="Show guidance for my licence" hidden><span>My licence</span><button type="button" data-t="chat">Chat</button><button type="button" data-t="premium">Premium</button><button type="button" data-t="both">Both</button></div>
 <button type="button" class="theme" id="theme">Dark mode</button>
+<nav class="nav" aria-label="Main"><a href="../start/" aria-current=page>Start</a><a href="../playbooks/">Playbooks</a><a href="../prompts/">Prompts</a><a href="../apps/">Apps</a><a href="../agents/">Agents</a><a href="../safety/">Safety</a><a href="../troubleshooting/">Fix it</a></nav>
 </div></header>
 <div class="wrap">
 <div class="layout has-toc">
-<nav class="toc" aria-label="On this page"><div class="toc-in"><h2>On this page</h2><ol><li><a href="#names">The names changed</a></li><li><a href="#chat">Chat: With Copilot Chat</a></li><li><a href="#premium">Premium: With M365 Copilot (Premium)</a></li><li><a href="#cost">The cost reality check</a></li><li><a href="#check">Check your own setup</a></li></ol></div></nav>
+<nav class="toc" aria-label="On this page"><div class="toc-in"><h2>On this page</h2><ol><li><a href="#names">The names changed</a></li><li data-tier=chat><a href="#chat">Chat: With Copilot Chat</a></li><li data-tier=premium><a href="#premium">Premium: With M365 Copilot (Premium)</a></li><li><a href="#lookup">Can my Copilot do this?</a></li><li><a href="#check">Check your own setup</a></li></ol></div></nav>
 <main id="main"><article>
-
-<p class="eyebrow">Guide 1</p>
-<h1>What Copilot is, and what it costs</h1>
-<p class="lede">"Copilot" is the name on many different Microsoft products. This page sorts out the ones you meet at work.</p>
+<nav class="secnav" aria-label="In this section"><a href="../start/">Start here</a><a href="../what-is-copilot/" aria-current=page>Your licence</a><a href="../moves/">The 12 moves</a><a href="../copilot-way/">The Copilot way</a><a href="../challenge/">5-day challenge</a></nav>
+<p class="eyebrow">Guide</p>
+<h1>Your licence: what you've got</h1>
+<p class="lede">What the label under your name means, and exactly what it lets Copilot do for you.</p>
 
 <div class="short"><h2>The short version</h2>
 <ul>
 <li>This site covers <strong>two tiers</strong>: <strong>Chat</strong> (free with eligible plans) and <strong>Premium</strong> (the paid add-on).</li>
 <li>The main difference is <strong>whether Copilot can reach your work data on its own</strong>.</li>
 <li>Microsoft recently renamed things. Old and new names are both in use.</li>
-<li>Your employer buys and assigns the paid licence, not you.</li>
+<li>Use the <a href="#lookup">lookup table</a> to check any feature against your licence.</li>
 </ul></div>
 
 <h2 id="names">The names changed</h2>
-<p>Microsoft's own documentation now says that <strong>Microsoft 365 Copilot</strong> is called <strong>Microsoft Copilot</strong>, and <strong>Microsoft 365 Copilot Chat</strong> is called <strong>Microsoft Copilot Chat</strong>. Pages and menus still use the old names during the transition (Microsoft, 2026a). The web address is now <code>copilot.cloud.microsoft</code>.</p>
+<p>Microsoft's own documentation now says that <strong>Microsoft 365 Copilot</strong> is called <strong>Microsoft Copilot</strong>, and <strong>Microsoft 365 Copilot Chat</strong> is called <strong>Microsoft Copilot Chat</strong>. Pages and menus still use the old names during the transition. The web address is now <code>copilot.cloud.microsoft</code>.</p>
 <p>In practice: if one article says "Microsoft 365 Copilot" and another says "Microsoft Copilot" they are usually describing the same product. Do not mix it up with the free consumer Copilot or with GitHub Copilot, which is for programmers. Those are separate.</p>
-<p>Under your name you will see one of three labels (Microsoft, 2026b). On this site:</p>
+<p>Under your name you will see one of three labels. On this site:</p>
 <ul>
 <li><em>Copilot Chat (Basic)</em> and <em>M365 Copilot (Basic)</em> are the <span class="tier tier-chat">Chat</span> track.</li>
 <li><em>M365 Copilot (Premium)</em> is the <span class="tier tier-premium">Premium</span> track.</li>
 </ul>
 <p class="meta">Usage-based extras such as Copilot Cowork and Copilot Code need the Premium licence and are billed by consumption. They are not covered yet; a later section will cover them.</p>
 
-<h2 id="chat" class="tiered"><span class="tier tier-chat">Chat</span>With Copilot Chat</h2>
-<p><strong>What you get:</strong> a secure AI chat included with eligible Microsoft 365 plans when you sign in with a work or school account (Microsoft, 2026e). It works from the web, and also in Outlook and Teams.</p>
-<p><strong>Two Chat labels, and Word/Excel/PowerPoint.</strong> Microsoft's overview says people with the <em>Copilot Chat (Basic)</em> label "don't have access" to Copilot in Word, Excel, PowerPoint and OneNote, while people with <em>M365 Copilot (Basic)</em> have <em>standard access</em> to it, subject to service capacity (Microsoft, 2026a, 2026s). Microsoft's Learn requirements page adds that chat in Word, Excel and PowerPoint varies with licence and tenant configuration (Microsoft, 2026aq).</p>
-<p><strong>What it can see:</strong> Chat cannot use Microsoft Graph, the layer that holds your emails, files, meetings and calendar. It can use your content only if you hand it over: paste it, upload a file, or open it next to Copilot in Outlook or Teams. Copilot only shows you data you already have <strong>at least view permission</strong> for (Microsoft, 2026d).</p>
+<section class="tier-sec" data-tier="chat"><h2 id="chat" class="tiered"><span class="tier tier-chat">Chat</span>With Copilot Chat</h2>
+<p><strong>What you get:</strong> a secure AI chat included with eligible Microsoft 365 plans when you sign in with a work or school account. It works from the web, and also in Outlook and Teams.</p>
+<p><strong>Two Chat labels, and Word/Excel/PowerPoint.</strong> Microsoft's overview says people with the <em>Copilot Chat (Basic)</em> label "don't have access" to Copilot in Word, Excel, PowerPoint and OneNote, while people with <em>M365 Copilot (Basic)</em> have <em>standard access</em> to it, subject to service capacity. Microsoft's Learn requirements page adds that chat in Word, Excel and PowerPoint varies with licence and tenant configuration.</p>
+<p><strong>What it can see:</strong> Chat cannot use Microsoft Graph, the layer that holds your emails, files, meetings and calendar. It can use your content only if you hand it over: paste it, upload a file, or open it next to Copilot in Outlook or Teams. Copilot only shows you data you already have <strong>at least view permission</strong> for.</p>
 <div class="callout warn"><strong>What I could not confirm</strong>
 <p>Several university help pages, and a secondary quote of a Microsoft Message Center notice, say the Copilot pane in Word, Excel, PowerPoint and OneNote ended for unlicensed users from 15 April 2026. Microsoft's current pages are consistent with that for the <em>Copilot Chat (Basic)</em> label, but I couldn't find the original announcement on a Microsoft documentation page. I also couldn't find a page that explains what decides whether you get the <em>Copilot Chat (Basic)</em> or the <em>M365 Copilot (Basic)</em> label. The reliable test is your own apps: open Word and look for the Copilot button. If it is missing, work down <a href="../troubleshooting/#missing">this checklist</a>.</p></div>
 
 
-<h2 id="premium" class="tiered"><span class="tier tier-premium">Premium</span>With M365 Copilot (Premium)</h2>
-<p><strong>What you get:</strong> the paid add-on. Everything in Chat, plus priority access, Copilot Search, agents that use work data, and management tools for administrators (Microsoft, 2026a).</p>
-<p><strong>What it can see:</strong> it pulls from Graph and Work IQ automatically. You can name a file to focus on, but you do not have to upload it. An administrator can switch Work IQ off, in which case answers are not enriched with your work context (Microsoft, 2026a). It still only shows you data you already have <strong>at least view permission</strong> to open (Microsoft, 2026d). To check whether Work IQ is working for you, ask Copilot about a file you know you can open; if it can't find it, see <a href="../troubleshooting/#files">Troubleshooting</a>.</p>
+</section><section class="tier-sec" data-tier="premium"><h2 id="premium" class="tiered"><span class="tier tier-premium">Premium</span>With M365 Copilot (Premium)</h2>
+<p><strong>What you get:</strong> the paid add-on. Everything in Chat, plus priority access, Copilot Search, agents that use work data, and management tools for administrators.</p>
+<p><strong>What it can see:</strong> it pulls from Graph and Work IQ automatically. You can name a file to focus on, but you do not have to upload it. An administrator can switch Work IQ off, in which case answers are not enriched with your work context. It still only shows you data you already have <strong>at least view permission</strong> to open. To check whether Work IQ is working for you, ask Copilot about a file you know you can open; if it can't find it, see <a href="../troubleshooting/#files">Troubleshooting</a>.</p>
 
-<h2 id="cost">The cost reality check</h2>
-<div class="callout"><strong>You probably do not pay for any of this directly.</strong><p>Copilot Chat is included at no extra cost with eligible Microsoft 365 plans when you sign in with a work or school account (Microsoft, 2026e). The paid licence is an add-on that your employer buys and an administrator assigns.</p></div>
-<p>If you work for a small business, or you are the person deciding, these are Microsoft's listed prices for the <strong>Copilot Business</strong> add-on. They are US dollars per user per month, excluding tax, checked again on 6 November 2026 with the same figures (Microsoft, 2026f). I did not check UK prices, which differ:</p>
-<table>
-<thead><tr><th>Option</th><th>Paid yearly</th><th>Paid monthly</th></tr></thead>
+</section><h2 id="lookup">Can my Copilot do this?</h2>
+<p>Type a word to filter. "Chat" covers both Basic labels.</p>
+<div class="lib-tools"><label for="lookq">Filter</label><input type="search" id="lookq" class="filter" data-target=".lookup tbody tr" placeholder="e.g. agent, meeting, Excel"></div>
+<table class="lookup">
+<thead><tr><th>Feature</th><th data-tier="chat"><span class="tier tier-chat">Chat</span></th><th data-tier="premium"><span class="tier tier-premium">Premium</span></th></tr></thead>
 <tbody>
-<tr><td>Copilot Business add-on</td><td>$18.00 promotional (list $21.00)</td><td>$25.20</td></tr>
-<tr><td>Business Standard with Copilot</td><td>$23.50</td><td>$28.20</td></tr>
-<tr><td>Business Premium with Copilot</td><td>$32.00</td><td>$38.40</td></tr>
+<tr><td>Chat with Copilot under your work account's data protection</td><td class="yes" data-tier="chat">Yes</td><td class="yes" data-tier="premium">Yes</td></tr>
+<tr><td>Answers from the web</td><td class="dep" data-tier="chat">Yes, unless your organisation turns web search off</td><td class="dep" data-tier="premium">Yes, unless your organisation turns web search off</td></tr>
+<tr><td>Upload or paste a file into the chat</td><td class="yes" data-tier="chat">Yes</td><td class="yes" data-tier="premium">Yes</td></tr>
+<tr><td>Find your emails, files, meetings and chats for you</td><td class="dep" data-tier="chat">No. You hand it the content</td><td class="yes" data-tier="premium">Yes</td></tr>
+<tr><td>Copilot in Outlook: inbox, calendar, drafting, scheduling</td><td class="yes" data-tier="chat">Yes</td><td class="dep" data-tier="premium">Yes, plus your chats and documents</td></tr>
+<tr><td>Copilot Chat in Teams and Outlook that sees the item you have open</td><td class="yes" data-tier="chat">Yes</td><td class="yes" data-tier="premium">Yes</td></tr>
+<tr><td>Copilot inside Word, Excel, PowerPoint and OneNote</td><td class="dep" data-tier="chat">Depends on your label: no on Copilot Chat (Basic), standard access on M365 Copilot (Basic)</td><td class="dep" data-tier="premium">Yes, with priority access</td></tr>
+<tr><td>Teams meeting recap and questions</td><td class="dep" data-tier="chat">Needs Teams Premium or a Copilot licence, and the organiser's setting</td><td class="dep" data-tier="premium">Yes, within the organiser's setting</td></tr>
+<tr><td>Choose Auto, Quick response or Think deeper</td><td class="yes" data-tier="chat">Yes</td><td class="yes" data-tier="premium">Yes</td></tr>
+<tr><td>Researcher and Analyst agents</td><td class="no" data-tier="chat">No</td><td class="dep" data-tier="premium">Yes, if your organisation has them switched on</td></tr>
+<tr><td>Coaching agents: Prompt, Writing, Idea, Learning, Career</td><td class="dep" data-tier="chat">Yes, if your organisation has enabled them</td><td class="dep" data-tier="premium">Yes, if your organisation has enabled them</td></tr>
+<tr><td>Build your own agent from instructions and websites</td><td class="dep" data-tier="chat">Probably. Look for New agent in the Copilot app</td><td class="yes" data-tier="premium">Yes</td></tr>
+<tr><td>Build an agent that reads SharePoint files</td><td class="dep" data-tier="chat">Only if your organisation pays as it goes</td><td class="yes" data-tier="premium">Yes</td></tr>
+<tr><td>Build an agent that uses your email, Teams and people data</td><td class="no" data-tier="chat">No</td><td class="yes" data-tier="premium">Yes</td></tr>
+<tr><td>Create an agent from a SharePoint library</td><td class="dep" data-tier="chat">Only with pay-as-you-go, plus edit rights on the site</td><td class="dep" data-tier="premium">Yes, with edit rights on the site</td></tr>
+<tr><td>Copilot Cowork and Copilot Code</td><td class="no" data-tier="chat">No</td><td class="dep" data-tier="premium">Extra, billed by usage. Not covered here yet</td></tr>
 </tbody></table>
-<ul>
-<li>The add-on needs a qualifying Microsoft 365 plan and is for up to 300 users.</li>
-<li>The $18 rate runs from 1 July to 31 December 2026, applies to the first year only, and is for existing customers on an eligible Business plan (not trials).</li>
-<li>Annual commitment, with a 7-day window for a prorated refund.</li>
-</ul>
-<p>Prices for larger enterprise plans are on <a href="https://www.microsoft.com/microsoft-365-copilot">Microsoft's Copilot page</a>. I have not listed them here because I could not confirm them on a Microsoft page.</p>
+<p class="meta">"Yes" means Microsoft's documentation says the licence includes it. Your organisation can still switch individual features off, so the final test is what appears in your own apps.</p>
 
 <h2 id="check">Check your own setup</h2>
 <ol>
 <li>Which label do I see under my name at <code>copilot.cloud.microsoft</code>?</li>
 <li>Is my licence assigned? Microsoft publishes a licence details page at <a href="https://aka.ms/CopilotLicenseDetails">aka.ms/CopilotLicenseDetails</a>.</li>
 <li>Do I see the <em>Work</em> label and green shield?</li>
-<li>Is there a <em>View info from your organization</em> link in the app? That is where your organisation puts its own guidance (Microsoft, 2026e).</li>
+<li>Is there a <em>View info from your organization</em> link in the app? That is where your organisation puts its own guidance.</li>
 </ol>
 <p>Web search, agents and models are organisation settings. You cannot change them, but you can see what is switched on by what appears in your own menus.</p>
 
-<p class="meta">Sources: Microsoft (2026a, 2026b, 2026d, 2026e, 2026f, 2026g, 2026s, 2026aq).</p>
-<p class="meta">Last checked against Microsoft's documentation: 6 November 2026. Copilot changes often, so check the sources at the end of the page.</p>
-<div class="pager"><a href="../start/">&larr; Start here</a><a href="../copilot-chat/">Copilot Chat &rarr;</a></div>
+
+<details class="src"><summary>Where this comes from (17 Microsoft pages)</summary><ul><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview">What is Microsoft Copilot?</a></li><li><a href="https://support.microsoft.com/copilot-microsoft365-chat">Microsoft Copilot Chat: your AI assistant for work</a></li><li><a href="https://learn.microsoft.com/en-us/copilot/manage">Manage Microsoft Copilot Chat</a></li><li><a href="https://support.microsoft.com/en-us/microsoft-365-copilot/what-copilot-license-do-i-have">What Copilot license do I have?</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-copilot-requirements">Microsoft Copilot requirements</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-privacy">Data, privacy, and security for Microsoft Copilot</a></li><li><a href="https://support.microsoft.com/en-us/copilot-outlook">Copilot Chat in Outlook</a></li><li><a href="https://support.microsoft.com/en-us/office/get-started-with-copilot-in-microsoft-teams-meetings-0bf9dd3c-96f7-44e2-8bb8-790bedf066b1">Get started with Copilot in Microsoft Teams meetings</a></li><li><a href="https://support.microsoft.com/en-us/microsoft-365-copilot/how-copilot-chat-works-with-and-without-a-microsoft-365-copilot-license">How Copilot Chat works with and without a Microsoft Copilot license</a></li><li><a href="https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-researcher-in-microsoft-365-copilot">Get started with Researcher</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/agent-essentials/m365-agents-admin-guide">Agents admin guide for Microsoft 365</a></li><li><a href="https://support.microsoft.com/en-us/microsoft-365-copilot/agents-built-by-microsoft">Agents built by Microsoft</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/prerequisites">Set up your development environment for a Microsoft 365 Copilot plugin</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder">Agent Builder overview</a></li><li><a href="https://support.microsoft.com/en-us/sharepoint/copilot-in-sharepoint/create-an-agent-in-sharepoint">Create an agent in SharePoint</a></li><li><a href="https://support.microsoft.com/en-us/office/get-started-with-sharepoint-agents-69e2faf9-2c1e-4baa-8305-23e625021bcf">Get started with agents in SharePoint</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-licensing">License options for Microsoft Copilot</a></li></ul></details><p class="meta">Last checked against Microsoft's documentation: 6 November 2026. Copilot changes often.</p>
+<div class="pager"><a href="../start/">&larr; Start</a><a href="../moves/">The 12 moves &rarr;</a></div>
 </article></main>
 </div>
 </div>
 <footer><div class="wrap">
-<p class="feedback">Was this useful? <a href="https://github.com/gladbacher/copilot-plainly/issues/new?title=Feedback%3A%20What%20Copilot%20is%2C%20and%20what%20it%20costs">Report a problem or suggest a fix</a>.</p>
+<p class="feedback">Was this useful? <a href="https://github.com/gladbacher/copilot-plainly/issues/new?title=Feedback%3A%20Your%20licence%3A%20what%20you%27ve%20got">Report a problem or suggest a fix</a>.</p>
 <p>An independent guide for people who use Microsoft Copilot at work. It is not made by, endorsed by, or affiliated with Microsoft. Microsoft, Copilot, Word, Excel, PowerPoint, Outlook and Teams are trademarks of Microsoft.</p>
 <p>Content is licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Format inspired by <a href="https://www.guidesforhumans.com/">Guides for Humans</a>. All text here is original. Prices and features change, so check Microsoft's own pages.</p>
 </div></footer>

@@ -3,20 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Other Microsoft agents | Copilot, plainly</title>
+<title>Other Microsoft agents | Copilot Flight Deck</title>
 <meta name="description" content="Visual Creator and the Idea, Writing, Prompt, Learning and Career coaches: what each is for, and one prompt each.">
 <link rel="stylesheet" href="../assets/style.css">
+<script>try{var d=document.documentElement,t=localStorage.getItem('tier'),h=localStorage.getItem('theme');if(t==='chat'||t==='premium')d.setAttribute('data-tier',t);if(h==='light'||h==='dark')d.setAttribute('data-theme',h)}catch(e){}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="topbar"><div class="topbar-in">
-<a class="brand" href="../">Copilot<span>, plainly</span></a>
-<nav class="nav" aria-label="Main"><a href="../">Home</a><a href="../start/">Start here</a><a href="../what-is-copilot/">What it is</a><a href="../copilot-chat/">Copilot Chat</a><a href="../word-outlook/">Word/Outlook</a><a href="../excel/">Excel</a><a href="../powerpoint/">PowerPoint</a><a href="../teams-meetings/">Teams</a><a href="../agents/" aria-current=page>Agents</a><a href="../prompts/">Prompts</a><a href="../safety/">Safety</a><a href="../troubleshooting/">Troubleshooting</a></nav>
+<a class="brand" href="../">Copilot <span>Flight Deck</span></a>
+<div class="tierswitch" id="tierswitch" role="group" aria-label="Show guidance for my licence" hidden><span>My licence</span><button type="button" data-t="chat">Chat</button><button type="button" data-t="premium">Premium</button><button type="button" data-t="both">Both</button></div>
 <button type="button" class="theme" id="theme">Dark mode</button>
+<nav class="nav" aria-label="Main"><a href="../start/">Start</a><a href="../playbooks/">Playbooks</a><a href="../prompts/">Prompts</a><a href="../apps/">Apps</a><a href="../agents/" aria-current=page>Agents</a><a href="../safety/">Safety</a><a href="../troubleshooting/">Fix it</a></nav>
 </div></header>
 <div class="wrap">
 <div class="layout has-toc">
-<nav class="toc" aria-label="On this page"><div class="toc-in"><h2>On this page</h2><ol><li><a href="#list">What each one is for</a></li><li><a href="#prompts">One prompt each</a></li><li><a href="#chat">Chat: On Copilot Chat</a></li><li><a href="#premium">Premium: With M365 Copilot (Premium)</a></li></ol></div></nav>
+<nav class="toc" aria-label="On this page"><div class="toc-in"><h2>On this page</h2><ol><li><a href="#list">What each one is for</a></li><li><a href="#prompts">One prompt each</a></li><li data-tier=chat><a href="#chat">Chat: On Copilot Chat</a></li><li data-tier=premium><a href="#premium">Premium: With M365 Copilot (Premium)</a></li></ol></div></nav>
 <main id="main"><article>
 <nav class="secnav" aria-label="In this section"><a href="../agents/">Overview</a><a href="../researcher/">Researcher</a><a href="../analyst/">Analyst</a><a href="../other-agents/" aria-current=page>Other agents</a><a href="../make-an-agent/">Make your own</a><a href="../agents-safely/">Using agents safely</a><a href="../agent-prompts/">Agent prompts</a></nav>
 <p class="eyebrow">Agents · Built by Microsoft</p>
@@ -25,7 +27,7 @@
 
 <div class="short"><h2>The short version</h2>
 <ul>
-<li>Visual Creator is shown by default. The coaches are added from <em>All agents</em> (Microsoft, 2026n).</li>
+<li>Visual Creator is shown by default. The coaches are added from <em>All agents</em>.</li>
 <li>Microsoft says "more agents are coming soon", so the list changes.</li>
 <li>Availability varies by subscription and organisation settings.</li>
 </ul></div>
@@ -41,7 +43,7 @@
 <tr><td>Learning Coach</td><td>Helps master subjects and build study plans</td><td>Add via <em>All agents</em></td></tr>
 <tr><td>Career Coach</td><td>Skills, goals and career planning; Microsoft's page mentions students and institutions</td><td>Add via <em>All agents</em></td></tr>
 </tbody></table>
-<p class="meta">Source: Microsoft (2026n). Newer items in Microsoft's release notes include a Learning Agent for Windows and a SharePoint list agent. I couldn't tell whether the Learning Agent is the same as Learning Coach (Microsoft, 2026w).</p>
+<p class="meta">Newer items in Microsoft's release notes include a Learning Agent for Windows and a SharePoint list agent. I couldn't tell whether the Learning Agent is the same as Learning Coach.</p>
 
 <h2 id="prompts">One prompt each</h2>
 <div class="promptbox"><span class="label">Visual Creator</span><pre>Create a simple visual that explains [idea] to [audience].
@@ -56,12 +58,12 @@ Improve it using goal, context, source and expectations, and explain each change
 <div class="promptbox"><span class="label">Learning Coach</span><pre>I want to learn [skill] in [four weeks], at [30 minutes a day]. Build me a study plan with a weekly goal and a short quiz at the end of each week.</pre></div>
 <div class="promptbox"><span class="label">Career Coach</span><pre>My current role is [role]. I want to move towards [goal]. List the skills I should build, in order, and one small step for each.</pre></div>
 
-<h2 id="chat" class="tiered"><span class="tier tier-chat">Chat</span>On Copilot Chat</h2>
-<p>Microsoft's admin guide says the Idea, Writing, Prompt, Career and Learning coaches are included with Copilot Chat at no additional cost (Microsoft, 2026ah). A pay-as-you-go setup page suggests testing usage by asking a coach a question, which implies some use may be metered in a tenant with that billing (Microsoft, 2026ae). I couldn't reconcile the two. Your administrator must also have enabled the agent for you.</p>
-<h2 id="premium" class="tiered"><span class="tier tier-premium">Premium</span>With M365 Copilot (Premium)</h2>
-<p>You have the same Microsoft-built agents, plus Researcher and Analyst. Availability still depends on what your administrator has turned on (Microsoft, 2026n).</p>
-<p class="meta">Sources: Microsoft (2026n, 2026w, 2026ae, 2026ah).</p>
-<p class="meta">Last checked against Microsoft's documentation: 6 November 2026. Copilot changes often, so check the sources at the end of the page.</p>
+<section class="tier-sec" data-tier="chat"><h2 id="chat" class="tiered"><span class="tier tier-chat">Chat</span>On Copilot Chat</h2>
+<p>Microsoft's admin guide says the Idea, Writing, Prompt, Career and Learning coaches are included with Copilot Chat at no additional cost. A pay-as-you-go setup page suggests testing usage by asking a coach a question, which implies some use may be metered in a tenant with that billing. I couldn't reconcile the two. Your administrator must also have enabled the agent for you.</p>
+</section><section class="tier-sec" data-tier="premium"><h2 id="premium" class="tiered"><span class="tier tier-premium">Premium</span>With M365 Copilot (Premium)</h2>
+<p>You have the same Microsoft-built agents, plus Researcher and Analyst. Availability still depends on what your administrator has turned on.</p>
+</section>
+<details class="src"><summary>Where this comes from (4 Microsoft pages)</summary><ul><li><a href="https://support.microsoft.com/en-us/microsoft-365-copilot/agents-built-by-microsoft">Agents built by Microsoft</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes">Release notes for Microsoft 365 Copilot</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/agent-essentials/m365-agents-admin-guide">Agents admin guide for Microsoft 365</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/pay-as-you-go/setup">Set up Microsoft Copilot pay-as-you-go services</a></li></ul></details><p class="meta">Last checked against Microsoft's documentation: 6 November 2026. Copilot changes often.</p>
 <div class="pager"><a href="../analyst/">&larr; Analyst</a><a href="../make-an-agent/">Make your own &rarr;</a></div>
 </article></main>
 </div>

@@ -3,23 +3,25 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Agents: the overview | Copilot, plainly</title>
+<title>Agents: the overview | Copilot Flight Deck</title>
 <meta name="description" content="What agents are in Microsoft 365 Copilot, where to find them, and which ones you get on Copilot Chat and on Premium.">
 <link rel="stylesheet" href="../assets/style.css">
+<script>try{var d=document.documentElement,t=localStorage.getItem('tier'),h=localStorage.getItem('theme');if(t==='chat'||t==='premium')d.setAttribute('data-tier',t);if(h==='light'||h==='dark')d.setAttribute('data-theme',h)}catch(e){}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="topbar"><div class="topbar-in">
-<a class="brand" href="../">Copilot<span>, plainly</span></a>
-<nav class="nav" aria-label="Main"><a href="../">Home</a><a href="../start/">Start here</a><a href="../what-is-copilot/">What it is</a><a href="../copilot-chat/">Copilot Chat</a><a href="../word-outlook/">Word/Outlook</a><a href="../excel/">Excel</a><a href="../powerpoint/">PowerPoint</a><a href="../teams-meetings/">Teams</a><a href="../agents/" aria-current=page>Agents</a><a href="../prompts/">Prompts</a><a href="../safety/">Safety</a><a href="../troubleshooting/">Troubleshooting</a></nav>
+<a class="brand" href="../">Copilot <span>Flight Deck</span></a>
+<div class="tierswitch" id="tierswitch" role="group" aria-label="Show guidance for my licence" hidden><span>My licence</span><button type="button" data-t="chat">Chat</button><button type="button" data-t="premium">Premium</button><button type="button" data-t="both">Both</button></div>
 <button type="button" class="theme" id="theme">Dark mode</button>
+<nav class="nav" aria-label="Main"><a href="../start/">Start</a><a href="../playbooks/">Playbooks</a><a href="../prompts/">Prompts</a><a href="../apps/">Apps</a><a href="../agents/" aria-current=page>Agents</a><a href="../safety/">Safety</a><a href="../troubleshooting/">Fix it</a></nav>
 </div></header>
 <div class="wrap">
 <div class="layout has-toc">
-<nav class="toc" aria-label="On this page"><div class="toc-in"><h2>On this page</h2><ol><li><a href="#what">What an agent is</a></li><li><a href="#find">Where to find agents</a></li><li><a href="#chat">Chat: Which agents you get with Copilot Chat</a></li><li><a href="#premium">Premium: Which agents you get with M365 Copilot (Premium)</a></li><li><a href="#section">In this section</a></li></ol></div></nav>
+<nav class="toc" aria-label="On this page"><div class="toc-in"><h2>On this page</h2><ol><li><a href="#what">What an agent is</a></li><li><a href="#find">Where to find agents</a></li><li data-tier=chat><a href="#chat">Chat: Which agents you get with Copilot Chat</a></li><li data-tier=premium><a href="#premium">Premium: Which agents you get with M365 Copilot (Premium)</a></li><li><a href="#section">In this section</a></li></ol></div></nav>
 <main id="main"><article>
 <nav class="secnav" aria-label="In this section"><a href="../agents/" aria-current=page>Overview</a><a href="../researcher/">Researcher</a><a href="../analyst/">Analyst</a><a href="../other-agents/">Other agents</a><a href="../make-an-agent/">Make your own</a><a href="../agents-safely/">Using agents safely</a><a href="../agent-prompts/">Agent prompts</a></nav>
-<p class="eyebrow">Guide 7 · Agents</p>
+<p class="eyebrow">Agents</p>
 <h1>Agents: the overview</h1>
 <p class="lede">An agent is Copilot set up for one kind of job. You pick it, then give it the task.</p>
 
@@ -27,43 +29,43 @@
 <ul>
 <li>Microsoft ships a set of agents, and you can build your own. This section covers agents in Microsoft 365. It does not cover Copilot Studio.</li>
 <li>Find agents in the <strong>Agents</strong> area of the Copilot app, or type <code>@</code> and pick one.</li>
-<li><span class="tier tier-chat">Chat</span> You get agents grounded in instructions and the web. Agents that use work data are pay-as-you-go and must be switched on by your organisation.</li>
-<li><span class="tier tier-premium">Premium</span> You also get Researcher, Analyst and agents that can use your email, meetings and files.</li>
+<li data-tier="chat"><span class="tier tier-chat">Chat</span> You get agents grounded in instructions and the web. Agents that use work data are pay-as-you-go and must be switched on by your organisation.</li>
+<li data-tier="premium"><span class="tier tier-premium">Premium</span> You also get Researcher, Analyst and agents that can use your email, meetings and files.</li>
 </ul></div>
 
 <h2 id="what">What an agent is</h2>
-<p>Microsoft describes agents as scoped or focused versions of Copilot that act as assistants and can automate processes (Microsoft, 2026a). An agent is a set of instructions, plus optional knowledge sources such as websites or files, plus the tools it may use.</p>
+<p>Microsoft describes agents as scoped or focused versions of Copilot that act as assistants and can automate processes. An agent is a set of instructions, plus optional knowledge sources such as websites or files, plus the tools it may use.</p>
 
 <h2 id="find">Where to find agents</h2>
 <ul>
-<li><strong>The Agents pane.</strong> In the Copilot app, open <em>Agents</em> in the left navigation. Pre-installed agents are listed there (Microsoft, 2026am).</li>
-<li><strong>All agents / the Agent Store.</strong> <em>All agents</em> opens the Agent Store, a hub for agents from Microsoft, partners and your organisation. Choose <em>Add</em> or <em>Open</em> (Microsoft, 2026ag, 2026am). Some agents show <em>Request approval</em> instead of <em>Add</em> (Microsoft, 2026an).</li>
-<li><strong>@-mentioning.</strong> In the Copilot app you can mention an agent in your prompt. Type <code>@</code> and pick the agent. I couldn't find a Microsoft page that explains the steps, so if it doesn't work for you, use the Agents pane instead (Microsoft, 2026z).</li>
-<li><strong>Pinning.</strong> Agents can be pinned by Microsoft, by administrators and by you. Researcher and Analyst are pinned by default where you have them (Microsoft, 2026ah). Use the pin icon to keep your favourites at the top.</li>
-<li><strong>Links.</strong> A colleague can send you a link to an agent they built (Microsoft, 2026am).</li>
+<li><strong>The Agents pane.</strong> In the Copilot app, open <em>Agents</em> in the left navigation. Pre-installed agents are listed there.</li>
+<li><strong>All agents / the Agent Store.</strong> <em>All agents</em> opens the Agent Store, a hub for agents from Microsoft, partners and your organisation. Choose <em>Add</em> or <em>Open</em>. Some agents show <em>Request approval</em> instead of <em>Add</em>.</li>
+<li><strong>@-mentioning.</strong> In the Copilot app you can mention an agent in your prompt. Type <code>@</code> and pick the agent. I couldn't find a Microsoft page that explains the steps, so if it doesn't work for you, use the Agents pane instead.</li>
+<li><strong>Pinning.</strong> Agents can be pinned by Microsoft, by administrators and by you. Researcher and Analyst are pinned by default where you have them. Use the pin icon to keep your favourites at the top.</li>
+<li><strong>Links.</strong> A colleague can send you a link to an agent they built.</li>
 </ul>
 
 
-<h2 id="chat" class="tiered"><span class="tier tier-chat">Chat</span>Which agents you get with Copilot Chat</h2>
+<section class="tier-sec" data-tier="chat"><h2 id="chat" class="tiered"><span class="tier tier-chat">Chat</span>Which agents you get with Copilot Chat</h2>
 <ul>
-<li><strong>Included:</strong> agents grounded in instructions and public websites. Microsoft says these come with Copilot Chat (Microsoft, 2026a, 2026ac).</li>
-<li><strong>Microsoft's coaching agents</strong> (Idea, Writing, Prompt, Career and Learning Coach) are described as included with Copilot Chat at no extra cost (Microsoft, 2026ah). I also found a setup page that suggests at least some of them use credits in a pay-as-you-go tenant, and I couldn't reconcile the two, so treat them as "included, but your organisation must have enabled them" (Microsoft, 2026ae).</li>
-<li><strong>Pay-as-you-go:</strong> agents that use work data such as SharePoint files and Copilot connectors are billed by usage. They are off by default and your organisation has to set them up. That is a billing setting only an administrator can change (Microsoft, 2026ae, 2026ah).</li>
-<li><strong>Not available on Chat:</strong> knowledge from your email, people data, Teams messages and meetings needs a Copilot licence (Microsoft, 2026ac).</li>
-<li><strong>Researcher and Analyst:</strong> Microsoft's pages put these on the licensed side (Microsoft, 2026ar). See <a href="../researcher/#chat">Researcher</a>.</li>
+<li><strong>Included:</strong> agents grounded in instructions and public websites. Microsoft says these come with Copilot Chat.</li>
+<li><strong>Microsoft's coaching agents</strong> (Idea, Writing, Prompt, Career and Learning Coach) are described as included with Copilot Chat at no extra cost. I also found a setup page that suggests at least some of them use credits in a pay-as-you-go tenant, and I couldn't reconcile the two, so treat them as "included, but your organisation must have enabled them".</li>
+<li><strong>Pay-as-you-go:</strong> agents that use work data such as SharePoint files and Copilot connectors are billed by usage. They are off by default and your organisation has to set them up. That is a billing setting only an administrator can change.</li>
+<li><strong>Not available on Chat:</strong> knowledge from your email, people data, Teams messages and meetings needs a Copilot licence.</li>
+<li><strong>Researcher and Analyst:</strong> Microsoft's pages put these on the licensed side. See <a href="../researcher/#chat">Researcher</a>.</li>
 </ul>
-<p class="meta">How to tell: open the Agents pane. What you see is what your organisation has enabled for you. A missing agent means the licence, or an organisation setting; it is not a fault with your account (Microsoft, 2026n).</p>
+<p class="meta">How to tell: open the Agents pane. What you see is what your organisation has enabled for you. A missing agent means the licence, or an organisation setting; it is not a fault with your account.</p>
 
-<h2 id="premium" class="tiered"><span class="tier tier-premium">Premium</span>Which agents you get with M365 Copilot (Premium)</h2>
+</section><section class="tier-sec" data-tier="premium"><h2 id="premium" class="tiered"><span class="tier tier-premium">Premium</span>Which agents you get with M365 Copilot (Premium)</h2>
 <ul>
 <li><strong>Everything in Chat</strong>, with no pay-as-you-go step for the work data a licence already covers.</li>
-<li><strong>Researcher and Analyst:</strong> advanced agents that Microsoft lists on the licensed side (Microsoft, 2026ar, 2026ah). See <a href="../researcher/#premium">Researcher</a> and <a href="../analyst/">Analyst</a>.</li>
-<li><strong>Agents that use your email, people, Teams messages and meetings</strong> as knowledge (Microsoft, 2026ac).</li>
+<li><strong>Researcher and Analyst:</strong> advanced agents that Microsoft lists on the licensed side. See <a href="../researcher/#premium">Researcher</a> and <a href="../analyst/">Analyst</a>.</li>
+<li><strong>Agents that use your email, people, Teams messages and meetings</strong> as knowledge.</li>
 <li><strong>Agents you build</strong> can use those same sources. See <a href="../make-an-agent/#premium">Make your own agent</a>.</li>
 </ul>
-<p class="meta">Your administrator can still switch individual agents off. Researcher and Analyst sit in the core chat experience and may not fall under agent-blocking settings (Microsoft, 2026ad).</p>
+<p class="meta">Your administrator can still switch individual agents off. Researcher and Analyst sit in the core chat experience and may not fall under agent-blocking settings.</p>
 
-<h2 id="section">In this section</h2>
+</section><h2 id="section">In this section</h2>
 <ul>
 <li><a href="../researcher/">Researcher</a>: cited research reports</li>
 <li><a href="../analyst/">Analyst</a>: from data to insight</li>
@@ -72,8 +74,8 @@
 <li><a href="../agents-safely/">Using agents safely</a></li>
 <li><a href="../agent-prompts/">Agent prompt pack</a></li>
 </ul>
-<p class="meta">Copilot Studio, Microsoft's separate tool for agents with actions and wider publishing, is outside this guide. Sources: Microsoft (2026a, 2026ac, 2026ae, 2026ah, 2026ar).</p>
-<p class="meta">Last checked against Microsoft's documentation: 6 November 2026. Copilot changes often, so check the sources at the end of the page.</p>
+<p class="meta">Copilot Studio, Microsoft's separate tool for agents with actions and wider publishing, is outside this guide. </p>
+<details class="src"><summary>Where this comes from (11 Microsoft pages)</summary><ul><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview">What is Microsoft Copilot?</a></li><li><a href="https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-agents-in-the-microsoft-365-copilot-app">Get started with agents in the Microsoft Copilot app</a></li><li><a href="https://learn.microsoft.com/en-us/copilot/manage/copilot-agent-store">Agent Store in Microsoft Copilot</a></li><li><a href="https://support.microsoft.com/en-us/Microsoft-365-Copilot/get-more-agents-in-the-microsoft-365-copilot-app">Get more agents in the Microsoft Copilot app</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-build-agents">Build agents in Agent Builder</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/agent-essentials/m365-agents-admin-guide">Agents admin guide for Microsoft 365</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/prerequisites">Set up your development environment for a Microsoft 365 Copilot plugin</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/pay-as-you-go/setup">Set up Microsoft Copilot pay-as-you-go services</a></li><li><a href="https://support.microsoft.com/en-us/microsoft-365-copilot/how-copilot-chat-works-with-and-without-a-microsoft-365-copilot-license">How Copilot Chat works with and without a Microsoft Copilot license</a></li><li><a href="https://support.microsoft.com/en-us/microsoft-365-copilot/agents-built-by-microsoft">Agents built by Microsoft</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-agent-365/admin/manage-copilot-agents-integrated-apps">Manage agents in the Microsoft 365 admin center</a></li></ul></details><p class="meta">Last checked against Microsoft's documentation: 6 November 2026. Copilot changes often.</p>
 <div class="pager"><a href="../teams-meetings/">&larr; Teams</a><a href="../researcher/">Researcher &rarr;</a></div>
 </article></main>
 </div>

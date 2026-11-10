@@ -3,23 +3,25 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Safety and privacy | Copilot, plainly</title>
+<title>Safety and privacy | Copilot Flight Deck</title>
 <meta name="description" content="What Microsoft Copilot can see at work, what it keeps, what it does not do with your data, and what not to paste.">
 <link rel="stylesheet" href="../assets/style.css">
+<script>try{var d=document.documentElement,t=localStorage.getItem('tier'),h=localStorage.getItem('theme');if(t==='chat'||t==='premium')d.setAttribute('data-tier',t);if(h==='light'||h==='dark')d.setAttribute('data-theme',h)}catch(e){}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="topbar"><div class="topbar-in">
-<a class="brand" href="../">Copilot<span>, plainly</span></a>
-<nav class="nav" aria-label="Main"><a href="../">Home</a><a href="../start/">Start here</a><a href="../what-is-copilot/">What it is</a><a href="../copilot-chat/">Copilot Chat</a><a href="../word-outlook/">Word/Outlook</a><a href="../excel/">Excel</a><a href="../powerpoint/">PowerPoint</a><a href="../teams-meetings/">Teams</a><a href="../agents/">Agents</a><a href="../prompts/">Prompts</a><a href="../safety/" aria-current=page>Safety</a><a href="../troubleshooting/">Troubleshooting</a></nav>
+<a class="brand" href="../">Copilot <span>Flight Deck</span></a>
+<div class="tierswitch" id="tierswitch" role="group" aria-label="Show guidance for my licence" hidden><span>My licence</span><button type="button" data-t="chat">Chat</button><button type="button" data-t="premium">Premium</button><button type="button" data-t="both">Both</button></div>
 <button type="button" class="theme" id="theme">Dark mode</button>
+<nav class="nav" aria-label="Main"><a href="../start/">Start</a><a href="../playbooks/">Playbooks</a><a href="../prompts/">Prompts</a><a href="../apps/">Apps</a><a href="../agents/">Agents</a><a href="../safety/" aria-current=page>Safety</a><a href="../troubleshooting/">Fix it</a></nav>
 </div></header>
 <div class="wrap">
 <div class="layout has-toc">
 <nav class="toc" aria-label="On this page"><div class="toc-in"><h2>On this page</h2><ol><li><a href="#sees">What Copilot can see</a></li><li><a href="#overshare">The real risk: oversharing</a></li><li><a href="#kept">What is stored, and who can see it</a></li><li><a href="#training">What Microsoft says it does not do</a></li><li><a href="#dont">What not to paste</a></li><li><a href="#wrong">Wrong answers</a></li><li><a href="#web">Web search and agents</a></li><li><a href="#ask">Before you paste: a self-check</a></li></ol></div></nav>
 <main id="main"><article>
 
-<p class="eyebrow">Guide 9</p>
+<p class="eyebrow">Guide</p>
 <h1>Safety and privacy</h1>
 <p class="lede">The honest version of "is it safe?". What is protected, what is not, and what is up to you.</p>
 
@@ -32,8 +34,8 @@
 </ul></div>
 
 <h2 id="sees">What Copilot can see</h2>
-<p>Copilot reaches your work data through Microsoft Graph and surfaces only items you have <strong>at least view permission</strong> for. That includes people outside your company who have been given access through collaboration features such as shared channels in Teams (Microsoft, 2026d).</p>
-<p>It also honours sensitivity labels and encryption that your company applies. If a file's usage rights stop you from using it, they stop Copilot too (Microsoft, 2026d).</p>
+<p>Copilot reaches your work data through Microsoft Graph and surfaces only items you have <strong>at least view permission</strong> for. That includes people outside your company who have been given access through collaboration features such as shared channels in Teams.</p>
+<p>It also honours sensitivity labels and encryption that your company applies. If a file's usage rights stop you from using it, they stop Copilot too.</p>
 
 <h3 id="sees-chat"><span class="tier tier-chat">Chat</span>On the Chat track</h3>
 <p>Copilot cannot search your emails and files for you, so exposure comes from what you paste, upload or open yourself.</p>
@@ -42,7 +44,7 @@
 
 <h2 id="overshare">The real risk: oversharing</h2>
 <p>Copilot does not give you extra access. But it makes content you <em>already can</em> reach much easier to find. A file in a SharePoint site that "everyone" can open was always technically visible to you; Copilot can now surface it from a plain question.</p>
-<p>Microsoft's own advice for companies is to tighten permissions, and it offers tools such as SharePoint Advanced Management for reducing oversharing (Microsoft, 2026a). Two things you can do:</p>
+<p>Microsoft's own advice for companies is to tighten permissions, and it offers tools such as SharePoint Advanced Management for reducing oversharing. Two things you can do:</p>
 <ul>
 <li>Share files with specific people, not "anyone with the link" or whole-company groups.</li>
 <li>If Copilot shows you something that you think you should not see, <strong>don't use it</strong>. Report it through your organisation's route instead.</li>
@@ -51,7 +53,7 @@
 
 <h2 id="kept">What is stored, and who can see it</h2>
 <ul>
-<li>Your prompts, Copilot's responses and the citations are stored as your <strong>Copilot activity history</strong>. It is encrypted and handled under the same commitments as your company's other Microsoft 365 content (Microsoft, 2026d).</li>
+<li>Your prompts, Copilot's responses and the citations are stored as your <strong>Copilot activity history</strong>. It is encrypted and handled under the same commitments as your company's other Microsoft 365 content.</li>
 <li><strong>Administrators</strong> can search and set retention for that history using tools such as Content search and Microsoft Purview. Assume a prompt is as visible to your employer as an email.</li>
 <li><strong>You</strong> can delete your own activity history in the My Account portal (<a href="https://myaccount.microsoft.com/">myaccount.microsoft.com</a>).</li>
 </ul>
@@ -60,9 +62,9 @@
 
 <h2 id="training">What Microsoft says it does not do</h2>
 <ul>
-<li>Prompts, responses and data accessed through Microsoft Graph are not used to train the foundation models (Microsoft, 2026d).</li>
-<li>Copilot services have opted out of human abuse-monitoring review (Microsoft, 2026d).</li>
-<li>Copilot is restricted from making judgments about an employee's performance, attitude, emotional state or personal characteristics from their workplace communication (Microsoft, 2026d).</li>
+<li>Prompts, responses and data accessed through Microsoft Graph are not used to train the foundation models.</li>
+<li>Copilot services have opted out of human abuse-monitoring review.</li>
+<li>Copilot is restricted from making judgments about an employee's performance, attitude, emotional state or personal characteristics from their workplace communication.</li>
 </ul>
 <p>These are Microsoft's statements about its commercial service when you sign in with a <strong>work account</strong>. Personal-account Copilot has separate terms.</p>
 
@@ -76,7 +78,7 @@
 </ul>
 
 <h2 id="wrong">Wrong answers</h2>
-<p>Microsoft says outputs are not guaranteed to be fully factual and that you should use your judgement before sharing them (Microsoft, 2026d). Treat Copilot like a fast colleague who sometimes confidently gets it wrong:</p>
+<p>Microsoft says outputs are not guaranteed to be fully factual and that you should use your judgement before sharing them. Treat Copilot like a fast colleague who sometimes confidently gets it wrong:</p>
 <ul>
 <li>Check names, numbers, dates and quotes against the source.</li>
 <li>Request a citation for each claim, then open the citation.</li>
@@ -85,8 +87,8 @@
 
 <h2 id="web">Web search and agents</h2>
 <ul>
-<li>When Copilot searches the web it turns parts of your prompt into a query sent to Bing. Don't include things in a prompt that you would not type into a search engine (Microsoft, 2026d, 2026e).</li>
-<li>Agents built by other companies have their own privacy statements. Your admin decides which are allowed. If you are given one, read how it handles your data (Microsoft, 2026d).</li>
+<li>When Copilot searches the web it turns parts of your prompt into a query sent to Bing. Don't include things in a prompt that you would not type into a search engine.</li>
+<li>Agents built by other companies have their own privacy statements. Your admin decides which are allowed. If you are given one, read how it handles your data.</li>
 </ul>
 
 <h2 id="ask">Before you paste: a self-check</h2>
@@ -94,14 +96,14 @@
 <li>Am I in the work version? Look for <em>Work</em> and the green shield.</li>
 <li>Would I be comfortable if this prompt were read by my manager or a colleague in compliance?</li>
 <li>Does it contain a password, key, customer detail or someone's personal data I have no reason to process?</li>
-<li>Have I looked for my organisation's guidance? Look for a <em>View info from your organization</em> link in the app (Microsoft, 2026e).</li>
+<li>Have I looked for my organisation's guidance? Look for a <em>View info from your organization</em> link in the app.</li>
 <li>Is the file I am about to share with Copilot shared only with the people who should see it? Check its sharing settings.</li>
 </ol>
 
 
-<p class="meta">Sources: Microsoft (2026a, 2026d, 2026e).</p>
-<p class="meta">Last checked against Microsoft's documentation: 6 November 2026. Copilot changes often, so check the sources at the end of the page.</p>
-<div class="pager"><a href="../prompts/">&larr; Prompts</a><a href="../troubleshooting/">Troubleshooting &rarr;</a></div>
+
+<details class="src"><summary>Where this comes from (3 Microsoft pages)</summary><ul><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-privacy">Data, privacy, and security for Microsoft Copilot</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview">What is Microsoft Copilot?</a></li><li><a href="https://learn.microsoft.com/en-us/copilot/manage">Manage Microsoft Copilot Chat</a></li></ul></details><p class="meta">Last checked against Microsoft's documentation: 6 November 2026. Copilot changes often.</p>
+<div class="pager"><a href="../agent-prompts/">&larr; Agent prompts</a><a href="../troubleshooting/">Fix it &rarr;</a></div>
 </article></main>
 </div>
 </div>

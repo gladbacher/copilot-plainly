@@ -3,46 +3,48 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Copilot Chat | Copilot, plainly</title>
+<title>Copilot Chat | Copilot Flight Deck</title>
 <meta name="description" content="How to get into Copilot Chat at work, what it can use, how to give it your files, and what the model choices mean.">
 <link rel="stylesheet" href="../assets/style.css">
+<script>try{var d=document.documentElement,t=localStorage.getItem('tier'),h=localStorage.getItem('theme');if(t==='chat'||t==='premium')d.setAttribute('data-tier',t);if(h==='light'||h==='dark')d.setAttribute('data-theme',h)}catch(e){}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="topbar"><div class="topbar-in">
-<a class="brand" href="../">Copilot<span>, plainly</span></a>
-<nav class="nav" aria-label="Main"><a href="../">Home</a><a href="../start/">Start here</a><a href="../what-is-copilot/">What it is</a><a href="../copilot-chat/" aria-current=page>Copilot Chat</a><a href="../word-outlook/">Word/Outlook</a><a href="../excel/">Excel</a><a href="../powerpoint/">PowerPoint</a><a href="../teams-meetings/">Teams</a><a href="../agents/">Agents</a><a href="../prompts/">Prompts</a><a href="../safety/">Safety</a><a href="../troubleshooting/">Troubleshooting</a></nav>
+<a class="brand" href="../">Copilot <span>Flight Deck</span></a>
+<div class="tierswitch" id="tierswitch" role="group" aria-label="Show guidance for my licence" hidden><span>My licence</span><button type="button" data-t="chat">Chat</button><button type="button" data-t="premium">Premium</button><button type="button" data-t="both">Both</button></div>
 <button type="button" class="theme" id="theme">Dark mode</button>
+<nav class="nav" aria-label="Main"><a href="../start/">Start</a><a href="../playbooks/">Playbooks</a><a href="../prompts/">Prompts</a><a href="../apps/" aria-current=page>Apps</a><a href="../agents/">Agents</a><a href="../safety/">Safety</a><a href="../troubleshooting/">Fix it</a></nav>
 </div></header>
 <div class="wrap">
 <div class="layout has-toc">
-<nav class="toc" aria-label="On this page"><div class="toc-in"><h2>On this page</h2><ol><li><a href="#get-in">Getting in</a></li><li><a href="#models">Choosing how it thinks</a></li><li><a href="#habits">Four habits that help</a></li><li><a href="#chat">Chat: With Copilot Chat</a></li><li><a href="#premium">Premium: With M365 Copilot (Premium)</a></li></ol></div></nav>
+<nav class="toc" aria-label="On this page"><div class="toc-in"><h2>On this page</h2><ol><li><a href="#get-in">Getting in</a></li><li><a href="#models">Choosing how it thinks</a></li><li><a href="#habits">Four habits that help</a></li><li data-tier=chat><a href="#chat">Chat: With Copilot Chat</a></li><li data-tier=premium><a href="#premium">Premium: With M365 Copilot (Premium)</a></li></ol></div></nav>
 <main id="main"><article>
-
-<p class="eyebrow">Guide 2</p>
+<nav class="secnav" aria-label="In this section"><a href="../apps/">All apps</a><a href="../copilot-chat/" aria-current=page>Copilot Chat</a><a href="../word-outlook/">Word/Outlook</a><a href="../excel/">Excel</a><a href="../powerpoint/">PowerPoint</a><a href="../teams-meetings/">Teams</a></nav>
+<p class="eyebrow">App guide</p>
 <h1>Copilot Chat</h1>
 <p class="lede">The everyday chat. It is the one part of Copilot almost everyone at a Microsoft 365 company already has.</p>
 
 <div class="short"><h2>The short version</h2>
 <ul>
 <li>Open it at <code>copilot.cloud.microsoft</code>, in the Edge sidebar, or inside Outlook and Teams, signed in with your <strong>work</strong> account.</li>
-<li><span class="tier tier-chat">Chat</span> It answers from the web. To use a work document you give it that document.</li>
-<li><span class="tier tier-premium">Premium</span> It can search your work data for you.</li>
+<li data-tier="chat"><span class="tier tier-chat">Chat</span> It answers from the web. To use a work document you give it that document.</li>
+<li data-tier="premium"><span class="tier tier-premium">Premium</span> It can search your work data for you.</li>
 <li>Check anything important. It can be wrong, and it can answer differently each time.</li>
 </ul></div>
 
 <h2 id="get-in">Getting in</h2>
-<p>Copilot Chat is available to people who sign in with a Microsoft Entra work or school account on an eligible Microsoft 365 plan, at no extra cost (Microsoft, 2026e). You can reach it in several places:</p>
+<p>Copilot Chat is available to people who sign in with a Microsoft Entra work or school account on an eligible Microsoft 365 plan, at no extra cost. You can reach it in several places:</p>
 <ul>
 <li>The Microsoft Copilot app on web, desktop and mobile (<code>copilot.cloud.microsoft</code>)</li>
 <li>The Copilot icon in the Edge sidebar, when Edge is signed in with your work account</li>
 <li>Copilot Chat inside Outlook and Teams</li>
 </ul>
-<div class="callout warn"><strong>Check which account you are in</strong><p>The app also accepts personal Microsoft accounts. Chats, files and protections are kept separate for each. For work, look for the <em>Work</em> label under your profile and the green data protection shield (Microsoft, 2026e).</p></div>
-<p>Your organisation can turn web search off with the <em>Allow web search in Copilot</em> policy. If it does, Copilot answers from the language model alone (Microsoft, 2026e). That is an organisation setting, not something you can change.</p>
+<div class="callout warn"><strong>Check which account you are in</strong><p>The app also accepts personal Microsoft accounts. Chats, files and protections are kept separate for each. For work, look for the <em>Work</em> label under your profile and the green data protection shield.</p></div>
+<p>Your organisation can turn web search off with the <em>Allow web search in Copilot</em> policy. If it does, Copilot answers from the language model alone. That is an organisation setting, not something you can change.</p>
 
 <h2 id="models">Choosing how it thinks</h2>
-<p>Copilot has a model selector. The default is <strong>Auto</strong>, which picks for you (Microsoft, 2026a).</p>
+<p>Copilot has a model selector. The default is <strong>Auto</strong>, which picks for you.</p>
 <table>
 <thead><tr><th>Option</th><th>Use it for</th></tr></thead>
 <tbody>
@@ -54,15 +56,15 @@
 
 <h2 id="habits">Four habits that help</h2>
 <ol>
-<li><strong>Start with the goal.</strong> Add context, sources and the format you want only if you need them (Microsoft, 2026c).</li>
+<li><strong>Start with the goal.</strong> Add context, sources and the format you want only if you need them.</li>
 <li><strong>Follow up.</strong> Microsoft expects you to refine; the first answer is a draft.</li>
-<li><strong>Check what matters.</strong> Microsoft says responses are not guaranteed to be fully factual and you should review them before sending them to others (Microsoft, 2026d).</li>
-<li><strong>Run it twice if it matters.</strong> The same prompt can give different results because of built-in randomness (Microsoft, 2026c).</li>
+<li><strong>Check what matters.</strong> Microsoft says responses are not guaranteed to be fully factual and you should review them before sending them to others.</li>
+<li><strong>Run it twice if it matters.</strong> The same prompt can give different results because of built-in randomness.</li>
 </ol>
 
-<h2 id="chat" class="tiered"><span class="tier tier-chat">Chat</span>With Copilot Chat</h2>
+<section class="tier-sec" data-tier="chat"><h2 id="chat" class="tiered"><span class="tier tier-chat">Chat</span>With Copilot Chat</h2>
 <h3 id="files">Giving it your files</h3>
-<p>Chat cannot search Microsoft Graph, so it does not look through your emails, files and meetings for you. Microsoft says there are three ways to get work content into it (Microsoft, 2026a):</p>
+<p>Chat cannot search Microsoft Graph, so it does not look through your emails, files and meetings for you. Microsoft says there are three ways to get work content into it:</p>
 <ol class="steps">
 <li><strong>Paste or upload it</strong>Copy text into the prompt, upload a file, or select a file when you write the prompt.</li>
 <li><strong>Open it first</strong>In Outlook and Teams, Copilot Chat can see the item you have open, so you do not need to paste it. In Outlook it can also work with your inbox and calendar (see <a href="../word-outlook/#chat">Word and Outlook</a>).</li>
@@ -70,7 +72,7 @@
 </ol>
 <h3>What to expect</h3>
 <ul>
-<li>The web: when Copilot decides a search would help, it sends a query to Bing and answers with public information (Microsoft, 2026e).</li>
+<li>The web: when Copilot decides a search would help, it sends a query to Bing and answers with public information.</li>
 <li>Your work data: only what you provide.</li>
 </ul>
 <div class="promptbox"><span class="label">Prompt · Chat</span><pre>Using only the text I have pasted below, list the decisions made and the open questions.
@@ -78,21 +80,21 @@ If something is not in the text, say so.
 
 [Paste the text here]</pre></div>
 
-<h2 id="premium" class="tiered"><span class="tier tier-premium">Premium</span>With M365 Copilot (Premium)</h2>
+</section><section class="tier-sec" data-tier="premium"><h2 id="premium" class="tiered"><span class="tier tier-premium">Premium</span>With M365 Copilot (Premium)</h2>
 <h3 id="work-data">Work data, automatically</h3>
-<p>The same chat, but Copilot can use your emails, files, meetings, chats and calendar through Microsoft Graph, with no upload needed (Microsoft, 2026a). It also searches the web when it decides that would help.</p>
+<p>The same chat, but Copilot can use your emails, files, meetings, chats and calendar through Microsoft Graph, with no upload needed. It also searches the web when it decides that would help.</p>
 <ul>
 <li>You can name a file to focus on, but you do not have to upload it.</li>
-<li>It shows you only what you already have at least view permission to open (Microsoft, 2026d). A file you cannot open will not appear.</li>
+<li>It shows you only what you already have at least view permission to open. A file you cannot open will not appear.</li>
 <li>If answers are not using your work context, Work IQ may be switched off for your organisation. That is an organisation setting; see <a href="../troubleshooting/#files">Troubleshooting</a>.</li>
 </ul>
 <div class="promptbox"><span class="label">Prompt · Premium</span><pre>Find the latest version of the [project name] proposal and the email thread about it.
 Summarise where we have landed and what is still open.
 Link to the sources you used.</pre></div>
-<p>Ready-made starting points are in <a href="../prompts/#premium">the prompt library</a>.</p>
-<p class="meta">Sources: Microsoft (2026a, 2026c, 2026d, 2026e).</p>
-<p class="meta">Last checked against Microsoft's documentation: 6 November 2026. Copilot changes often, so check the sources at the end of the page.</p>
-<div class="pager"><a href="../what-is-copilot/">&larr; What it is</a><a href="../word-outlook/">Word/Outlook &rarr;</a></div>
+<p>Ready-made starting points are in <a href="../prompts/">the prompt library</a>.</p>
+</section>
+<details class="src"><summary>Where this comes from (4 Microsoft pages)</summary><ul><li><a href="https://learn.microsoft.com/en-us/copilot/manage">Manage Microsoft Copilot Chat</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview">What is Microsoft Copilot?</a></li><li><a href="https://support.microsoft.com/en-us/topic/learn-about-copilot-prompts-f6c3b467-f07c-4db1-ae54-ffac96184dd5">Get started writing prompts in Microsoft Copilot</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-privacy">Data, privacy, and security for Microsoft Copilot</a></li></ul></details><p class="meta">Last checked against Microsoft's documentation: 6 November 2026. Copilot changes often.</p>
+<div class="pager"><a href="../apps/">&larr; Apps</a><a href="../word-outlook/">Word/Outlook &rarr;</a></div>
 </article></main>
 </div>
 </div>

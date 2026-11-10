@@ -3,24 +3,26 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>When it breaks | Copilot, plainly</title>
+<title>When it breaks | Copilot Flight Deck</title>
 <meta name="description" content="Fixes for missing Copilot buttons, wrong account, empty answers, blocked access and Teams meeting recaps.">
 <link rel="stylesheet" href="../assets/style.css">
+<script>try{var d=document.documentElement,t=localStorage.getItem('tier'),h=localStorage.getItem('theme');if(t==='chat'||t==='premium')d.setAttribute('data-tier',t);if(h==='light'||h==='dark')d.setAttribute('data-theme',h)}catch(e){}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="topbar"><div class="topbar-in">
-<a class="brand" href="../">Copilot<span>, plainly</span></a>
-<nav class="nav" aria-label="Main"><a href="../">Home</a><a href="../start/">Start here</a><a href="../what-is-copilot/">What it is</a><a href="../copilot-chat/">Copilot Chat</a><a href="../word-outlook/">Word/Outlook</a><a href="../excel/">Excel</a><a href="../powerpoint/">PowerPoint</a><a href="../teams-meetings/">Teams</a><a href="../agents/">Agents</a><a href="../prompts/">Prompts</a><a href="../safety/">Safety</a><a href="../troubleshooting/" aria-current=page>Troubleshooting</a></nav>
+<a class="brand" href="../">Copilot <span>Flight Deck</span></a>
+<div class="tierswitch" id="tierswitch" role="group" aria-label="Show guidance for my licence" hidden><span>My licence</span><button type="button" data-t="chat">Chat</button><button type="button" data-t="premium">Premium</button><button type="button" data-t="both">Both</button></div>
 <button type="button" class="theme" id="theme">Dark mode</button>
+<nav class="nav" aria-label="Main"><a href="../start/">Start</a><a href="../playbooks/">Playbooks</a><a href="../prompts/">Prompts</a><a href="../apps/">Apps</a><a href="../agents/">Agents</a><a href="../safety/">Safety</a><a href="../troubleshooting/" aria-current=page>Fix it</a></nav>
 </div></header>
 <div class="wrap">
 <div class="layout has-toc">
-<nav class="toc" aria-label="On this page"><div class="toc-in"><h2>On this page</h2><ol><li><a href="#account">"I'm not sure I'm in the right Copilot"</a></li><li><a href="#missing">"There's no Copilot button in Word, Excel or PowerPoint"</a></li><li><a href="#blocked">"It says access is turned off"</a></li><li><a href="#files">"It can't find my files, emails or meetings"</a></li><li><a href="#wrong">"It invented something"</a></li><li><a href="#teams">"Copilot in my Teams meeting isn't working"</a></li><li><a href="#escalate">Note these details if you need help</a></li></ol></div></nav>
+<nav class="toc" aria-label="On this page"><div class="toc-in"><h2>On this page</h2><ol><li><a href="#pick">What's wrong?</a></li><li><a href="#account">"I'm not sure I'm in the right Copilot"</a></li><li><a href="#missing">"There's no Copilot button in Word, Excel or PowerPoint"</a></li><li><a href="#blocked">"It says access is turned off"</a></li><li><a href="#files">"It can't find my files, emails or meetings"</a></li><li><a href="#wrong">"It invented something"</a></li><li><a href="#teams">"Copilot in my Teams meeting isn't working"</a></li><li><a href="#escalate">Note these details if you need help</a></li></ol></div></nav>
 <main id="main"><article>
 
-<p class="eyebrow">Guide 10</p>
-<h1>When it breaks</h1>
+<p class="eyebrow">Guide</p>
+<h1>Fix it</h1>
 <p class="lede">Copilot not showing up, not seeing your files, or not answering. Start with the first one. It is the cause more often than not.</p>
 
 <div class="short"><h2>The short version</h2>
@@ -29,46 +31,56 @@
 <li>Steps marked <span class="pill">Microsoft</span> come from Microsoft's documentation. Steps marked <span class="pill soon">Reported</span> are commonly suggested elsewhere; I have not confirmed them in Microsoft's pages.</li>
 </ul></div>
 
+<h2 id="pick">What's wrong?</h2>
+<ul class="cards">
+<li><a class="card" href="#account"><b>Not sure I'm in the right Copilot</b><span>Work or personal account, and your label.</span></a></li>
+<li><a class="card" href="#missing"><b>No Copilot button in Word, Excel or PowerPoint</b><span>Label, licence, updates.</span></a></li>
+<li><a class="card" href="#blocked"><b>It says access is turned off</b><span>Organisation settings and networks.</span></a></li>
+<li><a class="card" href="#files"><b>It can't find my files, emails or meetings</b><span>What each licence can reach.</span></a></li>
+<li><a class="card" href="#wrong"><b>It invented something</b><span>How to pin it to the source.</span></a></li>
+<li><a class="card" href="#teams"><b>Copilot in my Teams meeting isn't working</b><span>Organiser settings and transcripts.</span></a></li>
+</ul>
+
 <h2 id="account">"I'm not sure I'm in the right Copilot"</h2>
-<p><span class="pill">Microsoft</span> Work and personal accounts keep separate chats, files, and protections. In the work version you should see <em>Work</em> under your profile and a green data protection shield (Microsoft, 2026e).</p>
+<p><span class="pill">Microsoft</span> Work and personal accounts keep separate chats, files, and protections. In the work version you should see <em>Work</em> under your profile and a green data protection shield.</p>
 <ol>
 <li>Sign out, then sign in at <code>copilot.cloud.microsoft</code> with your work email.</li>
-<li>Check the label under your name: <em>Copilot Chat (Basic)</em>, <em>M365 Copilot (Basic)</em> or <em>M365 Copilot (Premium)</em> (Microsoft, 2026b).</li>
+<li>Check the label under your name: <em>Copilot Chat (Basic)</em>, <em>M365 Copilot (Basic)</em> or <em>M365 Copilot (Premium)</em>.</li>
 <li>In Edge, make sure the browser profile itself is signed in with your work account.</li>
 </ol>
 
 <h2 id="missing">"There's no Copilot button in Word, Excel or PowerPoint"</h2>
 <p>Work down this list:</p>
 <ol>
-<li><strong>Check your label.</strong> <em>Copilot Chat (Basic)</em> does not include Copilot inside Word, Excel, PowerPoint or OneNote. <em>M365 Copilot (Basic)</em> has standard access, subject to capacity (Microsoft, 2026a, 2026s).</li>
+<li><strong>Check your label.</strong> <em>Copilot Chat (Basic)</em> does not include Copilot inside Word, Excel, PowerPoint or OneNote. <em>M365 Copilot (Basic)</em> has standard access, subject to capacity.</li>
 <li><strong>Know the April 2026 report.</strong> Several university help pages say embedded Copilot in these apps ended for people without a paid licence around then. Microsoft's current pages match that for the <em>Copilot Chat (Basic)</em> label, but I couldn't find the original announcement or what decides which Basic label you get. If you lost it recently, check your label and your update channel first (below) before spending time on fixes.</li>
-<li><strong>Check your licence yourself.</strong> Microsoft publishes a licence details page: <a href="https://aka.ms/CopilotLicenseDetails">Copilot License Details</a> (Microsoft, 2026g).</li>
+<li><strong>Check your licence yourself.</strong> Microsoft publishes a licence details page: <a href="https://aka.ms/CopilotLicenseDetails">Copilot License Details</a>.</li>
 <li><span class="pill soon">Reported</span> In the app, open <em>File &gt; Account</em> and look for <em>Update License</em>, then restart the app. The button is not always there.</li>
 <li><span class="pill soon">Reported</span> Make sure the app is up to date. Some features are reported to be missing on the Semi-Annual Enterprise Channel; your update channel is shown under <em>File &gt; Account</em>.</li>
 </ol>
-<div class="callout"><strong>An admin setting can switch it off</strong><p><span class="pill">Microsoft</span> If your company turns off "connected experiences that analyze your content", Copilot is unavailable in Word, Excel, OneNote, Outlook and PowerPoint, regardless of licence (Microsoft, 2026d).</p></div>
+<div class="callout"><strong>An admin setting can switch it off</strong><p><span class="pill">Microsoft</span> If your company turns off "connected experiences that analyze your content", Copilot is unavailable in Word, Excel, OneNote, Outlook and PowerPoint, regardless of licence.</p></div>
 
 <h2 id="blocked">"It says access is turned off"</h2>
-<p><span class="pill">Microsoft</span> Administrators can block Copilot Chat for everyone or for chosen groups, including people with a paid licence. You may still see <em>Chat</em> in the app menu, but selecting it shows a message that access is disabled by policy. Your company can add a link there to its own guidance, titled <em>View info from your organization</em> (Microsoft, 2026e). Follow that link.</p>
-<p><span class="pill">Microsoft</span> If the app won't load at all, part of <code>*.cloud.microsoft</code> may be blocked on your network. Microsoft says all of that domain needs to be allowed (Microsoft, 2026e). That is a network setting, not something you can fix. Try a different network, such as a phone hotspot, to see whether that is the cause.</p>
+<p><span class="pill">Microsoft</span> Administrators can block Copilot Chat for everyone or for chosen groups, including people with a paid licence. You may still see <em>Chat</em> in the app menu, but selecting it shows a message that access is disabled by policy. Your company can add a link there to its own guidance, titled <em>View info from your organization</em>. Follow that link.</p>
+<p><span class="pill">Microsoft</span> If the app won't load at all, part of <code>*.cloud.microsoft</code> may be blocked on your network. Microsoft says all of that domain needs to be allowed. That is a network setting, not something you can fix. Try a different network, such as a phone hotspot, to see whether that is the cause.</p>
 
 <h2 id="files">"It can't find my files, emails or meetings"</h2>
 <ul>
-<li><span class="tier tier-chat">Chat</span> Chat can't search your work data. Upload or paste the content, or open it in Outlook or Teams first (Microsoft, 2026a). This isn't a fault.</li>
-<li><span class="tier tier-premium">Premium</span> It can. If it still can't see something, check that you have permission to open that file yourself. Copilot only shows what you can access (Microsoft, 2026d).</li>
-<li><span class="tier tier-premium">Premium</span> Work IQ is an organisation setting. When it is off, answers aren't grounded in your work data (Microsoft, 2026a). You can't switch it on, but you can recognise it: answers about files you can open yourself come back with no work context.</li>
+<li data-tier="chat"><span class="tier tier-chat">Chat</span> Chat can't search your work data. Upload or paste the content, or open it in Outlook or Teams first. This isn't a fault.</li>
+<li data-tier="premium"><span class="tier tier-premium">Premium</span> It can. If it still can't see something, check that you have permission to open that file yourself. Copilot only shows what you can access.</li>
+<li data-tier="premium"><span class="tier tier-premium">Premium</span> Work IQ is an organisation setting. When it is off, answers aren't grounded in your work data. You can't switch it on, but you can recognise it: answers about files you can open yourself come back with no work context.</li>
 </ul>
 
 <h2 id="wrong">"It invented something"</h2>
 <ol>
 <li>Ask: "Where does that come from? Quote the source." Then open the citation.</li>
 <li>Re-run with an instruction such as "use only the attached document; if it isn't there, say so".</li>
-<li>Run it a second time. Microsoft notes results vary from run to run (Microsoft, 2026c).</li>
+<li>Run it a second time. Microsoft notes results vary from run to run.</li>
 <li>If it is wrong about something that matters, don't send it. Fix it by hand.</li>
 </ol>
 
 <h2 id="teams">"Copilot in my Teams meeting isn't working"</h2>
-<p>These come from Microsoft's page on Copilot in Teams meetings (Microsoft, 2026h).</p>
+<p>These come from Microsoft's page on Copilot in Teams meetings.</p>
 <table>
 <thead><tr><th>Symptom</th><th>Likely reason</th></tr></thead>
 <tbody>
@@ -89,8 +101,8 @@
 - Account I'm signed in with: [work email]
 - Since when: [date, or "never worked"]</pre></div>
 
-<p class="meta">Sources: Microsoft (2026a, 2026s, 2026b, 2026c, 2026d, 2026e, 2026g, 2026h).</p>
-<p class="meta">Last checked against Microsoft's documentation: 6 November 2026. Copilot changes often, so check the sources at the end of the page.</p>
+
+<details class="src"><summary>Where this comes from (8 Microsoft pages)</summary><ul><li><a href="https://learn.microsoft.com/en-us/copilot/manage">Manage Microsoft Copilot Chat</a></li><li><a href="https://support.microsoft.com/copilot-microsoft365-chat">Microsoft Copilot Chat: your AI assistant for work</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview">What is Microsoft Copilot?</a></li><li><a href="https://support.microsoft.com/en-us/microsoft-365-copilot/what-copilot-license-do-i-have">What Copilot license do I have?</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-licensing">License options for Microsoft Copilot</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-privacy">Data, privacy, and security for Microsoft Copilot</a></li><li><a href="https://support.microsoft.com/en-us/topic/learn-about-copilot-prompts-f6c3b467-f07c-4db1-ae54-ffac96184dd5">Get started writing prompts in Microsoft Copilot</a></li><li><a href="https://support.microsoft.com/en-us/office/get-started-with-copilot-in-microsoft-teams-meetings-0bf9dd3c-96f7-44e2-8bb8-790bedf066b1">Get started with Copilot in Microsoft Teams meetings</a></li></ul></details><p class="meta">Last checked against Microsoft's documentation: 6 November 2026. Copilot changes often.</p>
 <div class="pager"><a href="../safety/">&larr; Safety</a><span></span></div>
 </article></main>
 </div>

@@ -1,0 +1,49 @@
+slug: research
+order: 29
+nav: no
+navlabel: Research a topic
+section: playbooks
+title: Research a topic
+desc: A sourced answer you can check, not a confident guess.
+toc: no
+verified: yes
+---
+<p class="eyebrow">Playbook</p>
+<h1>Research a topic</h1>
+<p class="lede">Make Copilot show its sources and its doubts.</p>
+
+<h2 id="chat" class="tiered"><span class="tier tier-chat">Chat</span>With Copilot Chat</h2>
+<ol class="steps">
+<li><strong>Use Copilot Chat on the web</strong>It searches the web when that helps (Microsoft, 2026e).</li>
+<li><strong>Pick the slower setting</strong>Choose <strong>Think deeper</strong> in the model selector for a more thorough answer (Microsoft, 2026a).</li>
+<li><strong>Demand sources and disagreements</strong>Use the prompt below, then open the links.</li>
+</ol>
+<div class="promptbox"><span class="label">Prompt · Chat</span><pre>Research [topic] using public web sources, for a decision on [decision].
+Give me the key findings, where sources disagree, the risks, and a recommendation.
+Cite every claim with its link. Mark anything you could not verify.</pre></div>
+
+<h2 id="premium" class="tiered"><span class="tier tier-premium">Premium</span>With M365 Copilot (Premium)</h2>
+<ol class="steps">
+<li><strong>Open the Researcher agent</strong>In the Agents pane. It is slow on purpose and returns a cited report (Microsoft, 2026m).</li>
+<li><strong>Set the scope</strong>Web, your work sources, or both (Microsoft, 2026m).</li>
+<li><strong>Answer its questions</strong>It may ask before it starts. That steers the report.</li>
+</ol>
+<div class="promptbox"><span class="label">Prompt · Premium</span><pre>Research [topic] for a decision on [decision].
+Scope: [the web only / our internal documents and emails only / both].
+I need the key findings, where sources disagree, the risks, and a recommendation.
+Cite every claim. Mark anything you could not verify.</pre></div>
+
+<h2 id="further">Push it further</h2>
+<p>The first answer is a draft. Send one of these next:</p>
+<div class="promptbox"><span class="label">Follow-up</span><pre>What is the strongest argument against your recommendation?</pre></div>
+<div class="promptbox"><span class="label">Follow-up</span><pre>Which of these sources is least reliable, and why?</pre></div>
+<div class="promptbox"><span class="label">Follow-up</span><pre>Summarise this in five lines for someone senior.</pre></div>
+
+<h2 id="check">Before you use it</h2>
+<ul>
+<li>Open the citations behind anything you will repeat.</li>
+<li>A link is not proof. Check the page says what Copilot says it says.</li>
+<li>Run it twice. Answers vary (Microsoft, 2026c).</li>
+</ul>
+<aside class="org" data-key="data-rules"></aside>
+<p class="meta">I wrote these prompts from Microsoft's guidance. They have not yet been tested on every licence, so tell me what works and what doesn't.</p>

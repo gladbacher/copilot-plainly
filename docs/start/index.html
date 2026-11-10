@@ -3,22 +3,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Start here | Copilot, plainly</title>
+<title>Start here | Copilot Flight Deck</title>
 <meta name="description" content="Check which Copilot you have, sign in the right way, and send a first prompt that works. About two minutes.">
 <link rel="stylesheet" href="../assets/style.css">
+<script>try{var d=document.documentElement,t=localStorage.getItem('tier'),h=localStorage.getItem('theme');if(t==='chat'||t==='premium')d.setAttribute('data-tier',t);if(h==='light'||h==='dark')d.setAttribute('data-theme',h)}catch(e){}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="topbar"><div class="topbar-in">
-<a class="brand" href="../">Copilot<span>, plainly</span></a>
-<nav class="nav" aria-label="Main"><a href="../">Home</a><a href="../start/" aria-current=page>Start here</a><a href="../what-is-copilot/">What it is</a><a href="../copilot-chat/">Copilot Chat</a><a href="../word-outlook/">Word/Outlook</a><a href="../excel/">Excel</a><a href="../powerpoint/">PowerPoint</a><a href="../teams-meetings/">Teams</a><a href="../agents/">Agents</a><a href="../prompts/">Prompts</a><a href="../safety/">Safety</a><a href="../troubleshooting/">Troubleshooting</a></nav>
+<a class="brand" href="../">Copilot <span>Flight Deck</span></a>
+<div class="tierswitch" id="tierswitch" role="group" aria-label="Show guidance for my licence" hidden><span>My licence</span><button type="button" data-t="chat">Chat</button><button type="button" data-t="premium">Premium</button><button type="button" data-t="both">Both</button></div>
 <button type="button" class="theme" id="theme">Dark mode</button>
+<nav class="nav" aria-label="Main"><a href="../start/" aria-current=page>Start</a><a href="../playbooks/">Playbooks</a><a href="../prompts/">Prompts</a><a href="../apps/">Apps</a><a href="../agents/">Agents</a><a href="../safety/">Safety</a><a href="../troubleshooting/">Fix it</a></nav>
 </div></header>
 <div class="wrap">
 <div class="layout">
 
 <main id="main"><article>
-
+<nav class="secnav" aria-label="In this section"><a href="../start/" aria-current=page>Start here</a><a href="../what-is-copilot/">Your licence</a><a href="../moves/">The 12 moves</a><a href="../copilot-way/">The Copilot way</a><a href="../challenge/">5-day challenge</a></nav>
 <p class="eyebrow">Quickstart · 2 minutes</p>
 <h1>Start here</h1>
 <p class="lede">Three steps. You finish knowing what you have and with one prompt that gives you something useful.</p>
@@ -32,9 +34,9 @@
 
 <ol class="steps">
 <li><strong>Sign in with your work account</strong>
-Open <code>copilot.cloud.microsoft</code>. Use the email address your employer gave you. In the work version you should see the word <em>Work</em> under your profile and a green data protection shield. Personal accounts look different and have separate chats, files and protections (Microsoft, 2026a).</li>
+Open <code>copilot.cloud.microsoft</code>. Use the email address your employer gave you. In the work version you should see the word <em>Work</em> under your profile and a green data protection shield. Personal accounts look different and have separate chats, files and protections.</li>
 <li><strong>Read your label</strong>
-Under your name you will see one of three labels: <em>Copilot Chat (Basic)</em>, <em>M365 Copilot (Basic)</em> or <em>M365 Copilot (Premium)</em> (Microsoft, 2026b). The first two are the <strong>Chat track</strong> on this site. The third is the <strong>Premium track</strong>. If you see no label, use Microsoft's <a href="https://aka.ms/CopilotLicenseDetails">licence details page</a> or see <a href="../troubleshooting/#account">Troubleshooting</a>.</li>
+Under your name you will see one of three labels: <em>Copilot Chat (Basic)</em>, <em>M365 Copilot (Basic)</em> or <em>M365 Copilot (Premium)</em>. The first two are the <strong>Chat track</strong> on this site. The third is the <strong>Premium track</strong>. If you see no label, use Microsoft's <a href="https://aka.ms/CopilotLicenseDetails">licence details page</a> or see <a href="../troubleshooting/#account">Troubleshooting</a>.</li>
 <li><strong>Send one good prompt</strong>
 Pick the prompt for your track below, change the brackets, and send it. If the first answer is not right, say what to change. Refining is normal.</li>
 </ol>
@@ -42,41 +44,43 @@ Pick the prompt for your track below, change the brackets, and send it. If the f
 
 
 <h2 id="first-prompt">Your first prompt</h2>
-<p>Microsoft says a prompt has four parts: a <strong>goal</strong> (the only required one), <strong>context</strong>, a <strong>source</strong> and your <strong>expectations</strong> (Microsoft, 2026c). This one uses three of them and works on both tracks.</p>
+<p>Microsoft says a prompt has four parts: a <strong>goal</strong> (the only required one), <strong>context</strong>, a <strong>source</strong> and your <strong>expectations</strong>. This one uses three of them and works on both tracks.</p>
 <div class="promptbox"><span class="label">Prompt</span><pre>I need to explain [topic or decision] to [who: my manager / a client / my team].
 They know [what they already know] and care about [what they care about].
 Write a first draft in under 150 words, in a friendly and direct tone.
 Then list the three questions they are most likely to ask.</pre></div>
 
-<h2 id="chat" class="tiered"><span class="tier tier-chat">Chat</span>Next, on the Chat track</h2>
+<section class="tier-sec" data-tier="chat"><h2 id="chat" class="tiered"><span class="tier tier-chat">Chat</span>Next, on the Chat track</h2>
 <p>Copilot does not go looking through your files for you. To use a document, upload it or select it with your prompt. See <a href="../copilot-chat/#files">giving it your files</a>.</p>
 <div class="promptbox"><span class="label">Prompt · Chat track</span><pre>Using only the document I have attached, summarise it in five bullet points for [who].
 If something is not in the document, say so instead of guessing.</pre></div>
 <ul>
-<li><a href="../what-is-copilot/#chat">What you get with Chat</a></li>
-<li><a href="../copilot-chat/#chat">Copilot Chat</a></li>
-<li><a href="../prompts/#chat">Prompt library for Chat</a></li>
+<li><a href="../playbooks/">Pick a job from the playbooks</a></li>
+<li><a href="../what-is-copilot/#chat">What your licence can do</a></li>
+<li><a href="../copilot-chat/#chat">Copilot Chat in depth</a></li>
 </ul>
 
-<h2 id="premium" class="tiered"><span class="tier tier-premium">Premium</span>Next, on the Premium track</h2>
+</section><section class="tier-sec" data-tier="premium"><h2 id="premium" class="tiered"><span class="tier tier-premium">Premium</span>Next, on the Premium track</h2>
 <p>Copilot can search your emails, files and meetings for you, within what you already have permission to open. You can name a file instead of uploading it.</p>
 <div class="promptbox"><span class="label">Prompt · Premium track</span><pre>Look at my emails and meetings from the last week about [project].
 Summarise what has been decided, what is still open, and anything waiting on me.
 Name the source of each point.</pre></div>
 <ul>
-<li><a href="../what-is-copilot/#premium">What you get with Premium</a></li>
+<li><a href="../playbooks/">Pick a job from the playbooks</a></li>
+<li><a href="../what-is-copilot/#premium">What your licence can do</a></li>
 <li><a href="../copilot-chat/#premium">Copilot Chat and work data</a></li>
-<li><a href="../prompts/#premium">Prompt library for Premium</a></li>
 </ul>
 
-<h2 id="next">For everyone</h2>
+</section><h2 id="next">For everyone</h2>
 <ul>
+<li><a href="../moves/">The 12 moves</a> that make answers better.</li>
+<li><a href="../challenge/">The 5-day challenge</a>: ten minutes a day.</li>
 <li><a href="../safety/">Safety and privacy</a> before you paste anything sensitive.</li>
 <li><a href="../troubleshooting/">When it breaks</a> if something is missing.</li>
 </ul>
-<p class="meta">Sources: Microsoft (2026a), Microsoft (2026b), Microsoft (2026c).</p>
-<p class="meta">Last checked against Microsoft's documentation: 6 November 2026. Copilot changes often, so check the sources at the end of the page.</p>
-<div class="pager"><a href="../">&larr; Home</a><a href="../what-is-copilot/">What it is &rarr;</a></div>
+
+<details class="src"><summary>Where this comes from (3 Microsoft pages)</summary><ul><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview">What is Microsoft Copilot?</a></li><li><a href="https://support.microsoft.com/copilot-microsoft365-chat">Microsoft Copilot Chat: your AI assistant for work</a></li><li><a href="https://support.microsoft.com/en-us/topic/learn-about-copilot-prompts-f6c3b467-f07c-4db1-ae54-ffac96184dd5">Get started writing prompts in Microsoft Copilot</a></li></ul></details><p class="meta">Last checked against Microsoft's documentation: 6 November 2026. Copilot changes often.</p>
+<div class="pager"><span></span><a href="../what-is-copilot/">Your licence &rarr;</a></div>
 </article></main>
 </div>
 </div>

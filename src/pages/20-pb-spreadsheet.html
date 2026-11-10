@@ -1,0 +1,50 @@
+slug: spreadsheet
+order: 27
+nav: no
+navlabel: Make sense of a spreadsheet
+section: playbooks
+title: Make sense of a spreadsheet
+desc: Trends, outliers and formulas without breaking the file.
+toc: no
+verified: yes
+---
+<p class="eyebrow">Playbook</p>
+<h1>Make sense of a spreadsheet</h1>
+<p class="lede">Ask questions of the data first. Change the workbook second, on a copy.</p>
+
+<h2 id="chat" class="tiered"><span class="tier tier-chat">Chat</span>With Copilot Chat</h2>
+<ol class="steps">
+<li><strong>Give it the data</strong>Upload the file to Copilot Chat or paste a small table. Check <a href="../safety/#dont">what you may share</a> first.</li>
+<li><strong>Ask what stands out</strong>Chat explains and writes formulas. It does not change your workbook.</li>
+<li><strong>Copy the formula across</strong>Paste it into Excel and test it on a few rows.</li>
+<li><strong>Have Copilot in Excel?</strong>If the button is there, use <strong>Chat only</strong> mode to explore safely (Microsoft, 2026i).</li>
+</ol>
+<div class="promptbox"><span class="label">Prompt · Chat</span><pre>Here is a table of data:
+[Paste the data here]
+Tell me three things that stand out and one thing that looks like an error or an outlier. Explain how you know.
+Then write a formula for column [D] that [describes what it should calculate], and explain it in one sentence.</pre></div>
+
+<h2 id="premium" class="tiered"><span class="tier tier-premium">Premium</span>With M365 Copilot (Premium)</h2>
+<ol class="steps">
+<li><strong>Open Copilot in Excel</strong>Pick the mode before you ask: <strong>Chat only</strong> to explore, <strong>Plan</strong> to see changes first, <strong>Allow editing</strong> on a copy (Microsoft, 2026i).</li>
+<li><strong>Explore, then build</strong>Ask what stands out. Then ask for the summary table or chart.</li>
+<li><strong>Bigger question?</strong>Try the <a href="../analyst/">Analyst agent</a>.</li>
+</ol>
+<div class="promptbox"><span class="label">Prompt · Premium</span><pre>Look at the data on this sheet. Tell me three things that stand out and one thing that looks like an error or an outlier.
+Then show me your plan for a summary table of [measure] by [category] and [month], with a chart of the trend.
+Use formulas, not pasted values. Do not change anything until I say so.</pre></div>
+
+<h2 id="further">Push it further</h2>
+<p>The first answer is a draft. Send one of these next:</p>
+<div class="promptbox"><span class="label">Follow-up</span><pre>Explain this formula step by step: [Paste the formula here]</pre></div>
+<div class="promptbox"><span class="label">Follow-up</span><pre>What happens to the result if a cell in column [B] is empty?</pre></div>
+<div class="promptbox"><span class="label">Follow-up</span><pre>Which rows did you exclude, and why?</pre></div>
+
+<h2 id="check">Before you use it</h2>
+<ul>
+<li>Click into the formulas. Do they point at the right ranges?</li>
+<li>Recalculate one total by hand.</li>
+<li>After a sort or filter, count the rows.</li>
+</ul>
+<aside class="org" data-key="data-rules"></aside>
+<p class="meta">I wrote these prompts from Microsoft's guidance. They have not yet been tested on every licence, so tell me what works and what doesn't.</p>

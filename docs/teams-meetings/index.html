@@ -3,23 +3,25 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Teams meetings | Copilot, plainly</title>
+<title>Teams meetings | Copilot Flight Deck</title>
 <meta name="description" content="How Microsoft Copilot works in Teams meetings, what the organiser must switch on, and why recaps and questions sometimes fail.">
 <link rel="stylesheet" href="../assets/style.css">
+<script>try{var d=document.documentElement,t=localStorage.getItem('tier'),h=localStorage.getItem('theme');if(t==='chat'||t==='premium')d.setAttribute('data-tier',t);if(h==='light'||h==='dark')d.setAttribute('data-theme',h)}catch(e){}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="topbar"><div class="topbar-in">
-<a class="brand" href="../">Copilot<span>, plainly</span></a>
-<nav class="nav" aria-label="Main"><a href="../">Home</a><a href="../start/">Start here</a><a href="../what-is-copilot/">What it is</a><a href="../copilot-chat/">Copilot Chat</a><a href="../word-outlook/">Word/Outlook</a><a href="../excel/">Excel</a><a href="../powerpoint/">PowerPoint</a><a href="../teams-meetings/" aria-current=page>Teams</a><a href="../agents/">Agents</a><a href="../prompts/">Prompts</a><a href="../safety/">Safety</a><a href="../troubleshooting/">Troubleshooting</a></nav>
+<a class="brand" href="../">Copilot <span>Flight Deck</span></a>
+<div class="tierswitch" id="tierswitch" role="group" aria-label="Show guidance for my licence" hidden><span>My licence</span><button type="button" data-t="chat">Chat</button><button type="button" data-t="premium">Premium</button><button type="button" data-t="both">Both</button></div>
 <button type="button" class="theme" id="theme">Dark mode</button>
+<nav class="nav" aria-label="Main"><a href="../start/">Start</a><a href="../playbooks/">Playbooks</a><a href="../prompts/">Prompts</a><a href="../apps/" aria-current=page>Apps</a><a href="../agents/">Agents</a><a href="../safety/">Safety</a><a href="../troubleshooting/">Fix it</a></nav>
 </div></header>
 <div class="wrap">
 <div class="layout has-toc">
-<nav class="toc" aria-label="On this page"><div class="toc-in"><h2>On this page</h2><ol><li><a href="#setting">The organiser's setting</a></li><li><a href="#during">During the meeting</a></li><li><a href="#after">After the meeting</a></li><li><a href="#limits">Limits Microsoft lists</a></li><li><a href="#chat">Chat: With Copilot Chat</a></li><li><a href="#premium">Premium: With M365 Copilot (Premium)</a></li></ol></div></nav>
+<nav class="toc" aria-label="On this page"><div class="toc-in"><h2>On this page</h2><ol><li><a href="#setting">The organiser's setting</a></li><li><a href="#during">During the meeting</a></li><li><a href="#after">After the meeting</a></li><li><a href="#limits">Limits Microsoft lists</a></li><li data-tier=chat><a href="#chat">Chat: With Copilot Chat</a></li><li data-tier=premium><a href="#premium">Premium: With M365 Copilot (Premium)</a></li></ol></div></nav>
 <main id="main"><article>
-
-<p class="eyebrow">Guide 6</p>
+<nav class="secnav" aria-label="In this section"><a href="../apps/">All apps</a><a href="../copilot-chat/">Copilot Chat</a><a href="../word-outlook/">Word/Outlook</a><a href="../excel/">Excel</a><a href="../powerpoint/">PowerPoint</a><a href="../teams-meetings/" aria-current=page>Teams</a></nav>
+<p class="eyebrow">App guide</p>
 <h1>Teams meetings</h1>
 <p class="lede">Copilot can summarise a meeting while it happens and after it ends. Whether it can depends mostly on a setting the organiser chose.</p>
 
@@ -32,7 +34,7 @@
 </ul></div>
 
 <h2 id="setting">The organiser's setting</h2>
-<p>In <em>Meeting options</em>, under <em>Copilot and other AI</em>, the organiser picks one of three choices (Microsoft, 2026h):</p>
+<p>In <em>Meeting options</em>, under <em>Copilot and other AI</em>, the organiser picks one of three choices:</p>
 <table>
 <thead><tr><th>Choice</th><th>What it means</th></tr></thead>
 <tbody>
@@ -52,7 +54,7 @@
 List any action items with the person responsible, if one was named.</pre></div>
 
 <h2 id="after">After the meeting</h2>
-<p>Open Copilot from the meeting chat or the <em>Recap</em> tab. Copilot cites its sources. Long answers (over 1,300 characters) can open in Word, and tables can open in Excel (Microsoft, 2026h).</p>
+<p>Open Copilot from the meeting chat or the <em>Recap</em> tab. Copilot cites its sources. Long answers (over 1,300 characters) can open in Word, and tables can open in Excel.</p>
 <div class="promptbox"><span class="label">Prompt</span><pre>Write follow-up notes for the people who attended.
 Include decisions, action items (owner and date if mentioned), and open questions.
 Use only what was said in the meeting. If something is unclear, flag it instead of filling it in.</pre></div>
@@ -65,9 +67,9 @@ Use only what was said in the meeting. If something is unclear, flag it instead 
 <li>Export to Word or Excel can be blocked by a sensitivity label or by the option that turns off copying and forwarding of chat, captions and transcripts.</li>
 <li><strong>Intelligent recap</strong> needs a Teams Premium add-on or a Copilot licence.</li>
 </ul>
-<div class="callout warn"><strong>Be careful with people's words</strong><p>Summaries can misattribute or soften what someone said. Check anything that affects a person, a decision or a customer. Microsoft also restricts Copilot from judging an employee's performance or emotional state from workplace communication (Microsoft, 2026d).</p></div>
-<h2 id="chat" class="tiered"><span class="tier tier-chat">Chat</span>With Copilot Chat</h2>
-<p>In Teams, Copilot Chat can see the meeting or item you have open, so you do not need to paste it (Microsoft, 2026a). Whether the meeting copilot (summaries, live questions, recap) is available to you depends on your tier and on the organiser's setting above. <em>Intelligent recap</em> needs a Teams Premium add-on or a Copilot licence, so on the Chat track expect the recap to be missing unless Teams Premium is on.</p>
+<div class="callout warn"><strong>Be careful with people's words</strong><p>Summaries can misattribute or soften what someone said. Check anything that affects a person, a decision or a customer. Microsoft also restricts Copilot from judging an employee's performance or emotional state from workplace communication.</p></div>
+<section class="tier-sec" data-tier="chat"><h2 id="chat" class="tiered"><span class="tier tier-chat">Chat</span>With Copilot Chat</h2>
+<p>In Teams, Copilot Chat can see the meeting or item you have open, so you do not need to paste it. Whether the meeting copilot (summaries, live questions, recap) is available to you depends on your tier and on the organiser's setting above. <em>Intelligent recap</em> needs a Teams Premium add-on or a Copilot licence, so on the Chat track expect the recap to be missing unless Teams Premium is on.</p>
 <p>What always works: copy the transcript or notes from the meeting chat and paste them into Copilot Chat.</p>
 <div class="promptbox"><span class="label">Prompt · Chat</span><pre>Below are the notes from our meeting. Write follow-up notes for the people who attended.
 Include decisions, action items (owner and date if mentioned), and open questions.
@@ -75,14 +77,14 @@ Use only what is in the notes. If something is unclear, flag it instead of filli
 
 [Paste the notes here]</pre></div>
 
-<h2 id="premium" class="tiered"><span class="tier tier-premium">Premium</span>With M365 Copilot (Premium)</h2>
-<p>Copilot works in the meeting itself and from the meeting chat or <em>Recap</em> tab afterwards, within the organiser's setting (Microsoft, 2026h). Use the prompts in the <em>During</em> and <em>After</em> sections above.</p>
+</section><section class="tier-sec" data-tier="premium"><h2 id="premium" class="tiered"><span class="tier tier-premium">Premium</span>With M365 Copilot (Premium)</h2>
+<p>Copilot works in the meeting itself and from the meeting chat or <em>Recap</em> tab afterwards, within the organiser's setting. Use the prompts in the <em>During</em> and <em>After</em> sections above.</p>
 <div class="promptbox"><span class="label">Prompt · Premium</span><pre>Summarise the meeting for someone who missed it.
 Give the decisions, the action items with owners, and the open questions.
 Quote the part of the discussion each one came from.</pre></div>
 
-<p class="meta">Sources: Microsoft (2026d, 2026h). The Teams page shows no update date. Symptoms and fixes are in <a href="../troubleshooting/#teams">Troubleshooting</a>.</p>
-<p class="meta">Last checked against Microsoft's documentation: 6 November 2026. Copilot changes often, so check the sources at the end of the page.</p>
+<p class="meta">The Teams page shows no update date. Symptoms and fixes are in <a href="../troubleshooting/#teams">Troubleshooting</a>.</p></section>
+<details class="src"><summary>Where this comes from (3 Microsoft pages)</summary><ul><li><a href="https://support.microsoft.com/en-us/office/get-started-with-copilot-in-microsoft-teams-meetings-0bf9dd3c-96f7-44e2-8bb8-790bedf066b1">Get started with Copilot in Microsoft Teams meetings</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-privacy">Data, privacy, and security for Microsoft Copilot</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview">What is Microsoft Copilot?</a></li></ul></details><p class="meta">Last checked against Microsoft's documentation: 6 November 2026. Copilot changes often.</p>
 <div class="pager"><a href="../powerpoint/">&larr; PowerPoint</a><a href="../agents/">Agents &rarr;</a></div>
 </article></main>
 </div>

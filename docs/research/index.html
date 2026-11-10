@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Research a topic | Copilot Flight Deck</title>
+<meta name="description" content="A sourced answer you can check, not a confident guess.">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var d=document.documentElement,t=localStorage.getItem('tier'),h=localStorage.getItem('theme');if(t==='chat'||t==='premium')d.setAttribute('data-tier',t);if(h==='light'||h==='dark')d.setAttribute('data-theme',h)}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar"><div class="topbar-in">
+<a class="brand" href="../">Copilot <span>Flight Deck</span></a>
+<div class="tierswitch" id="tierswitch" role="group" aria-label="Show guidance for my licence" hidden><span>My licence</span><button type="button" data-t="chat">Chat</button><button type="button" data-t="premium">Premium</button><button type="button" data-t="both">Both</button></div>
+<button type="button" class="theme" id="theme">Dark mode</button>
+<nav class="nav" aria-label="Main"><a href="../start/">Start</a><a href="../playbooks/" aria-current=page>Playbooks</a><a href="../prompts/">Prompts</a><a href="../apps/">Apps</a><a href="../agents/">Agents</a><a href="../safety/">Safety</a><a href="../troubleshooting/">Fix it</a></nav>
+</div></header>
+<div class="wrap">
+<div class="layout">
+
+<main id="main"><article>
+<nav class="secnav" aria-label="In this section"><a href="../playbooks/">All playbooks</a><a href="../inbox/">Clear my inbox</a><a href="../first-draft/">Write a first draft</a><a href="../rewrite/">Shorten or sharpen</a><a href="../summarise/">Summarise a long document</a><a href="../meeting-prep/">Prepare for a meeting</a><a href="../meeting-follow-up/">Follow up a meeting</a><a href="../spreadsheet/">Make sense of a spreadsheet</a><a href="../deck/">Build a deck</a><a href="../research/" aria-current=page>Research a topic</a><a href="../plan/">Plan a piece of work</a><a href="../learn/">Learn something fast</a><a href="../catch-up/">Catch up after time away</a></nav>
+<p class="eyebrow">Playbook</p>
+<h1>Research a topic</h1>
+<p class="lede">Make Copilot show its sources and its doubts.</p>
+
+<section class="tier-sec" data-tier="chat"><h2 id="chat" class="tiered"><span class="tier tier-chat">Chat</span>With Copilot Chat</h2>
+<ol class="steps">
+<li><strong>Use Copilot Chat on the web</strong>It searches the web when that helps.</li>
+<li><strong>Pick the slower setting</strong>Choose <strong>Think deeper</strong> in the model selector for a more thorough answer.</li>
+<li><strong>Demand sources and disagreements</strong>Use the prompt below, then open the links.</li>
+</ol>
+<div class="promptbox"><span class="label">Prompt · Chat</span><pre>Research [topic] using public web sources, for a decision on [decision].
+Give me the key findings, where sources disagree, the risks, and a recommendation.
+Cite every claim with its link. Mark anything you could not verify.</pre></div>
+
+</section><section class="tier-sec" data-tier="premium"><h2 id="premium" class="tiered"><span class="tier tier-premium">Premium</span>With M365 Copilot (Premium)</h2>
+<ol class="steps">
+<li><strong>Open the Researcher agent</strong>In the Agents pane. It is slow on purpose and returns a cited report.</li>
+<li><strong>Set the scope</strong>Web, your work sources, or both.</li>
+<li><strong>Answer its questions</strong>It may ask before it starts. That steers the report.</li>
+</ol>
+<div class="promptbox"><span class="label">Prompt · Premium</span><pre>Research [topic] for a decision on [decision].
+Scope: [the web only / our internal documents and emails only / both].
+I need the key findings, where sources disagree, the risks, and a recommendation.
+Cite every claim. Mark anything you could not verify.</pre></div>
+
+</section><h2 id="further">Push it further</h2>
+<p>The first answer is a draft. Send one of these next:</p>
+<div class="promptbox"><span class="label">Follow-up</span><pre>What is the strongest argument against your recommendation?</pre></div>
+<div class="promptbox"><span class="label">Follow-up</span><pre>Which of these sources is least reliable, and why?</pre></div>
+<div class="promptbox"><span class="label">Follow-up</span><pre>Summarise this in five lines for someone senior.</pre></div>
+
+<h2 id="check">Before you use it</h2>
+<ul>
+<li>Open the citations behind anything you will repeat.</li>
+<li>A link is not proof. Check the page says what Copilot says it says.</li>
+<li>Run it twice. Answers vary.</li>
+</ul>
+
+<p class="meta">I wrote these prompts from Microsoft's guidance. They have not yet been tested on every licence, so tell me what works and what doesn't.</p>
+<details class="src"><summary>Where this comes from (4 Microsoft pages)</summary><ul><li><a href="https://learn.microsoft.com/en-us/copilot/manage">Manage Microsoft Copilot Chat</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview">What is Microsoft Copilot?</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/researcher-agent">What is Researcher agent in Microsoft Copilot?</a></li><li><a href="https://support.microsoft.com/en-us/topic/learn-about-copilot-prompts-f6c3b467-f07c-4db1-ae54-ffac96184dd5">Get started writing prompts in Microsoft Copilot</a></li></ul></details><p class="meta">Last checked against Microsoft's documentation: 6 November 2026. Copilot changes often.</p>
+<div class="pager"><a href="../deck/">&larr; Build a deck</a><a href="../plan/">Plan a piece of work &rarr;</a></div>
+</article></main>
+</div>
+</div>
+<footer><div class="wrap">
+<p class="feedback">Was this useful? <a href="https://github.com/gladbacher/copilot-plainly/issues/new?title=Feedback%3A%20Research%20a%20topic">Report a problem or suggest a fix</a>.</p>
+<p>An independent guide for people who use Microsoft Copilot at work. It is not made by, endorsed by, or affiliated with Microsoft. Microsoft, Copilot, Word, Excel, PowerPoint, Outlook and Teams are trademarks of Microsoft.</p>
+<p>Content is licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Format inspired by <a href="https://www.guidesforhumans.com/">Guides for Humans</a>. All text here is original. Prices and features change, so check Microsoft's own pages.</p>
+</div></footer>
+<script src="../assets/app.js" defer></script>
+</body>
+</html>

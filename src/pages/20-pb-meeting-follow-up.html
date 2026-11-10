@@ -1,0 +1,50 @@
+slug: meeting-follow-up
+order: 26
+nav: no
+navlabel: Follow up a meeting
+section: playbooks
+title: Follow up a meeting
+desc: Decisions, actions and owners, sent while it is fresh.
+toc: no
+verified: yes
+---
+<p class="eyebrow">Playbook</p>
+<h1>Follow up a meeting</h1>
+<p class="lede">Notes out within the hour, with owners and dates, and nothing invented.</p>
+
+<h2 id="chat" class="tiered"><span class="tier tier-chat">Chat</span>With Copilot Chat</h2>
+<ol class="steps">
+<li><strong>Get the words</strong>Copy your notes, or the transcript from the meeting chat if one was made.</li>
+<li><strong>Paste them into Copilot Chat</strong>In Teams, Copilot Chat can also see the item you have open (Microsoft, 2026a).</li>
+<li><strong>Ask for actions as a table</strong>Tell it to write "not stated" instead of guessing an owner.</li>
+</ol>
+<div class="promptbox"><span class="label">Prompt · Chat</span><pre>Below are the notes from our meeting. Write follow-up notes for the people who attended.
+Include decisions, action items as a table (action, owner, due date), and open questions.
+Use only what is in the notes. Write "not stated" if an owner or date is missing.
+
+[Paste the notes here]</pre></div>
+
+<h2 id="premium" class="tiered"><span class="tier tier-premium">Premium</span>With M365 Copilot (Premium)</h2>
+<ol class="steps">
+<li><strong>Open the meeting recap</strong>From the meeting chat or the <em>Recap</em> tab in Teams (Microsoft, 2026h).</li>
+<li><strong>Ask Copilot there</strong>It works from the transcript, so the organiser must have allowed Copilot during and after the meeting (Microsoft, 2026h).</li>
+<li><strong>Send the notes yourself</strong>Long answers can open in Word (Microsoft, 2026h).</li>
+</ol>
+<div class="promptbox"><span class="label">Prompt · Premium</span><pre>Write follow-up notes for the people who attended this meeting.
+Include decisions, action items as a table (action, owner, due date), and open questions.
+Use only what was said. Write "not stated" if an owner or date is missing, and quote the line each action came from.</pre></div>
+
+<h2 id="further">Push it further</h2>
+<p>The first answer is a draft. Send one of these next:</p>
+<div class="promptbox"><span class="label">Follow-up</span><pre>Draft the email that sends these notes. Three lines, then the table.</pre></div>
+<div class="promptbox"><span class="label">Follow-up</span><pre>What was discussed but not decided?</pre></div>
+<div class="promptbox"><span class="label">Follow-up</span><pre>Which actions are mine?</pre></div>
+
+<h2 id="check">Before you use it</h2>
+<ul>
+<li>Summaries can misattribute or soften what someone said. Check anything about a person.</li>
+<li>Confirm owners and dates with the people named.</li>
+<li>No transcript, no after-meeting answers. See <a href="../teams-meetings/#setting">the organiser's setting</a>.</li>
+</ul>
+<aside class="org" data-key="data-rules"></aside>
+<p class="meta">I wrote these prompts from Microsoft's guidance. They have not yet been tested on every licence, so tell me what works and what doesn't.</p>
