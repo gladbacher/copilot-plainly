@@ -25,7 +25,6 @@ VERIFIED = "6 November 2026"
 SITE_URL = "https://gladbacher.github.io/copilot-plainly/"  # public address; used for share tags, sitemap and the 404 page
 BASE_PATH = "/" + SITE_URL.split("/", 3)[3]
 FAVICON = "data:image/svg+xml," + urllib.parse.quote('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#0b6e6e"/><path d="M14 36l36-16-10 30-8-12z" fill="#fff"/></svg>')
-ISSUES = "https://github.com/gladbacher/copilot-plainly/issues/new"
 MARKER = ".copilot-plainly-build"
 
 # Pages must be self-sufficient: never send readers to "IT".
@@ -347,11 +346,9 @@ def main():
         if meta.get("verified") == "yes":
             verified = f'{sources}<p class="meta">Last checked against Microsoft\'s documentation: {meta.get("checked", VERIFIED)}. Copilot changes often.</p>'
 
-        if org and org["answers"].get("feedback", {}).get("url"):
-            fb_url = org["answers"]["feedback"]["url"]
-        else:
-            fb_url = ISSUES + "?title=" + urllib.parse.quote("Feedback: " + meta["title"])
-        feedback = f'<p class="feedback">Was this useful? <a href="{html.escape(fb_url)}">Report a problem or suggest a fix</a>.</p>'
+        # No public feedback link. An organisation edition can supply its own internal route.
+        fb_url = (org or {}).get("answers", {}).get("feedback", {}).get("url", "")
+        feedback = f'<p class="feedback">Was this useful? <a href="{html.escape(fb_url)}">Send feedback</a>.</p>' if fb_url else ""
         badge = f'<span class="orgbadge">{html.escape(org["name"])} edition</span>' if org else ""
 
         page = f"""<!doctype html>
@@ -393,7 +390,7 @@ def main():
 <footer><div class="wrap">
 {feedback}
 <p>An independent guide for people who use Microsoft Copilot at work. It is not made by, endorsed by, or affiliated with Microsoft. Microsoft, Copilot, Word, Excel, PowerPoint, Outlook and Teams are trademarks of Microsoft.</p>
-<p>Content is licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Format inspired by <a href="https://www.guidesforhumans.com/">Guides for Humans</a>. All text here is original. Prices and features change, so check Microsoft's own pages.</p>
+<p>Content is licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. All text here is original. Prices and features change, so check Microsoft's own pages.</p>
 </div></footer>
 {f'<script src="{up}assets/search-index.js" defer></script>' if slug == "search" else ""}
 <script src="{up}assets/app.js" defer></script>

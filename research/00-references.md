@@ -47,6 +47,5 @@ Moved here from the site's Sources page, which was removed from the published gu
 - **2026bh.** Microsoft. (2026, September 2; updated November 3). *Manage Copilot personalization and memory*. Microsoft Learn. https://learn.microsoft.com/en-us/microsoft-365/copilot/copilot-personalization-memory
 
 ## Other material
-- Format inspiration: https://www.guidesforhumans.com/setup-claude/full-guide.html (no text copied).
 - The April 2026 report about embedded Copilot for unlicensed users comes from university help pages and a secondary quote of a Message Center notice; Microsoft's current docs match it for the Copilot Chat (Basic) label but I found no original announcement on a docs page.
 - Troubleshooting steps marked Reported (Update License in File > Account, update channels) come from IT help pages and community threads, not Microsoft docs.

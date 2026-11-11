@@ -20,7 +20,7 @@ A JSON file kept **outside the repository** (or in `org-pack/`, where `*.json` i
 - `html` is inserted as it is. Keep it short: two or three sentences.
 - `links` is an optional list of `{ "text", "url" }`.
 - Any `html` containing the word `TODO` gets a dashed border so unfinished boxes stand out.
-- The `feedback` answer may carry a `url`. If it does, every page's "Report a problem" link goes there instead of GitHub.
+- The `feedback` answer may carry a `url`. If it does, every page footer shows a "Send feedback" link to it. Without it, the footer has no feedback link at all.
 
 ## Keys
 

@@ -54,7 +54,7 @@ Public pages contain empty `<aside class="org" data-key="KEY"></aside>` slots th
 python3 tools/build.py --org /abs/path/org.json --out /abs/path/outside-repo
 ```
 
-It adds "At <name>" boxes, a top-bar badge, routes feedback to the org's `feedback` URL, and writes `org-summary.html` (one paste-ready page). `--out` must be outside the repo. Keep real packs outside the repo; only `org-pack/example.json` is tracked.
+It adds "At <name>" boxes, a top-bar badge, adds a "Send feedback" footer link when the org supplies a `feedback` URL (the public site has no feedback link), and writes `org-summary.html` (one paste-ready page). `--out` must be outside the repo. Keep real packs outside the repo; only `org-pack/example.json` is tracked.
 
 ## The "ask IT" guard
 The build fails if a page matches wording such as (capital "IT" only, so "ask it to…" is fine) "ask IT", "tell IT", "check with IT", "contact IT", "IT team" or "to IT". The site must stand on its own: say what the reader can check themselves, or state "this is an organisation setting".
