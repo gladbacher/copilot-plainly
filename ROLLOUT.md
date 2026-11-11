@@ -2,7 +2,7 @@
 
 Generic notes. The public guide stays free of any one organisation's internals; organisation-specific answers go in an [org pack](org-pack/TEMPLATE.md).
 
-1. **Get approval.** Check with AI governance, communications and brand teams before pointing staff to an unofficial external guide. The site's disclaimer (not affiliated with Microsoft) and its CC BY 4.0 licence help.
+1. **Get approval.** Check with AI governance, communications and brand teams before pointing staff to an unofficial external guide. The site's disclaimer (not affiliated with Microsoft) and its CC BY-NC-ND 4.0 licence (share, but no changes or sales) help.
 2. **Fill in the org pack** and build the organisation edition and `org-summary.html` (see `org-pack/TEMPLATE.md`).
 3. **Pilot** with about 15 to 20 people, split between Chat and Premium, for two to three weeks. Collect feedback through the organisation's own route (the org pack `feedback` key puts a link in every footer) plus the short survey below.
 4. **Champions, then everyone.** Brief a champions network first, then all staff through the intranet and comms, using the two tracks and the one-page cheat sheets.

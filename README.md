@@ -68,4 +68,4 @@ The build fails if a page matches wording such as (capital "IT" only, so "ask it
 - Update the "last checked" date in `tools/build.py` (`VERIFIED`) whenever pages are re-verified.
 
 ## Licence
-Content and code: [CC BY 4.0](LICENSE). Reuse with credit.
+Content and code: © 2026 Chris Kenny, licensed [CC BY-NC-ND 4.0](LICENSE). You may share it with credit; you may not sell it or change it. Earlier versions of this repository were published under CC BY 4.0, and copies taken then keep that licence.

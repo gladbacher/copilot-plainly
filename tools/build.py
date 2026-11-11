@@ -22,6 +22,10 @@ ROOT = Path(__file__).resolve().parent.parent
 SRC, DOCS = ROOT / "src", ROOT / "docs"
 SITE = "Copilot Flight Deck"
 VERIFIED = "6 November 2026"
+OWNER = "Chris Kenny"  # name in the copyright notice
+YEAR = "2026"
+LICENCE_URL = "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+AI_BOTS = ["GPTBot", "ChatGPT-User", "OAI-SearchBot", "ClaudeBot", "Claude-Web", "anthropic-ai", "CCBot", "Google-Extended", "PerplexityBot", "Bytespider", "Applebot-Extended", "Amazonbot", "cohere-ai", "Meta-ExternalAgent", "FacebookBot", "Diffbot", "Omgilibot", "ImagesiftBot"]
 SITE_URL = "https://gladbacher.github.io/copilot-plainly/"  # public address; used for share tags, sitemap and the 404 page
 BASE_PATH = "/" + SITE_URL.split("/", 3)[3]
 FAVICON = "data:image/svg+xml," + urllib.parse.quote('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#0b6e6e"/><path d="M14 36l36-16-10 30-8-12z" fill="#fff"/></svg>')
@@ -220,6 +224,7 @@ def write_summary(out, org):
         rows += f"<h2>{html.escape(label)}</h2>\n{ans.get('html', '')}{links}\n"
     name = html.escape(org["name"])
     page = f"""<!doctype html>
+<!-- (c) {YEAR} {OWNER}. Licensed CC BY-NC-ND 4.0 ({LICENCE_URL}). Copying, adapting or selling this site is not permitted. -->
 <html lang="en"><head><meta charset="utf-8"><title>Copilot at {name}</title>
 <style>body{{font:16px/1.6 Segoe UI,Arial,sans-serif;max-width:46rem;margin:2rem auto;padding:0 1rem;color:#222}}h1{{font-size:1.9rem}}h2{{font-size:1.25rem;margin-top:1.8em;border-bottom:1px solid #ddd;padding-bottom:.2em}}</style>
 </head><body>
@@ -352,6 +357,7 @@ def main():
         badge = f'<span class="orgbadge">{html.escape(org["name"])} edition</span>' if org else ""
 
         page = f"""<!doctype html>
+<!-- (c) {YEAR} {OWNER}. Licensed CC BY-NC-ND 4.0 ({LICENCE_URL}). Copying, adapting or selling this site is not permitted. -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -363,6 +369,9 @@ def main():
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="{SITE}">
 <meta name="theme-color" content="#0b6e6e">
+<meta name="author" content="{OWNER}">
+<meta name="copyright" content="&copy; {YEAR} {OWNER}. CC BY-NC-ND 4.0">
+<meta name="robots" content="noai, noimageai">
 <link rel="icon" href="{FAVICON}">
 <link rel="stylesheet" href="{up}assets/style.css">
 <script>try{{var d=document.documentElement,t=localStorage.getItem('tier'),h=localStorage.getItem('theme');if(t==='chat'||t==='premium')d.setAttribute('data-tier',t);if(h==='light'||h==='dark')d.setAttribute('data-theme',h)}}catch(e){{}}</script>
@@ -390,7 +399,7 @@ def main():
 <footer><div class="wrap">
 {feedback}
 <p>An independent guide for people who use Microsoft Copilot at work. It is not made by, endorsed by, or affiliated with Microsoft. Microsoft, Copilot, Word, Excel, PowerPoint, Outlook and Teams are trademarks of Microsoft.</p>
-<p>Content is licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. All text here is original. Prices and features change, so check Microsoft's own pages.</p>
+<p>&copy; {YEAR} {OWNER}. Licensed under <a href="{LICENCE_URL}">CC BY-NC-ND 4.0</a>: you may share it with credit, but you may not sell it or change it. All text here is original. Prices and features change, so check Microsoft's own pages.</p>
 </div></footer>
 {f'<script src="{up}assets/search-index.js" defer></script>' if slug == "search" else ""}
 <script src="{up}assets/app.js" defer></script>
@@ -407,7 +416,8 @@ def main():
     else:
         urls = "".join(f"<url><loc>{SITE_URL}{m['slug'] + '/' if m['slug'] else ''}</loc></url>" for m, _ in pages if m["slug"] not in ("404", "search"))
         (out / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>', encoding="utf-8")
-        (out / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}sitemap.xml\n", encoding="utf-8")
+        blocks = "".join(f"User-agent: {b}\nDisallow: /\n\n" for b in AI_BOTS)
+        (out / "robots.txt").write_text(f"{blocks}User-agent: *\nAllow: /\nSitemap: {SITE_URL}sitemap.xml\n", encoding="utf-8")
     print(f"built {len(pages)} pages -> {out}")
 
 
